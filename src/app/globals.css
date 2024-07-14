@@ -7,6 +7,16 @@
   --background-rgb: white;
 }
 
+/* TODO: set the header and other text styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));

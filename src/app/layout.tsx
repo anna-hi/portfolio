@@ -1,4 +1,5 @@
 import "./globals.css";
+
 import type { Metadata } from "next";
 
 import Footer from "@/components/footer";
@@ -15,11 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
-        <main>
+    <html lang="en" className="h-full">
+      <body className="h-full">
+        <main className="flex flex-col h-full">
           <NavBar />
-          {children}
+          <div className="flex-grow">{children}</div>
           <Footer />
         </main>
       </body>

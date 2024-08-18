@@ -8,13 +8,13 @@ const NavBar: React.FC = () => {
   const pathname = usePathname();
   return (
     <nav className="flex p-2">
-      <div className="flex-none px-2">
+      <button className="flex-none px-2">
         <Link href="/" className="">
           Home
         </Link>
-      </div>
+      </button>
       <div className="flex-none px-2">
-        <Link href="/" className={`$(pathname === '/' ? 'active' : '')`}>
+        <Link href="/" className={`${pathname === "/" ? "active" : ""}`}>
           Work
         </Link>
       </div>

@@ -1,22 +1,33 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import type { Metadata } from "next";
+import { LORA, PONTANO_SANS } from "@/util/fonts";
+
+import Footer from "@/components/footer";
+import NavBar from "@/components/navbar";
 
 export const metadata: Metadata = {
-  title: "my portfolio",
-  description: "my portfolio stuff",
+  title: "Anna's Portfolio",
+  description: "I'm stinky",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html
+      lang="en"
+      className={`h-full ${LORA.variable} ${PONTANO_SANS.variable}`}
+    >
+      <body className="h-full">
+        <main className="flex flex-col h-full">
+          <NavBar />
+          <div className="flex-grow">{children}</div>
+          <Footer />
+        </main>
+      </body>
     </html>
   );
 }

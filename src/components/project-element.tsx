@@ -1,6 +1,8 @@
+import React from "react";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+
 import FlowerIcon, { FLOWER_SIZES } from "./flower-icon";
 
 export type ProjectCardInfo = {

@@ -8,7 +8,6 @@ import FlowerIcon, {
 } from "@/components/flower-icon";
 import ProjectElement, { ProjectCardInfo } from "@/components/project-element";
 import ActivityElement from "@/components/activity-element";
-import Image from "next/image";
 
 // DATA
 const project_map: ProjectCardInfo[] = [
@@ -19,7 +18,7 @@ const project_map: ProjectCardInfo[] = [
     tags: ["Product Design", "UX Design", "Design Systems", "UX Research"],
     flowerColor: FLOWER_COLORS.FAT_RED,
     link: "/projects/faculty-activity-tracker",
-    thumbnail: "fat.svg",
+    thumbnail: "/fat.svg",
   },
   {
     title: "Practicing Mindfulness",
@@ -28,7 +27,7 @@ const project_map: ProjectCardInfo[] = [
     tags: ["Product Design", "Design Systems", "UX Research"],
     flowerColor: FLOWER_COLORS.MINDFUL_PURPLE,
     link: "/projects/mindful",
-    thumbnail: "mindful.svg",
+    thumbnail: "/mindful.svg",
   },
   {
     title: "A Personalized Digital Space",
@@ -37,7 +36,7 @@ const project_map: ProjectCardInfo[] = [
     tags: ["Product Design", "UI Design", "UX Design"],
     flowerColor: FLOWER_COLORS.PENELLA_WHITE,
     link: "/projects/penella",
-    thumbnail: "penella.svg",
+    thumbnail: "/penella.svg",
   },
 ];
 
@@ -114,7 +113,6 @@ export default function Main() {
         <div className="intro-background"></div>
       </div>
 
-      {/* TODO: images not loading after refresh */}
       <div className="grid grid-cols-1 gap-36 mt-32">
         {project_map.map((project) => (
           <ProjectElement key={project.title} project={project} />

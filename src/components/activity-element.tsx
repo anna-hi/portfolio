@@ -1,5 +1,6 @@
 import React from "react";
-import FlowerIcon, { FLOWER_COLORS, FLOWER_SIZES } from "./flower-icon";
+
+import FlowerIcon, { FLOWER_SIZES } from "./flower-icon";
 
 interface ActivityElementProps {
   header: string;

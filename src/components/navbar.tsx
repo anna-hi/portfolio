@@ -1,7 +1,9 @@
 "use client";
 
 import React from "react";
+
 import { usePathname, useRouter } from "next/navigation";
+
 import FlowerIcon, { FLOWER_COLORS, FLOWER_SIZES } from "./flower-icon";
 
 const NavBar: React.FC = () => {

@@ -1,6 +1,7 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
+import { LORA, PONTANO_SANS } from "@/util/fonts";
 
 import Footer from "@/components/footer";
 import NavBar from "@/components/navbar";
@@ -16,7 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full">
+    <html
+      lang="en"
+      className={`h-full ${LORA.variable} ${PONTANO_SANS.variable}`}
+    >
       <body className="h-full">
         <main className="flex flex-col h-full">
           <NavBar />

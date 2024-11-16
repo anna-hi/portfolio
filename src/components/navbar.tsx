@@ -2,6 +2,7 @@
 
 import React from "react";
 import { usePathname, useRouter } from "next/navigation";
+import FlowerIcon, { FLOWER_COLORS, FLOWER_SIZES } from "./flower-icon";
 
 const NavBar: React.FC = () => {
   const pathname = usePathname();
@@ -34,40 +35,42 @@ const NavBar: React.FC = () => {
 
   return (
     <>
-      <nav className="flex p-2 bg-blue-200">
+      <nav className="navbar flex bg-transparent">
         <button type="button" onClick={navigateToHome}>
-          Home
+          <FlowerIcon size={FLOWER_SIZES.LARGE} color={FLOWER_COLORS.PINK} />
         </button>
+
+        <div className="flex-grow px-2"></div>
+
         <button
           type="button"
-          className={setActive(
+          className={`navbar-button ${setActive(
             pathname.includes("projects") || pathname === "/"
-          )}
+          )}`}
           onClick={navigateToHome}
         >
           Work
         </button>
         <button
           type="button"
-          className={setActive(pathname === "/about")}
+          className={`navbar-button ${setActive(pathname === "/fun")}`}
+          onClick={navigateToFun}
+        >
+          Fun
+        </button>
+        <button
+          type="button"
+          className={`navbar-button ${setActive(pathname === "/about")}`}
           onClick={navigateToAbout}
         >
           About
         </button>
         <button
           type="button"
-          className={setActive(pathname === "/resume")}
+          className={`navbar-button ${setActive(pathname === "/resume")}`}
           onClick={navigateToResume}
         >
-          Résumé
-        </button>
-        <div className="flex-grow px-2"></div>
-        <button
-          type="button"
-          className={setActive(pathname === "/fun")}
-          onClick={navigateToFun}
-        >
-          Fun
+          Resume
         </button>
       </nav>
     </>

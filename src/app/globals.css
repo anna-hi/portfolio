@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: black;
-  --background-rgb: white;
+  --foreground-rgb: #fbf8ec;
+  --background-rgb: #25201a;
 }
 
 /* TODO: set the header and other text styles */
@@ -15,22 +15,35 @@ h4,
 h5,
 h6 {
   font-weight: bold;
+  font-family: var(--font-lora);
+}
+
+h1 {
+  @apply text-5xl;
+}
+h2 {
+  @apply text-4xl;
+}
+h3 {
+  @apply text-2xl;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-  font-family: "Inter", sans-serif;
+  /* COLORS */
+  color: var(--foreground-rgb);
+  background: var(--background-rgb);
+  /* FONT */
+  font-family: var(--font-pontano-sans);
 }
 
 @layer components {
   /* TODO: replace temporary button styles */
   button {
     min-width: 4rem;
-    @apply bg-gradient-to-br from-purple-600 to-blue-500 text-white py-2 px-4 mx-2 rounded-full;
+    /* @apply bg-gradient-to-br from-purple-600 to-blue-500 text-white py-2 px-4 mx-2 rounded-full; */
     flex: none;
   }
-  button:hover {
+  /* button:hover {
     @apply bg-gradient-to-bl;
   }
   button:focus {
@@ -39,7 +52,7 @@ body {
   button:active,
   button.active {
     @apply from-red-500;
-  }
+  } */
 }
 
 @layer utilities {
@@ -47,3 +60,58 @@ body {
     text-wrap: balance;
   }
 }
+
+/* home page start */
+.home-page-container {
+  margin: 40px 140px;
+}
+
+.introduction {
+  height: 85vh;
+}
+.intro-background {
+  /* background: linear-gradient(130deg, rgb(7, 51, 58) 0%, rgb(54, 4, 30) 100%); */
+  background-image: url("/background.png");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -100;
+  top: 0;
+  left: 0;
+}
+/* home page end */
+
+/* navbar start */
+.navbar {
+  margin: 40px 140px;
+}
+.navbar-button {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  @apply text-base text-pink-light text-center;
+
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.navbar-button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.navbar-button:hover::after,
+.navbar-button:active::after,
+.navbar-button.active::after {
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* navbar end */

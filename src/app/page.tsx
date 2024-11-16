@@ -66,20 +66,22 @@ export default function Main() {
             <h2
               style={{
                 position: "relative",
-                display: "inline-block",
+                display: "inline",
               }}
             >
               a <span className="text-pink">product designer</span> who creates
               enchanting experiences
-              <span style={{ position: "absolute", top: -18, right: -15 }}>
-                <FlowerIcon color={FLOWER_COLORS.PURPLE} />
-              </span>
-              <span style={{ position: "absolute", top: 5, right: -28 }}>
-                <FlowerIcon
-                  color={FLOWER_COLORS.FAT_RED}
-                  size={FLOWER_SIZES.SMALL}
-                />
-              </span>
+              <div style={{ position: "absolute", top: 0, right: 0 }}>
+                <span style={{ position: "absolute", top: -18, right: -15 }}>
+                  <FlowerIcon color={FLOWER_COLORS.PURPLE} />
+                </span>
+                <span style={{ position: "absolute", top: 5, right: -28 }}>
+                  <FlowerIcon
+                    color={FLOWER_COLORS.FAT_RED}
+                    size={FLOWER_SIZES.SMALL}
+                  />
+                </span>
+              </div>
             </h2>
           </div>
         </div>

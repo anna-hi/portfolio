@@ -1,11 +1,11 @@
 import React from "react";
 
-import FlowerIcon, { FLOWER_SIZES } from "./flower-icon";
+import FlowerIcon, { FLOWER_SIZES, flowerColor } from "./flower-icon";
 
 interface ActivityElementProps {
   header: string;
   subtext: string;
-  color: string;
+  color: flowerColor;
 }
 
 const ActivityElement: React.FC<ActivityElementProps> = ({

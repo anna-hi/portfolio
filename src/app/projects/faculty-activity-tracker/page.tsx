@@ -1,8 +1,21 @@
+// components
+import ProjectHeader from "../_components/project-header";
+
+// text
+const HEADER = "Simplifying Form Experiences";
+const SUBHEADER =
+  "How do we make it easier for faculty to fill out an annual form? How do we optimize efficiency for the committee who scores those forms?";
+
 export default function FacultyActivityTrackerPage() {
   return (
-    <div>
-      <h1>Faculty Activity Tracker</h1>
-      <h2>Overview</h2>
+    <div className="project-container">
+      <ProjectHeader
+        projectHeader={{
+          header: HEADER,
+          subheader: SUBHEADER,
+          photo: "/fat.svg",
+        }}
+      />
       <p>
         Throughout the spring, summer, and fall 2023 semesters in Sandbox(a
         student-led software consultancy), I was a UI/UX designer for my client,

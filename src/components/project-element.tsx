@@ -1,9 +1,8 @@
-import React from "react";
-
 import Image from "next/image";
 import Link from "next/link";
 
 import FlowerIcon, { FLOWER_SIZES, flowerColor } from "./flower-icon";
+import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 
 export type ProjectCardInfo = {
   title: string;
@@ -49,14 +48,21 @@ const ProjectElement: React.FC<ProjectElementProps> = ({ project }) => {
             </div>
           ))}
         </div>
-        {/* TODO: right arrow icon here */}
-        <div className="text-orange">Take a look </div>
+        <div className="text-orange text-nowrap flex flex-nowrap">
+          Take a look
+          <ArrowLongRightIcon className="mx-3 h-6" />
+        </div>
       </div>
 
       <Image
         src={project.thumbnail}
-        width={668}
-        height={400}
+        width={0}
+        height={0}
+        style={{
+          width: "40vw",
+          height: "auto",
+          minWidth: "668px",
+        }}
         priority
         alt={project.title}
       />

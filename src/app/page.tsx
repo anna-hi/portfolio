@@ -2,6 +2,8 @@
 import { PINYON_SCRIPT } from "@/util/fonts";
 
 // COMPONENTS
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
+
 import FlowerIcon, {
   FLOWER_COLORS,
   FLOWER_SIZES,
@@ -15,7 +17,7 @@ const project_map: ProjectCardInfo[] = [
     title: "Simplifying Form Experiences",
     description:
       "How do we make it easier for faculty to fill out an annual form? How do we optimize efficiency for the committee who scores those forms?",
-    tags: ["Product Design", "UX Design", "Design Systems", "UX Research"],
+    tags: ["Product Design", "UX Design", "Design Systems"],
     flowerColor: FLOWER_COLORS.FAT_RED,
     link: "/projects/faculty-activity-tracker",
     thumbnail: "/fat.svg",
@@ -98,24 +100,12 @@ export default function Main() {
         </div>
 
         <div className="flex justify-center">
-          {/* TODO: maybe a higher res svg for this? or we can use an icon */}
-          <svg
-            width="60"
-            height="60"
-            viewBox="0 0 60 60"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M48.9459 19.426L29.9981 34.5688L11.0502 19.426C10.7117 19.1549 10.2572 19.0031 9.78396 19.0031C9.31072 19.0031 8.85626 19.1549 8.51774 19.426C8.35382 19.5577 8.22359 19.7149 8.13469 19.8883C8.04579 20.0618 8 20.248 8 20.4362C8 20.6243 8.04579 20.8106 8.13469 20.984C8.22359 21.1575 8.35382 21.3146 8.51774 21.4463L28.675 37.5588C29.029 37.8417 29.5037 38 29.9981 38C30.4924 38 30.9672 37.8417 31.3212 37.5588L51.4784 21.4494C51.6435 21.3176 51.7747 21.1601 51.8643 20.9861C51.9538 20.812 52 20.625 52 20.4362C52 20.2473 51.9538 20.0603 51.8643 19.8863C51.7747 19.7122 51.6435 19.5547 51.4784 19.4229C51.1399 19.1518 50.6854 19 50.2122 19C49.7389 19 49.2845 19.1518 48.9459 19.4229V19.426Z"
-              fill="#C7C7C7"
-            />
-          </svg>
+          <ChevronDownIcon className="h-8 w-8 text-gray-light" />
         </div>
         <div className="intro-background"></div>
       </div>
 
-      <div className="grid grid-cols-1 gap-36 mt-32">
+      <div className="home-projects grid grid-cols-1 gap-36">
         {project_map.map((project) => (
           <ProjectElement key={project.title} project={project} />
         ))}

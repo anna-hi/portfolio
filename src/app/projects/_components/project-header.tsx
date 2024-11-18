@@ -1,5 +1,6 @@
 import { PONTANO_SANS } from "@/util/fonts";
 import Image from "next/image";
+import ImageViewer from "./image-viewer";
 
 type projectHeader = {
   header: string;
@@ -21,13 +22,7 @@ export default function ProjectHeader({ projectHeader }: ProjectHeaderProps) {
         </h3>
       )}
       {projectHeader.photo && (
-        <Image
-          src={projectHeader.photo}
-          width={0}
-          height={0}
-          style={{ width: "100%", height: "auto" }}
-          alt={projectHeader.header}
-        />
+        <ImageViewer src={projectHeader.photo} alt={projectHeader.header} />
       )}
     </div>
   );

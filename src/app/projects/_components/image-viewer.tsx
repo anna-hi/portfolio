@@ -26,21 +26,23 @@ export default function ImageViewer({ src, alt }: ImageViewerProps) {
           src={src}
           width={0}
           height={0}
-          style={{ width: "100%", height: "auto" }}
           alt={alt}
+          className="w-full h-auto"
         />
       </div>
 
       {isModalOpen && (
         <div className="image-viewer-modal" onClick={handleCloseModal}>
-          <div className="image-viewer-modal-content">
-            <Image
-              src={src}
-              width={0}
-              height={0}
-              style={{ width: "100%", height: "auto" }}
-              alt={alt}
-            />
+          <div className="image-viewer-modal-content flex justify-center align-middle bg-transparent rounded-lg">
+            <div className="w-full h-auto">
+              <Image
+                src={src}
+                width={0}
+                height={0}
+                alt={alt}
+                className="w-full h-full"
+              />{" "}
+            </div>
           </div>
         </div>
       )}

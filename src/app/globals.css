@@ -55,21 +55,22 @@ body {
   margin: 40px 9% 20px 9%;
 }
 .navbar-button {
+  /* width: 3rem; */
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   @apply text-base text-pink-light text-center;
 
   position: relative;
-  padding-bottom: 0.25rem;
+  padding-top: 1px;
 }
 
 .navbar-button::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: 2px;
   width: 0;
-  height: 2px;
+  height: 1px;
   background-color: currentColor;
   transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
   transform: translateX(-50%);
@@ -106,9 +107,10 @@ body {
 }
 
 .home-projects {
-  margin: 160px 9% 0 9%;
+  width: 82%;
+  max-width: 1400px;
+  margin: 9% auto 0 auto;
 }
-
 .fade-in-section {
   opacity: 0;
   transform: translateY(20vh);
@@ -129,10 +131,12 @@ body {
   margin: 0 16%;
 }
 
+/* image viewer start */
 .image-viewer {
   cursor: zoom-in;
 }
 .image-viewer-modal {
+  z-index: 1000;
   position: fixed;
   top: 0;
   left: 0;
@@ -144,7 +148,8 @@ body {
   align-items: center;
 }
 .image-viewer-modal-content {
-  width: 80%;
-  height: 80%;
+  width: 95%;
+  height: 95%;
 }
+/* image viewer end */
 /* general projects end */

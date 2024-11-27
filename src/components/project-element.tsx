@@ -56,13 +56,8 @@ const ProjectElement: React.FC<ProjectElementProps> = ({ project }) => {
 
       <Image
         src={project.thumbnail}
-        width={0}
-        height={0}
-        style={{
-          width: "40vw",
-          height: "auto",
-          minWidth: "668px",
-        }}
+        width={668}
+        height={498}
         priority
         alt={project.title}
       />

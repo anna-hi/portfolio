@@ -24,6 +24,9 @@ const config: Config = {
         DEFAULT: "#8492a6",
         dark: "#273444",
       },
+      background: {
+        dark: "#25201a",
+      },
     },
   },
 };

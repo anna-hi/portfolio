@@ -1,5 +1,4 @@
 import { PONTANO_SANS } from "@/util/fonts";
-import Image from "next/image";
 import ImageViewer from "./image-viewer";
 
 type projectHeader = {

@@ -1,4 +1,15 @@
-import { Lora, Pontano_Sans, Pinyon_Script } from "next/font/google";
+import {
+  Alegreya_Sans_SC,
+  Lora,
+  Pontano_Sans,
+  Pinyon_Script,
+} from "next/font/google";
+
+export const ALEGREYA_SANS = Alegreya_Sans_SC({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-alegreya-sans",
+});
 
 export const LORA = Lora({
   subsets: ["latin"],

@@ -19,8 +19,8 @@ interface ProjectElementProps {
 
 const ProjectElement: React.FC<ProjectElementProps> = ({ project }) => {
   return (
-    <Link href={project.link} prefetch className="flex flex-nowrap">
-      <div className="flex-grow grid grid-cols-1 gap-7 content-center mr-12">
+    <Link href={project.link} prefetch className="flex flex-wrap gap-x-36">
+      <div className="flex-grow grid grid-cols-1 gap-7 content-center mr-28 min-w-80 w-80">
         <div>
           <h3
             style={{

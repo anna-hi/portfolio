@@ -153,3 +153,8 @@ body {
 }
 /* image viewer end */
 /* general projects end */
+
+/* footer start */
+.footer-container {
+  padding: 40px 9% 60px 9%;
+}

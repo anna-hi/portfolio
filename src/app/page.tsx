@@ -88,7 +88,7 @@ export default function Main() {
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-x-32">
+        <div className="flex flex-wrap gap-x-40">
           {activity_elements.map((activity) => (
             <ActivityElement
               key={activity.header}

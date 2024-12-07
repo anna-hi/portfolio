@@ -5,6 +5,7 @@ import { LORA, PONTANO_SANS } from "@/util/fonts";
 
 import Footer from "@/components/footer";
 import NavBar from "@/components/navbar";
+import ScrollToTop from "@/components/scroll-to-top";
 
 export const metadata: Metadata = {
   title: "Anna's Portfolio",
@@ -26,6 +27,7 @@ export default function RootLayout({
           <NavBar />
           <div className="flex-grow">{children}</div>
           <Footer />
+          <ScrollToTop />
         </main>
       </body>
     </html>

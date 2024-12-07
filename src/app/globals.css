@@ -106,7 +106,7 @@ body {
   left: 0;
 }
 
-.home-projects {
+.home-projects-container {
   width: 82%;
   max-width: 1400px;
   margin: 9% auto 0 auto;
@@ -158,3 +158,28 @@ body {
 .footer-container {
   padding: 40px 9% 60px 9%;
 }
+/* footer end */
+
+/* scroll to top start */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  background-color: var(--foreground-rgb);
+  color: var(--background-rgb);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: var(--background-rgb);
+  color: var(--foreground-rgb);
+}
+/* scroll to top end */

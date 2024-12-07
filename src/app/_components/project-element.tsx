@@ -1,13 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import FlowerIcon, { FLOWER_SIZES, flowerColor } from "./flower-icon";
+import FlowerIcon, {
+  FLOWER_SIZES,
+  flowerColor,
+} from "@/components/flower-icon";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
+
+// export this as a list too somehow?
+export type ProjectTags =
+  | "Product Design"
+  | "UX Design"
+  | "Design Systems"
+  | "UX Research"
+  | "UI Design";
+
+export const PROJECT_TAGS_LIST: ProjectTags[] = [
+  "Product Design",
+  "UX Design",
+  "Design Systems",
+  "UX Research",
+  "UI Design",
+];
 
 export type ProjectCardInfo = {
   title: string;
   description: string;
-  tags: string[];
+  tags: ProjectTags[];
   flowerColor: flowerColor;
   link: string;
   thumbnail: string;
@@ -16,7 +35,6 @@ export type ProjectCardInfo = {
 interface ProjectElementProps {
   project: ProjectCardInfo;
 }
-
 const ProjectElement: React.FC<ProjectElementProps> = ({ project }) => {
   return (
     <Link href={project.link} prefetch className="flex flex-wrap gap-x-36">

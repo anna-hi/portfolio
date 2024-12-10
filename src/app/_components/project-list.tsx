@@ -11,7 +11,7 @@ const project_map: ProjectCardInfo[] = [
     tags: ["Product Design", "UX Design", "Design Systems"],
     flowerColor: FLOWER_COLORS.FAT_RED,
     link: "/projects/faculty-activity-tracker",
-    thumbnail: "/fat.svg",
+    thumbnail: "/fat-project/fat-cover.png",
   },
   {
     title: "Practicing Mindfulness",
@@ -20,7 +20,7 @@ const project_map: ProjectCardInfo[] = [
     tags: ["Product Design", "Design Systems", "UX Research"],
     flowerColor: FLOWER_COLORS.MINDFUL_PURPLE,
     link: "/projects/mindful",
-    thumbnail: "/mindful.svg",
+    thumbnail: "/mindful-project/mindful-cover.png",
   },
   {
     title: "A Personalized Digital Space",
@@ -29,7 +29,7 @@ const project_map: ProjectCardInfo[] = [
     tags: ["Product Design", "UI Design", "UX Design"],
     flowerColor: FLOWER_COLORS.PENELLA_WHITE,
     link: "/projects/penella",
-    thumbnail: "/penella.svg",
+    thumbnail: "/penella-project/penella-cover.png",
   },
 ];
 

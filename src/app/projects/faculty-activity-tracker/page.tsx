@@ -1,6 +1,8 @@
 // components
 import ProjectHeader from "../_components/project-header";
 
+const FOLDER = "/fat-project";
+
 // text
 const HEADER = "Simplifying Form Experiences";
 const SUBHEADER =
@@ -13,7 +15,7 @@ export default function FacultyActivityTrackerPage() {
         projectHeader={{
           header: HEADER,
           subheader: SUBHEADER,
-          photo: "/fat.svg",
+          photo: `${FOLDER}/fat-title.png`,
         }}
       />
       <p>

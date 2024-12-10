@@ -77,6 +77,7 @@ const ProjectElement: React.FC<ProjectElementProps> = ({ project }) => {
         width={668}
         height={498}
         priority
+        sizes="100vw"
         alt={project.title}
       />
     </Link>

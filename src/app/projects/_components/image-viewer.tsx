@@ -27,6 +27,7 @@ export default function ImageViewer({ src, alt }: ImageViewerProps) {
           width={0}
           height={0}
           alt={alt}
+          sizes="100vw"
           className="w-full h-auto"
         />
       </div>
@@ -40,6 +41,7 @@ export default function ImageViewer({ src, alt }: ImageViewerProps) {
                 width={0}
                 height={0}
                 alt={alt}
+                sizes="100vw"
                 className="w-full h-full"
               />{" "}
             </div>

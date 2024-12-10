@@ -38,7 +38,7 @@ interface ProjectElementProps {
 const ProjectElement: React.FC<ProjectElementProps> = ({ project }) => {
   return (
     <Link href={project.link} prefetch className="flex flex-wrap gap-x-36">
-      <div className="flex-grow grid grid-cols-1 gap-7 content-center mr-28 min-w-80 w-80">
+      <div className="flex-grow grid grid-cols-1 gap-7 content-center min-w-80 w-80">
         <div>
           <h3
             style={{
@@ -59,14 +59,15 @@ const ProjectElement: React.FC<ProjectElementProps> = ({ project }) => {
         <div className="flex flex-wrap">
           {project.tags.map((tag) => (
             <div
-              className="mr-2 my-1 px-2 py-1 border border-gray-light rounded-3xl text-xs text-nowrap text-gray-light"
+              className="mr-2 my-1 px-2 py-1 border border-gray-light rounded-3xl 
+              text-xs text-nowrap text-gray-light"
               key={tag}
             >
               {tag}
             </div>
           ))}
         </div>
-        <div className="text-orange text-nowrap flex flex-nowrap">
+        <div className="text-orange text-nowrap flex flex-nowrap mb-4">
           Take a look
           <ArrowLongRightIcon className="mx-3 h-6" />
         </div>

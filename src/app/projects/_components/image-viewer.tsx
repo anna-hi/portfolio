@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
 interface ImageViewerProps {
@@ -19,8 +20,21 @@ export default function ImageViewer({ src, alt }: ImageViewerProps) {
     setIsModalOpen(false);
   };
 
+  useEffect(() => {
+    const handleOnScroll = () => {
+      if (isModalOpen) {
+        handleCloseModal();
+      }
+    };
+    window.addEventListener("scroll", handleOnScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleOnScroll);
+    };
+  }, [isModalOpen]);
+
   return (
-    <div>
+    <>
       <div className="image-viewer" onClick={handleImageClick}>
         <Image
           src={src}
@@ -32,22 +46,34 @@ export default function ImageViewer({ src, alt }: ImageViewerProps) {
         />
       </div>
 
-      {isModalOpen && (
-        <div className="image-viewer-modal" onClick={handleCloseModal}>
-          <div className="image-viewer-modal-content flex justify-center align-middle bg-transparent rounded-lg">
-            <div className="w-full h-auto">
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            className="image-viewer-modal"
+            onClick={handleCloseModal}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <motion.div
+              className="image-viewer-modal-content"
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.8 }}
+              transition={{ duration: 0.5 }}
+            >
               <Image
                 src={src}
-                width={0}
-                height={0}
                 alt={alt}
+                fill={true}
+                objectFit="contain"
                 sizes="100vw"
-                className="w-full h-full"
-              />{" "}
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }

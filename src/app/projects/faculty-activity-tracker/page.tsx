@@ -10,13 +10,11 @@ const SUBHEADER =
 
 export default function FacultyActivityTrackerPage() {
   return (
-    <div className="project-container">
+    <div className="project-fat-container">
       <ProjectHeader
-        projectHeader={{
-          header: HEADER,
-          subheader: SUBHEADER,
-          photo: `${FOLDER}/fat-title.png`,
-        }}
+        header={HEADER}
+        subheader={SUBHEADER}
+        photo={`${FOLDER}/fat-title.png`}
       />
       <p>
         Throughout the spring, summer, and fall 2023 semesters in Sandbox(a

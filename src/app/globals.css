@@ -123,36 +123,44 @@ body {
 /* home page end */
 
 /* general projects start */
-.project-container {
-  margin: 40px 0;
+/* project header start */
+.project-header-container {
+  padding: 60px 16%;
 }
 
-.project-text-container {
-  margin: 0 16%;
-}
+/* project header end */
 
 /* image viewer start */
 .image-viewer {
   cursor: zoom-in;
 }
 .image-viewer-modal {
+  cursor: zoom-out;
   z-index: 1000;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(232, 232, 232, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .image-viewer-modal-content {
+  position: relative;
   width: 95%;
   height: 95%;
 }
 /* image viewer end */
 /* general projects end */
+
+/* project FAT start */
+.project-fat-container {
+  background-color: #fff9f9;
+  color: black;
+}
+/* project FAT end */
 
 /* footer start */
 .footer-container {

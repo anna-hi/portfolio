@@ -23,7 +23,7 @@ const ActivityElement: React.FC<ActivityElementProps> = ({
       </div>
       <div>
         <h3 className="italic font-light">{header}</h3>
-        <div className="text-base text-gray-light">{subtext}</div>
+        <div className="text-base text-gray-light mt-2">{subtext}</div>
       </div>
     </div>
   );

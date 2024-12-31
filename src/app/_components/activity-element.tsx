@@ -22,7 +22,7 @@ const ActivityElement: React.FC<ActivityElementProps> = ({
         <FlowerIcon size={FLOWER_SIZES.MEDIUM} color={color} />
       </div>
       <div>
-        <h3 className="italic font-light">{header}</h3>
+        <h3 className="italic">{header}</h3>
         <div className="text-base text-gray-light mt-2">{subtext}</div>
       </div>
     </div>

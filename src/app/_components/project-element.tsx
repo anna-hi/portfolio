@@ -67,10 +67,6 @@ const ProjectElement: React.FC<ProjectElementProps> = ({ project }) => {
             </div>
           ))}
         </div>
-        <div className="text-orange text-nowrap flex flex-nowrap mb-4">
-          Take a look
-          <ArrowLongRightIcon className="mx-3 h-6" />
-        </div>
       </div>
 
       <Image

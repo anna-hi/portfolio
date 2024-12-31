@@ -33,7 +33,7 @@ export default function Main() {
         <div>
           <h1>
             hi, I&apos;m{" "}
-            <span className={`text-7xl ${PINYON_SCRIPT.className}`}>A</span>nna
+            <span className={`text-7xl ${PINYON_SCRIPT.className}`}>A</span>nna Ji
           </h1>
           <div>
             <h2
@@ -42,8 +42,7 @@ export default function Main() {
                 display: "inline",
               }}
             >
-              a <span className="text-pink">product designer</span> who creates
-              enchanting experiences
+              a <span className="text-pink">product designer</span> who creates for delight and utility
               <div style={{ position: "absolute", top: 0, right: 0 }}>
                 <span style={{ position: "absolute", top: -18, right: -15 }}>
                   <FlowerIcon color={FLOWER_COLORS.PURPLE} />
@@ -70,10 +69,8 @@ export default function Main() {
           ))}
         </div>
 
-        <div className="flex justify-center">
-          <ChevronDownIcon className="h-8 w-8 text-gray-light" />
-        </div>
-        <div className="intro-background"></div>
+        <div className="intro-background1" />
+        <div className="intro-background2" />
       </div>
 
       <ProjectList />

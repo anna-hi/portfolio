@@ -39,7 +39,6 @@ body {
 @layer components {
   button {
     min-width: 4rem;
-    /* @apply bg-gradient-to-br from-purple-600 to-blue-500 text-white py-2 px-4 mx-2 rounded-full; */
     flex: none;
   }
 }
@@ -58,7 +57,7 @@ body {
   /* width: 3rem; */
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-  @apply text-base text-pink-light text-center;
+  @apply text-base text-center;
 
   position: relative;
   padding-top: 1px;
@@ -87,16 +86,28 @@ body {
 
 /* home page start */
 .home-page-container {
-  margin: 40px 0;
+  margin-bottom: 40px;
 }
 
 .introduction {
   margin: 0 9%;
   height: 85vh;
 }
-.intro-background {
+.intro-background1 {
   /* background: linear-gradient(130deg, rgb(7, 51, 58) 0%, rgb(54, 4, 30) 100%); */
-  background-image: url("/background.png");
+  background-image: url("/background1.png");
+  opacity: 50%;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -100;
+  top: 0;
+  left: 0;
+}
+.intro-background2 {
+  background-image: url("/background2.png");
+  opacity: 20%;
   background-size: cover;
   width: 100vw;
   height: 100vh;

@@ -21,8 +21,8 @@ type flowerSize = {
 
 export const FLOWER_SIZES = {
   SMALL: { x: 20, y: 19 },
-  MEDIUM: { x: 26, y: 24 },
-  LARGE: { x: 40, y: 37.65 },
+  MEDIUM: { x: 35, y: 33 },
+  LARGE: { x: 46, y: 43 },
 };
 
 interface FlowerIconProps {

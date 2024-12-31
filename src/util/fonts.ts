@@ -14,8 +14,10 @@ export const ALEGREYA_SANS = Alegreya_Sans_SC({
 export const LORA = Lora({
   subsets: ["latin"],
   weight: "400",
+  style: ["italic", "normal"],
   variable: "--font-lora",
 });
+
 
 export const PONTANO_SANS = Pontano_Sans({
   subsets: ["latin"],

@@ -3,7 +3,7 @@ import React from "react";
 import FlowerIcon, {
   FLOWER_SIZES,
   flowerColor,
-} from "@/components/flower-icon";
+} from "@/components/flower-icon/flower-icon";
 
 interface ActivityElementProps {
   header: string;
@@ -23,7 +23,7 @@ const ActivityElement: React.FC<ActivityElementProps> = ({
       </div>
       <div>
         <h3 className="italic">{header}</h3>
-        <div className="text-base text-gray-light mt-2">{subtext}</div>
+        <div className="text-caption text-gray-light mt-2">{subtext}</div>
       </div>
     </div>
   );

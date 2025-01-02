@@ -2,15 +2,16 @@
 import { PINYON_SCRIPT } from "@/util/fonts";
 
 // COMPONENTS
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
-
 import FlowerIcon, {
   FLOWER_COLORS,
   FLOWER_SIZES,
-} from "@/components/flower-icon";
+} from "@/components/flower-icon/flower-icon";
 
 import ActivityElement from "@/app/_components/activity-element";
 import ProjectList from "./_components/project-list";
+
+// styles
+import styles from "./style.module.css";
 
 // DATA
 const activity_elements = [
@@ -28,22 +29,19 @@ const activity_elements = [
 
 export default function Main() {
   return (
-    <div className="home-page-container">
-      <div className="introduction grid grid-cols-1 gap-32 content-center">
+    <div className={styles.container}>
+      <div className={styles.introduction}>
         <div>
-          <h1>
+          <h1 className="text-5xl">
             hi, I&apos;m{" "}
-            <span className={`text-7xl ${PINYON_SCRIPT.className}`}>A</span>nna Ji
+            <span className={`text-6xl ${PINYON_SCRIPT.className}`}>A</span>nna
+            Ji
           </h1>
           <div>
-            <h2
-              style={{
-                position: "relative",
-                display: "inline",
-              }}
-            >
-              a <span className="text-pink">product designer</span> who creates for delight and utility
-              <div style={{ position: "absolute", top: 0, right: 0 }}>
+            <h1 className="relative inline">
+              a <span className="text-pink">product designer</span> who creates
+              for delight and utility
+              <div style={{ position: "absolute", top: 0, right: -10 }}>
                 <span style={{ position: "absolute", top: -18, right: -15 }}>
                   <FlowerIcon color={FLOWER_COLORS.PURPLE} />
                 </span>
@@ -54,7 +52,7 @@ export default function Main() {
                   />
                 </span>
               </div>
-            </h2>
+            </h1>
           </div>
         </div>
 
@@ -69,8 +67,8 @@ export default function Main() {
           ))}
         </div>
 
-        <div className="intro-background1" />
-        <div className="intro-background2" />
+        <div className={styles.introBackground1} />
+        <div className={styles.introBackground2} />
       </div>
 
       <ProjectList />

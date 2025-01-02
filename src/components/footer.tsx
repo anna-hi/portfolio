@@ -1,5 +1,5 @@
 import React from "react";
-import FlowerIcon, { FLOWER_COLORS, FLOWER_SIZES } from "./flower-icon";
+import FlowerIcon, { FLOWER_COLORS, FLOWER_SIZES } from "./flower-icon/flower-icon";
 
 const email = "annaji@andrew.cmu.edu";
 const linkedin = "https://www.linkedin.com/in/anna-ji/";

@@ -19,10 +19,10 @@ h6 {
 }
 
 h1 {
-  @apply text-5xl;
+  @apply text-4xl;
 }
 h2 {
-  @apply text-4xl;
+  @apply text-3xl;
 }
 h3 {
   @apply text-2xl;
@@ -33,7 +33,7 @@ body {
   color: var(--foreground-rgb);
   background: var(--background-rgb);
   /* FONT */
-  font-family: var(--font-pontano-sans);
+  font-family: var(--font-source-sans-3);
 }
 
 @layer components {
@@ -83,95 +83,6 @@ body {
   transform: translateX(-50%);
 }
 /* navbar end */
-
-/* home page start */
-.home-page-container {
-  margin-bottom: 40px;
-}
-
-.introduction {
-  margin: 0 9%;
-  height: 85vh;
-}
-.intro-background1 {
-  /* background: linear-gradient(130deg, rgb(7, 51, 58) 0%, rgb(54, 4, 30) 100%); */
-  background-image: url("/background1.png");
-  opacity: 50%;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  z-index: -100;
-  top: 0;
-  left: 0;
-}
-.intro-background2 {
-  background-image: url("/background2.png");
-  opacity: 20%;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  z-index: -100;
-  top: 0;
-  left: 0;
-}
-
-.home-projects-container {
-  width: 82%;
-  max-width: 1400px;
-  margin: 9% auto 0 auto;
-}
-.fade-in-section {
-  opacity: 0;
-  transform: translateY(20vh);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.fade-in-section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* home page end */
-
-/* general projects start */
-/* project header start */
-.project-header-container {
-  padding: 60px 16%;
-}
-
-/* project header end */
-
-/* image viewer start */
-.image-viewer {
-  cursor: zoom-in;
-}
-.image-viewer-modal {
-  cursor: zoom-out;
-  z-index: 1000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(232, 232, 232, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.image-viewer-modal-content {
-  position: relative;
-  width: 95%;
-  height: 95%;
-}
-/* image viewer end */
-/* general projects end */
-
-/* project FAT start */
-.project-fat-container {
-  background-color: #fff9f9;
-  color: black;
-}
-/* project FAT end */
 
 /* footer start */
 .footer-container {

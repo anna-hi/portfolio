@@ -1,33 +1,24 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 
-import { PONTANO_SANS } from "@/util/fonts";
+// styles
+import styles from "./style.module.css";
+import { ALEGREYA_SANS } from "@/util/fonts";
 
 type projectHeader = {
   header: string;
-  subheader?: string;
+  tags?: string[];
   photo?: string;
 };
 
-export default function ProjectHeader({
-  header,
-  subheader,
-  photo,
-}: projectHeader) {
-  const [backgroundHeight, setBackgroundHeight] = useState(80);
+export default function ProjectHeader({ header, tags, photo }: projectHeader) {
+  const tagsText = tags && tags.join(" · ");
   return (
-    <div
-      className="project-header-container"
-      style={{
-        background: `linear-gradient(to bottom, pink, pink ${backgroundHeight}%, transparent ${backgroundHeight}%, transparent)`,
-      }}
-    >
-      <h1 className="my-4">{header}</h1>
-      {subheader && (
-        <h3 className={`my-4 ${PONTANO_SANS.className}`}>{subheader}</h3>
-      )}
+    <div className={styles.projectHeaderContainer}>
+      <div className={styles.projectHeaderText}>
+        <h1>{header}</h1>
+        <div className={ALEGREYA_SANS.className}>{tagsText}</div>
+      </div>
       {photo && (
         <Image
           src={photo}

@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 import { usePathname, useRouter } from "next/navigation";
 
-import FlowerIcon, { FLOWER_COLORS, FLOWER_SIZES } from "./flower-icon";
+import FlowerIcon, { FLOWER_COLORS, FLOWER_SIZES } from "./flower-icon/flower-icon";
 
 const NavBar: React.FC = () => {
   const pathname = usePathname();

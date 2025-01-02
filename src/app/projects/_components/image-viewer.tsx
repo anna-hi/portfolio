@@ -4,6 +4,9 @@ import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
+// styles
+import styles from "./style.module.css";
+
 interface ImageViewerProps {
   src: string;
   alt: string;
@@ -35,7 +38,7 @@ export default function ImageViewer({ src, alt }: ImageViewerProps) {
 
   return (
     <>
-      <div className="image-viewer" onClick={handleImageClick}>
+      <div className={styles.imageViewer} onClick={handleImageClick}>
         <Image
           src={src}
           width={0}
@@ -49,7 +52,7 @@ export default function ImageViewer({ src, alt }: ImageViewerProps) {
       <AnimatePresence>
         {isModalOpen && (
           <motion.div
-            className="image-viewer-modal"
+            className={styles.imageViewerModal}
             onClick={handleCloseModal}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -57,7 +60,7 @@ export default function ImageViewer({ src, alt }: ImageViewerProps) {
             transition={{ duration: 0.3 }}
           >
             <motion.div
-              className="image-viewer-modal-content"
+              className={styles.imageViewerModalContent}
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}

@@ -1,0 +1,6 @@
+/* project FAT start */
+.container {
+  @apply bg-fatProject-background;
+  color: black;
+}
+/* project FAT end */

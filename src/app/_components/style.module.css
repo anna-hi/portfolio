@@ -1,0 +1,8 @@
+.homeProjectsContainer {
+  width: 82%;
+  max-width: 1400px;
+  margin: 9% auto 0 auto;
+  display: grid;
+  gap: 8.5rem;
+  @apply grid-cols-1;
+}

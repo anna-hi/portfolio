@@ -1,0 +1,35 @@
+.container {
+  margin-bottom: 40px;
+}
+
+.introduction {
+  margin: 0 9%;
+  height: 85vh;
+  display: grid;
+  align-content: center;
+  gap: 8rem;
+  @apply grid-cols-1;
+}
+.introBackground1 {
+  /* background: linear-gradient(130deg, rgb(7, 51, 58) 0%, rgb(54, 4, 30) 100%); */
+  background-image: url("/background1.png");
+  opacity: 50%;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -100;
+  top: 0;
+  left: 0;
+}
+.introBackground2 {
+  background-image: url("/background2.png");
+  opacity: 20%;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -100;
+  top: 0;
+  left: 0;
+}

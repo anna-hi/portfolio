@@ -1,32 +1,41 @@
-import { FLOWER_COLORS } from "@/components/flower-icon";
-import ProjectElement, {
-  ProjectCardInfo,
-} from "./project-element";
+// components
+import { FLOWER_COLORS } from "@/components/flower-icon/flower-icon";
+import ProjectElement, { ProjectCardInfo } from "./project-element";
+
+// styles
+import styles from "./style.module.css";
+
+// data
+import {
+  FAT_PROJECT_DATA,
+  MINDFUL_PROJECT_DATA,
+  PENELLA_PROJECT_DATA,
+} from "@/data/projects";
 
 const project_map: ProjectCardInfo[] = [
   {
-    title: "Simplifying Form Experiences",
+    title: FAT_PROJECT_DATA.title,
     description:
-      "How do we make it easier for faculty to fill out an annual form? How do we optimize efficiency for the committee who scores those forms?",
-    tags: ["Product Design", "UX Design", "Design Systems"],
+      "How might we make it easier for faculty to fill out an annual form? How might we optimize efficiency for the committee who scores those forms?",
+    tags: FAT_PROJECT_DATA.tags,
     flowerColor: FLOWER_COLORS.FAT_RED,
     link: "/projects/faculty-activity-tracker",
     thumbnail: "/fat-project/fat-cover.png",
   },
   {
-    title: "Practicing Mindfulness",
+    title: MINDFUL_PROJECT_DATA.title,
     description:
       "How might we help college students practice mindfulness in a productive and stress-relieving manner?",
-    tags: ["Product Design", "Design Systems", "UX Research"],
+    tags: MINDFUL_PROJECT_DATA.tags,
     flowerColor: FLOWER_COLORS.MINDFUL_PURPLE,
     link: "/projects/mindful",
     thumbnail: "/mindful-project/mindful-cover.png",
   },
   {
-    title: "A Personalized Digital Space",
+    title: PENELLA_PROJECT_DATA.title,
     description:
       "How might we create a personalized space where women can express their emotions, keep track of their mood, and feel creatively fulfilled?",
-    tags: ["Product Design", "UI Design", "UX Design"],
+    tags: PENELLA_PROJECT_DATA.tags,
     flowerColor: FLOWER_COLORS.PENELLA_WHITE,
     link: "/projects/penella",
     thumbnail: "/penella-project/penella-cover.png",
@@ -36,7 +45,7 @@ const project_map: ProjectCardInfo[] = [
 export default function ProjectList() {
   return (
     <>
-      <div className="home-projects-container grid grid-cols-1 gap-36">
+      <div className={styles.homeProjectsContainer}>
         {project_map.map((project) => (
           <ProjectElement key={project.title} project={project} />
         ))}

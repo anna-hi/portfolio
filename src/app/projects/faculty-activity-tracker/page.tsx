@@ -1,19 +1,20 @@
 // components
 import ProjectHeader from "../_components/project-header";
 
-const FOLDER = "/fat-project";
+// data
+import { FAT_PROJECT_DATA } from "@/data/projects";
 
-// text
-const HEADER = "Simplifying Form Experiences";
-const SUBHEADER =
-  "How do we make it easier for faculty to fill out an annual form? How do we optimize efficiency for the committee who scores those forms?";
+// styles
+import styles from "./style.module.css";
+
+const FOLDER = "/fat-project";
 
 export default function FacultyActivityTrackerPage() {
   return (
-    <div className="project-fat-container">
+    <div className={styles.container}>
       <ProjectHeader
-        header={HEADER}
-        subheader={SUBHEADER}
+        header={FAT_PROJECT_DATA.title}
+        tags={FAT_PROJECT_DATA.tags}
         photo={`${FOLDER}/fat-title.png`}
       />
       <p>

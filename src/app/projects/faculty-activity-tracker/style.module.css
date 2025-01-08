@@ -2,5 +2,26 @@
 .container {
   @apply bg-fatProject-background;
   color: black;
+
+  h3 {
+    @apply text-fatProject-primary;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
 }
 /* project FAT end */
+
+.impactHeaderItalic {
+  font-style: italic;
+  @apply text-fatProject-primary;
+  font-weight: 600;
+}
+
+.sparkSectionContainer {
+  margin: var(--text-margin);
+  margin-bottom: 4rem;
+}

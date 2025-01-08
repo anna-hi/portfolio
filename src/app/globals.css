@@ -5,6 +5,7 @@
 :root {
   --foreground-rgb: #fbf8ec;
   --background-rgb: #25201a;
+  --text-margin: 0 22%;
 }
 
 /* TODO: set the header and other text styles */
@@ -47,11 +48,15 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .text-container {
+    margin: var(--text-margin);
+  }
 }
 
 /* navbar start */
 .navbar {
-  margin: 40px 9% 20px 9%;
+  margin: 2.5rem 9% 1.25rem 9%;
 }
 .navbar-button {
   /* width: 3rem; */
@@ -86,21 +91,21 @@ body {
 
 /* footer start */
 .footer-container {
-  padding: 40px 9% 60px 9%;
+  padding: 2.5rem 9% 3.75rem 9%;
 }
 /* footer end */
 
 /* scroll to top start */
 .scroll-to-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 1.25rem;
+  right: 1.25rem;
   z-index: 100;
   background-color: var(--foreground-rgb);
   color: var(--background-rgb);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -26,7 +26,7 @@ export default function ProjectHeader({ header, tags, photo }: projectHeader) {
           height={0}
           alt={header}
           sizes="100vw"
-          className="w-full h-auto"
+          className={styles.projectHeaderImage}
         />
       )}
     </div>

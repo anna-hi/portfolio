@@ -3,6 +3,11 @@ import type { Config } from "tailwindcss";
 const colors = require("tailwindcss/colors");
 const fontSizes = require("tailwindcss/defaultTheme").fontSize;
 
+const FAT_PROJECT_COLORS = {
+  background: "#FFFBFB",
+  primary: "#DB4D4D",
+};
+
 const config: Config = {
   content: [
     "./src/app/**/*.{tsx, ts, jsx, js}",
@@ -11,29 +16,22 @@ const config: Config = {
   theme: {
     colors: {
       ...colors,
-      // blue: "#1fb6ff",
-      // purple: "#7e5bef",
       pink: {
         light: "#e7c8bf",
         DEFAULT: "#FF81A0",
       },
       orange: "#F7BEA9",
-      // green: "#13ce66",
-      // yellow: "#ffc82c",
       gray: {
         light: "#c7c7c7",
         DEFAULT: "#8492a6",
-        dark: "#273444",
+        dark: "#5D5C5C",
       },
       white: "#FBF8EC",
       whiteWhite: "#FFFFFF",
       background: {
         dark: "#25201a",
       },
-      fatProject: {
-        background: "#FFFBFB",
-        header: "#DB4D4D",
-      },
+      fatProject: FAT_PROJECT_COLORS,
     },
     fontSize: {
       // 'name': ['size', 'line-height'],
@@ -55,4 +53,7 @@ const config: Config = {
     },
   },
 };
+
+export { FAT_PROJECT_COLORS };
+
 export default config;

@@ -11,15 +11,25 @@
 }
 
 .projectHeaderText {
-  font-family: var(--font-lora);
   color: var(--foreground-rgb);
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+
   row-gap: 3.3125rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 5rem;
+
+  max-width: 34.625rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projectHeaderImage {
+  width: 100%;
+  height: auto;
 }
 /* project header end */
 
@@ -46,3 +56,24 @@
   height: 95%;
 }
 /* image viewer end */
+
+.impactHeaderContainer {
+  margin: var(--text-margin);
+  border-bottom: 0.5px solid #888;
+  border-color: #888;
+  margin-bottom: 4.625rem;
+}
+
+/* my role section start */
+.myRoleContainer {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.myRoleColumn {
+  text-wrap: none;
+  margin-bottom: 1.25rem;
+}
+/* my role section end */

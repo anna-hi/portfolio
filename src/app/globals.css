@@ -5,8 +5,6 @@
 :root {
   --foreground-rgb: #fbf8ec;
   --background-rgb: #25201a;
-  --text-margin: 0 22%;
-  --photo-margin: 0 16%;
 }
 
 /* TODO: set the header and other text styles */
@@ -40,8 +38,7 @@ h5 {
 
 body {
   /* COLORS */
-  color: var(--foreground-rgb);
-  background: var(--background-rgb);
+  @apply bg-background-dark text-white text-base;
   /* FONT */
   font-family: var(--font-source-sans-3);
 }
@@ -56,14 +53,6 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-  }
-
-  .text-container {
-    margin: var(--text-margin);
-  }
-
-  .photo-container {
-    margin: var(--photo-margin);
   }
 }
 
@@ -114,8 +103,7 @@ body {
   bottom: 1.25rem;
   right: 1.25rem;
   z-index: 100;
-  background-color: var(--foreground-rgb);
-  color: var(--background-rgb);
+  @apply bg-white text-background-dark;
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
@@ -127,7 +115,6 @@ body {
 }
 
 .scroll-to-top:hover {
-  background-color: var(--background-rgb);
-  color: var(--foreground-rgb);
+  @apply bg-background-dark text-white;
 }
 /* scroll to top end */

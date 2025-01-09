@@ -1,19 +1,15 @@
 type bannerProps = {
   background: string;
-  color?: string;
-  text: string;
+  children: React.ReactNode;
 };
 
-export default function Banner({
-  background,
-  color = "white",
-  text,
-}: bannerProps) {
+export default function Banner({ background, children }: bannerProps) {
   return (
-    <div className="w-full pt-14 pb-9" style={{ background }}>
-      <h3 className=" text-center text-container mb-0" style={{ color }}>
-        {text}
-      </h3>
+    <div
+      className="w-full py-together px-text text-center"
+      style={{ background }}
+    >
+      {children}
     </div>
   );
 }

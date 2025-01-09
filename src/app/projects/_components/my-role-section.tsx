@@ -17,13 +17,13 @@ export default function MyRoleSection({
   return (
     <div className={styles.myRoleContainer}>
       <div className={styles.myRoleColumn}>
-        <div className={`${ALEGREYA_SANS.className} text-gray-dark`}>
+        <div className={`${ALEGREYA_SANS.className} text-gray-dark text-base`}>
           DURATION
         </div>
         {duration}
       </div>
       <div className={styles.myRoleColumn}>
-        <div className={`${ALEGREYA_SANS.className} text-gray-dark`}>
+        <div className={`${ALEGREYA_SANS.className} text-gray-dark text-base`}>
           MY ROLE
         </div>
         {role.map((r) => (
@@ -32,7 +32,7 @@ export default function MyRoleSection({
       </div>
       {team && (
         <div className={styles.myRoleColumn}>
-          <div className={`${ALEGREYA_SANS.className} text-gray-dark`}>
+          <div className={`${ALEGREYA_SANS.className} text-gray-dark text-base`}>
             TEAM
           </div>
           {team.map((t) => (
@@ -42,7 +42,7 @@ export default function MyRoleSection({
       )}
       {advisor && (
         <div className={styles.myRoleColumn}>
-          <div className={`${ALEGREYA_SANS.className} text-gray-dark`}>
+          <div className={`${ALEGREYA_SANS.className} text-gray-dark text-base`}>
             ADVISOR
           </div>
           {advisor.map((a) => (

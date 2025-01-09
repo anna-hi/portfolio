@@ -1,7 +1,7 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { LORA,SOURCE_SANS_3 } from "@/util/fonts";
+import { LORA, SOURCE_SANS_3, ALEGREYA_SANS } from "@/util/fonts";
 
 import Footer from "@/components/footer";
 import NavBar from "@/components/navbar";
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-full ${LORA.variable} ${SOURCE_SANS_3.variable}`}
+      className={`h-full ${LORA.variable} ${SOURCE_SANS_3.variable} ${ALEGREYA_SANS.variable}`}
     >
       <body className="h-full">
         <main className="flex flex-col h-full">

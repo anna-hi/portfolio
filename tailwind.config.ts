@@ -9,6 +9,7 @@ const FAT_PROJECT_COLORS = {
 };
 
 const config: Config = {
+  important: true,
   content: [
     "./src/app/**/*.{tsx, ts, jsx, js}",
     "./src/components/**/*.{tsx, ts, jsx, js}",
@@ -30,6 +31,10 @@ const config: Config = {
       whiteWhite: "#FFFFFF",
       background: {
         dark: "#25201a",
+      },
+      iteration: {
+        primary: "#25201A",
+        secondary: "#2A2A2A",
       },
       fatProject: FAT_PROJECT_COLORS,
     },
@@ -54,8 +59,12 @@ const config: Config = {
     extend: {
       spacing: {
         together: "3.5rem",
-        seperate: "5.5rem",
+        separate: "5.5rem",
+        text: "22%",
+        photo: "16%",
       },
+      // TODO: Add custom font families
+      // fontFamily: {},
     },
   },
 };

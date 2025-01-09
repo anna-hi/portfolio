@@ -1,6 +1,6 @@
 /* project FAT start */
 .container {
-  @apply bg-fatProject-background text-black;
+  @apply bg-fatProject-background text-black pb-32;
 
   h3 {
     @apply text-fatProject-primary;

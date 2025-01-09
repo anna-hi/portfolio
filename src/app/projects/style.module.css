@@ -1,6 +1,5 @@
 .sparkSectionContainer {
-  margin: var(--text-margin);
-  @apply mb-seperate;
+  @apply mb-separate mx-text;
 }
 
 .photoCaptionText {

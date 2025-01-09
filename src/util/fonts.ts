@@ -1,7 +1,6 @@
 import {
   Alegreya_Sans_SC,
   Lora,
-  Pontano_Sans,
   Pinyon_Script,
   Source_Sans_3,
 } from "next/font/google";

@@ -1,7 +1,7 @@
 import { ALEGREYA_SANS, LORA } from "@/util/fonts";
 import styles from "./style.module.css";
 
-type impacyHeaderProps = {
+type impactHeaderProps = {
   isPerceivedImpact: boolean;
   children: React.ReactNode;
 };
@@ -9,15 +9,13 @@ type impacyHeaderProps = {
 export default function ImpactHeader({
   isPerceivedImpact,
   children,
-}: impacyHeaderProps) {
+}: impactHeaderProps) {
   return (
     <div className={styles.impactHeaderContainer}>
       <div className={`${ALEGREYA_SANS.className} text-gray-dark`}>
         {isPerceivedImpact ? "PERCEIVED IMPACT" : "IMPACT"}
       </div>
-      <div className={`${LORA.className} text-2xl mb-5 font-medium`}>
-        {children}
-      </div>
+      <div className={`${LORA.className} text-2xl font-medium`}>{children}</div>
     </div>
   );
 }

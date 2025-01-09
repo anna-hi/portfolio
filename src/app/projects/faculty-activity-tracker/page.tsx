@@ -12,6 +12,7 @@ import MyRoleSection from "../_components/my-role-section";
 import Banner from "../_components/banner";
 import { FAT_PROJECT_COLORS } from "../../../../tailwind.config";
 import ImageViewer from "../_components/image-viewer";
+import NumberedList from "../_components/numbered-list";
 
 const FOLDER = "/fat-project";
 
@@ -26,6 +27,21 @@ const MY_ROLE_SECTION_DATA = {
     "Christine Cho, Helen Miao",
   ],
 };
+
+const FINAL_THOUGHTS_LIST = [
+  {
+    title: "Facing ambiguity",
+    text: "There was a lack of onboarding for this project, so I became more proactive with asking questions and requesting to be apart of client meetings.",
+  },
+  {
+    title: "Chatting with devs",
+    text: "It was an invaluable experience being able to directly communicate with the developers, discussing ideas and certain intricacies of the design.",
+  },
+  {
+    title: "Getting feedback from the people",
+    text: "Looking back, one of my main regrets for this project was the lack of user testing and research. The people using the application must always be involved in the development.",
+  },
+];
 
 export default function FacultyActivityTrackerPage() {
   return (
@@ -291,7 +307,9 @@ export default function FacultyActivityTrackerPage() {
           which my teammates also thoroughly enjoyed :&#41;
         </p>
       </div>
-      <div className="my-together mx-text">{/* TODO: LIST OF STUFF */}</div>
+      <div className="my-together mx-text">
+        <NumberedList list={FINAL_THOUGHTS_LIST} />
+      </div>
       <div className="mt-together mx-text">
         {/* TODO: replace with photo of team */}
         <ImageViewer src={`${FOLDER}/fat-title.png`} alt="alt" />

@@ -47,7 +47,7 @@ export default function Main() {
                 </span>
                 <span style={{ position: "absolute", top: 5, right: -28 }}>
                   <FlowerIcon
-                    color={FLOWER_COLORS.FAT_RED}
+                    color={FLOWER_COLORS.ORANGE}
                     size={FLOWER_SIZES.SMALL}
                   />
                 </span>
@@ -68,7 +68,7 @@ export default function Main() {
         </div>
 
         <div className={styles.introBackground1} />
-        <div className={styles.introBackground2} />
+        {/* <div className={styles.introBackground2} /> */}
       </div>
 
       <ProjectList />

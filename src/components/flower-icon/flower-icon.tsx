@@ -9,6 +9,7 @@ export const FLOWER_COLORS = {
   PINK: { petal: "#EA7693", center: "#FBF8EC" },
   BLUE: { petal: "#57AAE0", center: "#FBF8EC" },
   PURPLE: { petal: "#AC6994", center: "#FBF8EC" },
+  ORANGE: {petal: '#DA6001', center: '#FBF8EC'},
   FAT_RED: { petal: "#F15350", center: "#FBF8EC" },
   MINDFUL_PURPLE: { petal: "#5963B1", center: "#FBF8EC" },
   PENELLA_WHITE: { petal: "#FFE9E9", center: "#C3653B" },

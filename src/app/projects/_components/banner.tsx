@@ -1,16 +1,19 @@
 type bannerProps = {
   background: string;
-  color: string;
+  color?: string;
   text: string;
 };
 
-export default function Banner({ background, color, text }: bannerProps) {
+export default function Banner({
+  background,
+  color = "white",
+  text,
+}: bannerProps) {
   return (
-    <div
-      className="flex items-center justify-center w-full h-80"
-      style={{ background, color }}
-    >
-      <h3>{text}</h3>
+    <div className="w-full pt-14 pb-9" style={{ background }}>
+      <h3 className=" text-center text-container mb-0" style={{ color }}>
+        {text}
+      </h3>
     </div>
   );
 }

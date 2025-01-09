@@ -1,7 +1,6 @@
 /* project FAT start */
 .container {
-  @apply bg-fatProject-background;
-  color: black;
+  @apply bg-fatProject-background text-black;
 
   h3 {
     @apply text-fatProject-primary;
@@ -16,12 +15,6 @@
 /* project FAT end */
 
 .impactHeaderItalic {
-  font-style: italic;
-  @apply text-fatProject-primary;
+  @apply text-fatProject-primary italic;
   font-weight: 600;
-}
-
-.sparkSectionContainer {
-  margin: var(--text-margin);
-  margin-bottom: 4rem;
 }

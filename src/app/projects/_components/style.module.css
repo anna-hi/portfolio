@@ -1,6 +1,6 @@
 /* project header start */
 .projectHeaderContainer {
-  padding: 3.75rem 16%;
+  padding: 3.75rem 0;
   background: linear-gradient(
     to bottom,
     var(--background-rgb),
@@ -59,9 +59,9 @@
 
 .impactHeaderContainer {
   margin: var(--text-margin);
+  @apply mb-together;
   border-bottom: 0.5px solid #888;
   border-color: #888;
-  margin-bottom: 4.625rem;
 }
 
 /* my role section start */

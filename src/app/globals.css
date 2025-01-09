@@ -6,6 +6,7 @@
   --foreground-rgb: #fbf8ec;
   --background-rgb: #25201a;
   --text-margin: 0 22%;
+  --photo-margin: 0 16%;
 }
 
 /* TODO: set the header and other text styles */
@@ -27,6 +28,14 @@ h2 {
 }
 h3 {
   @apply text-2xl;
+}
+
+h5 {
+  @apply text-base text-gray-dark;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem; /* 150% */
+  font-family: var(--font-alegreya-sans);
 }
 
 body {
@@ -51,6 +60,10 @@ body {
 
   .text-container {
     margin: var(--text-margin);
+  }
+
+  .photo-container {
+    margin: var(--photo-margin);
   }
 }
 

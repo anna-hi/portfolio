@@ -15,20 +15,22 @@ export default function ProjectHeader({ header, tags, photo }: projectHeader) {
   const tagsText = tags && tags.join(" · ");
   return (
     <div className={styles.projectHeaderContainer}>
-      <div className={styles.projectHeaderText}>
-        <h1>{header}</h1>
-        <div className={ALEGREYA_SANS.className}>{tagsText}</div>
+      <div className="photo-container">
+        <div className={styles.projectHeaderText}>
+          <h1>{header}</h1>
+          <div className={ALEGREYA_SANS.className}>{tagsText}</div>
+        </div>
+        {photo && (
+          <Image
+            src={photo}
+            width={0}
+            height={0}
+            alt={header}
+            sizes="100vw"
+            className={styles.projectHeaderImage}
+          />
+        )}
       </div>
-      {photo && (
-        <Image
-          src={photo}
-          width={0}
-          height={0}
-          alt={header}
-          sizes="100vw"
-          className={styles.projectHeaderImage}
-        />
-      )}
     </div>
   );
 }

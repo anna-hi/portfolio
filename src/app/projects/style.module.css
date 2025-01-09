@@ -1,0 +1,14 @@
+.sparkSectionContainer {
+  margin: var(--text-margin);
+  @apply mb-seperate;
+}
+
+.photoCaptionText {
+  @apply text-caption;
+  font-family: var(--font-source-sans-3);
+  color: #8e8e8e;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.875rem;
+  margin-top: 1rem;
+}

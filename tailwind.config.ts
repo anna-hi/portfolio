@@ -51,6 +51,12 @@ const config: Config = {
       base: "1.25rem",
       caption: "1rem",
     },
+    extend: {
+      spacing: {
+        together: "3.5rem",
+        seperate: "5.5rem",
+      },
+    },
   },
 };
 

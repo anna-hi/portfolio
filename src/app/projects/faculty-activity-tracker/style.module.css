@@ -6,6 +6,8 @@
     @apply text-fatProject-primary;
     font-weight: 600;
     margin-bottom: 1.25rem;
+    line-height: 35px;
+    font-style: normal;
   }
 
   p {

@@ -64,7 +64,7 @@ body {
   /* width: 3rem; */
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-  @apply text-base text-center;
+  @apply text-caption text-center;
 
   position: relative;
   padding-top: 1px;

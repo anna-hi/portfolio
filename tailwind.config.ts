@@ -50,7 +50,7 @@ const config: Config = {
         "1.5rem",
         {
           lineHeight: "1.875rem",
-          fontWeight: "500",
+          fontWeight: "600",
         },
       ],
       base: "1.25rem",

@@ -17,7 +17,7 @@ export default function ProjectHeader({ header, tags, photo }: projectHeader) {
     <div className={styles.projectHeaderContainer}>
       <div className={styles.projectHeaderText}>
         <h1>{header}</h1>
-        <div className={ALEGREYA_SANS.className}>{tagsText}</div>
+        <div className={`${ALEGREYA_SANS.className} text-base`}>{tagsText}</div>
       </div>
       {photo && (
         <Image

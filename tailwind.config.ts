@@ -8,6 +8,12 @@ const FAT_PROJECT_COLORS = {
   primary: "#DB4D4D",
 };
 
+const MINDFUL_COLORS = {
+  background: "#FFFEFE",
+  primary: "#5963B1",
+  bgSecond: "#F2F6FF",
+};
+
 const config: Config = {
   important: true,
   content: [
@@ -37,6 +43,7 @@ const config: Config = {
         secondary: "#2A2A2A",
       },
       fatProject: FAT_PROJECT_COLORS,
+      mindful: MINDFUL_COLORS,
     },
     fontSize: {
       // 'name': ['size', 'line-height'],
@@ -69,6 +76,6 @@ const config: Config = {
   },
 };
 
-export { FAT_PROJECT_COLORS };
+export { FAT_PROJECT_COLORS, MINDFUL_COLORS };
 
 export default config;

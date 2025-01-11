@@ -2,7 +2,7 @@ import { ALEGREYA_SANS, LORA } from "@/util/fonts";
 import styles from "./style.module.css";
 
 type impactHeaderProps = {
-  isPerceivedImpact: boolean;
+  isPerceivedImpact?: boolean;
   children: React.ReactNode;
 };
 

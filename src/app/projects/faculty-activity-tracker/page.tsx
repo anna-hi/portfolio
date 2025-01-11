@@ -1,5 +1,10 @@
 // components
 import ProjectHeader from "../_components/project-header";
+import ImpactHeader from "../_components/impact-header";
+import MyRoleSection from "../_components/my-role-section";
+import Banner from "../_components/banner";
+import ImageViewer from "../_components/image-viewer";
+import NumberedList from "../_components/numbered-list";
 
 // data
 import { FAT_PROJECT_DATA } from "@/data/projects";
@@ -7,12 +12,7 @@ import { FAT_PROJECT_DATA } from "@/data/projects";
 // styles
 import styles from "./style.module.css";
 import sharedStyles from "../style.module.css";
-import ImpactHeader from "../_components/impact-header";
-import MyRoleSection from "../_components/my-role-section";
-import Banner from "../_components/banner";
 import { FAT_PROJECT_COLORS } from "../../../../tailwind.config";
-import ImageViewer from "../_components/image-viewer";
-import NumberedList from "../_components/numbered-list";
 
 const FOLDER = "/fat-project";
 
@@ -51,14 +51,11 @@ export default function FacultyActivityTrackerPage() {
         tags={FAT_PROJECT_DATA.tags}
         photo={`${FOLDER}/fat-title.png`}
       />
-      <ImpactHeader isPerceivedImpact={false}>
-        <span className={styles.impactHeaderItalic}>
-          100s of Faculty & 10+ Members
-        </span>{" "}
-        of the Merit Committee will use this application
-        <span className={styles.impactHeaderItalic}> each year.</span>
+      <ImpactHeader>
+        <em>100s of Faculty & 10+ Members</em> of the Merit Committee will use
+        this application <em>each year.</em>
       </ImpactHeader>
-      <div className={sharedStyles.sparkSectionContainer}>
+      <div className="mb-separate mx-text">
         <h3>The Spark</h3>
         <div className="mb-together">
           <p>
@@ -112,7 +109,7 @@ export default function FacultyActivityTrackerPage() {
             <h5 className="text-white">iterations</h5>
             <h3 className="text-whiteWhite">
               Condensing necessary information to <i>one page</i> to reduce
-              facultys’ cognitive and physical efforts
+              facultys&#39; cognitive and physical efforts
             </h3>
           </div>
           {/* TODO: INSERT THE IMAGE CAROUSEL FOR ITERATIONS */}

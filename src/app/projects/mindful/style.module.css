@@ -1,12 +1,16 @@
 .container {
-  @apply bg-fatProject-background text-black pb-32;
+  @apply bg-mindful-background text-black pb-32;
 
   h3 {
-    @apply text-fatProject-primary;
+    @apply text-mindful-primary;
     font-weight: 600;
     margin-bottom: 1.25rem;
     line-height: 35px;
     font-style: normal;
+  }
+
+  h4 {
+    @apply text-mindful-primary;
   }
 
   p {
@@ -18,7 +22,7 @@
   }
 
   em {
-    @apply text-fatProject-primary italic;
+    @apply text-mindful-primary italic;
     font-weight: 600;
   }
 }

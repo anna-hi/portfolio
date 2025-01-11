@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { ALEGREYA_SANS } from "@/util/fonts";
+
 import FlowerIcon, {
   FLOWER_SIZES,
   flowerColor,
 } from "@/components/flower-icon/flower-icon";
-
 
 export type ProjectCardInfo = {
   title: string;
@@ -43,8 +44,8 @@ const ProjectElement: React.FC<ProjectElementProps> = ({ project }) => {
         <div className="flex flex-wrap">
           {project.tags.map((tag) => (
             <div
-              className="mr-2 my-1 px-2 py-1 border border-gray-light rounded-3xl 
-              text-xs text-nowrap text-gray-light"
+              className={`${ALEGREYA_SANS.className} mr-2 my-1 px-2 py-1 border border-gray-light rounded-3xl 
+              text-xs text-nowrap text-gray-light`}
               key={tag}
             >
               {tag}

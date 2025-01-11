@@ -91,7 +91,7 @@ export default function FacultyActivityTrackerPage() {
         </div>
       </div>
       <div className="mt-together mb-separate mx-text">
-        <h5>RESEARCH</h5>
+        <h5>research</h5>
         <h3>Paper form walkthrough revealed repetition & inefficiency</h3>
         <p>
           During our beginning meetings with Mark, we saw firsthand how tedious
@@ -109,7 +109,7 @@ export default function FacultyActivityTrackerPage() {
       <div>
         <div className="bg-iteration-primary pt-32 pb-separate">
           <div className="mx-text mb-together">
-            <h5 className="text-white">ITERATIONS</h5>
+            <h5 className="text-white">iterations</h5>
             <h3 className="text-whiteWhite">
               Condensing necessary information to <i>one page</i> to reduce
               facultys’ cognitive and physical efforts
@@ -144,7 +144,7 @@ export default function FacultyActivityTrackerPage() {
         </div>
         <div className="bg-iteration-primary pt-separate pb-32">
           <div className="mx-text mb-together">
-            <h5 className="text-white">SOLUTION</h5>
+            <h5 className="text-white">solution</h5>
             <h3 className="text-whiteWhite">
               Create a digital form layout that <i>sorts the activities</i> into
               each category <i>for you</i>
@@ -158,7 +158,7 @@ export default function FacultyActivityTrackerPage() {
       </div>
       <div className="my-separate mx-photo flex gap-8">
         <div className="mt-together">
-          <h5>DESIGN SYSTEM</h5>
+          <h5>design system</h5>
           <h3>Creating a clear design system for developers and future work</h3>
           <p>
             We created a design system to maintain consistency throughout the
@@ -183,7 +183,7 @@ export default function FacultyActivityTrackerPage() {
         </h3>
       </Banner>
       <div className="my-separate mx-text">
-        <h5>IDEATION &#40;AGAIN:&#41;&#41;</h5>
+        <h5>ideation &#40;again:&#41;&#41;</h5>
         <h3>
           How might we help MC members score the faculty members submitted
           activities faster and fairly?
@@ -214,7 +214,7 @@ export default function FacultyActivityTrackerPage() {
         </div>
       </div>
       <div className="mt-together mb-separate mx-text">
-        <h5>ITERATIONS</h5>
+        <h5>iterations</h5>
         <h3>
           Completed 20+ iterations which led to using visual hierarchy to
           highlight the final score
@@ -244,7 +244,7 @@ export default function FacultyActivityTrackerPage() {
       <div className="bg-iteration-secondary pt-32 pb-separate px-photo">
         <div className="flex gap-8">
           <div className="text-white">
-            <h5 className="text-white">PROBLEM-SOLVING</h5>
+            <h5 className="text-white">problem solving</h5>
             <h3 className="text-whiteWhite">
               Creating a scoring system that offered the easiest and fastest way
               to adjust scores
@@ -271,7 +271,7 @@ export default function FacultyActivityTrackerPage() {
       </div>
       <div className="bg-iteration-primary pt-separate pb-32">
         <div className="mb-together mx-text">
-          <h5 className="text-white">FINAL DELIVERABLES</h5>
+          <h5 className="text-white">final deliverables</h5>
           <h3 className="text-whiteWhite">
             Created an end-to-end experience for both faculty and MC members
             from login to scoring
@@ -295,7 +295,7 @@ export default function FacultyActivityTrackerPage() {
         </div>
       </div>
       <div className="mx-text mt-separate mb-together">
-        <h5>FINAL THOUGHTS</h5>
+        <h5>final thoughts</h5>
         <h3>
           Being on a 7-person team for a project that helped an entire school
           department helped me learn, grow, and empathize

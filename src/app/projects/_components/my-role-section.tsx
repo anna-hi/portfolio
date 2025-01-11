@@ -18,13 +18,13 @@ export default function MyRoleSection({
     <div className={styles.myRoleContainer}>
       <div className={styles.myRoleColumn}>
         <div className={`${ALEGREYA_SANS.className} text-gray-dark text-base`}>
-          DURATION
+          duration
         </div>
         {duration}
       </div>
       <div className={styles.myRoleColumn}>
         <div className={`${ALEGREYA_SANS.className} text-gray-dark text-base`}>
-          MY ROLE
+          my role
         </div>
         {role.map((r) => (
           <div key={r}>{r}</div>
@@ -32,8 +32,10 @@ export default function MyRoleSection({
       </div>
       {team && (
         <div className={styles.myRoleColumn}>
-          <div className={`${ALEGREYA_SANS.className} text-gray-dark text-base`}>
-            TEAM
+          <div
+            className={`${ALEGREYA_SANS.className} text-gray-dark text-base`}
+          >
+            team
           </div>
           {team.map((t) => (
             <div key={t}>{t}</div>
@@ -42,8 +44,10 @@ export default function MyRoleSection({
       )}
       {advisor && (
         <div className={styles.myRoleColumn}>
-          <div className={`${ALEGREYA_SANS.className} text-gray-dark text-base`}>
-            ADVISOR
+          <div
+            className={`${ALEGREYA_SANS.className} text-gray-dark text-base`}
+          >
+            advisor
           </div>
           {advisor.map((a) => (
             <div key={a}>{a}</div>

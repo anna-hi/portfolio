@@ -13,6 +13,10 @@
   p {
     margin-bottom: 1rem;
   }
+
+  strong {
+    font-weight: 600;
+  }
 }
 /* project FAT end */
 

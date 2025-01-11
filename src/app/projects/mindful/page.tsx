@@ -13,6 +13,7 @@ import { MINDFUL_PROJECT_DATA } from "@/data/projects";
 import styles from "./style.module.css";
 import sharedStyles from "../style.module.css";
 import { MINDFUL_COLORS } from "../../../../tailwind.config";
+import { WorkflowList } from "../_components/workflow-list";
 
 const FOLDER = "/mindful-project";
 
@@ -23,6 +24,71 @@ const MY_ROLE_SECTION_DATA = {
   role: ["UI/UX Designer", "UX Researcher"],
   team: ["Evie Hu / Lead UX Designer @ Google"],
 };
+
+const WORKFLOW_ITEMS = [
+  {
+    title: "Making task management easier",
+    text: (
+      <div>
+        <p>
+          Students often have multiple classes and commitments they must keep
+          track of.
+        </p>
+        <p>
+          I created a quick and simple fill-in process, featuring checklists and
+          a tagging system to simplify managing unique tasks.
+        </p>
+      </div>
+    ),
+    src: `${FOLDER}/mindful-cover.png`,
+    alt: "",
+  },
+  {
+    title: "Improving focus levels",
+    // text: "The Focus section offers curated music/noise from the user's own Spotify to help them lock in. This section also uses generative AI to create longer playlists with similar songs to allow users to focus for longer periods",
+    text: (
+      <div>
+        <p>
+          The Focus section offers curated music/noise from the user&#39;s own
+          Spotify to help them lock in.
+        </p>
+        <p>
+          This section also uses generative AI to create longer playlists with
+          similar songs to allow users to focus for longer periods
+        </p>
+      </div>
+    ),
+    src: `${FOLDER}/mindful-cover.png`,
+    alt: "",
+  },
+  {
+    title: "An option to pause ✨",
+    text: (
+      <div>
+        <p>
+          Amid the tasks and focus pages there&#39;s one <b>key feature</b>: the
+          breaks section.
+        </p>
+        <p>
+          Many of the users I talked too, all said one key phrase:{" "}
+          <b>&quot;I don&#39;t take enough breaks.&quot;</b>
+        </p>
+        <p>
+          Having this breaks section be apart of the same mobile app gives the
+          students the opportunity and the chance to take the breaks they need.
+        </p>
+      </div>
+    ),
+    src: `${FOLDER}/mindful-cover.png`,
+    alt: "",
+  },
+  {
+    title: "A better way to track ideas",
+    text: "In my user interviews, 3 out of 5 participants noted difficulty in remembering random ideas that would pop into their head for an assignment or project.",
+    src: `${FOLDER}/mindful-cover.png`,
+    alt: "",
+  },
+];
 
 const FINAL_THOUGHTS_LIST = [
   {
@@ -99,7 +165,7 @@ export default function MindfulPage() {
         </div>
       </div>
       <div className="bg-mindful-bgSecond py-32 my-separate">
-        <div className="mx-photo flex">
+        <div className="mx-photo flex gap-8">
           <div>
             <h5>insights</h5>
             <h3>Current meditation apps don&#39;t offer task organization</h3>
@@ -252,7 +318,9 @@ export default function MindfulPage() {
         </div>
       </div>
       {/* TODO COMPONENT THIS WORKFLOW STEP COMPONENT */}
-      <div className="my-separate flex-col gap-separate">workflow stuff</div>
+      <div className="my-separate mx-text">
+        <WorkflowList workflowItems={WORKFLOW_ITEMS} isAlternating />
+      </div>
       <Banner background={MINDFUL_COLORS.primary}>
         <h3 className={bannerTextClass}>
           How might we accommodate and de-stigmatize to improve accessibility?

@@ -26,16 +26,12 @@ const MY_ROLE_SECTION_DATA = {
 
 const FINAL_THOUGHTS_LIST = [
   {
-    title: "Facing ambiguity",
-    text: "There was a lack of onboarding for this project, so I became more proactive with asking questions and requesting to be apart of client meetings.",
+    title: "Making products accessible helps everyone",
+    text: "My professor challenged us to take an existing project and improve its accessibility. This taught me how an accessibility perspective can improve user experience for all.",
   },
   {
-    title: "Chatting with devs",
-    text: "It was an invaluable experience being able to directly communicate with the developers, discussing ideas and certain intricacies of the design.",
-  },
-  {
-    title: "Getting feedback from the people",
-    text: "Looking back, one of my main regrets for this project was the lack of user testing and research. The people using the application must always be involved in the development.",
+    title: "Learning to prioritize features",
+    text: "I wish had all the time in the world, but unfortunately that’s not the case. I had to prioritize the most impactful features to ensure I had the time to develop them fully.",
   },
 ];
 
@@ -237,6 +233,122 @@ export default function MindfulPage() {
           </div>
         </div>
       </div>
+      <div className="bg-mindful-bgSecond py-32 my-separate">
+        <div className="mx-text">
+          <div className="mb-together">
+            <h5>the solution</h5>
+            <h3>
+              A mobile app that allows students to organize their tasks, focus,
+              and take valuable breaks: Mindful, the app that does it all
+            </h3>
+          </div>
+          <div>
+            {/* TODO: replace this image later */}
+            <ImageViewer src={`${FOLDER}/mindful-images.png`} alt="" />
+            <div className={sharedStyles.photoCaptionText}>
+              A final solution teaser.
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* TODO COMPONENT THIS WORKFLOW STEP COMPONENT */}
+      <div className="my-separate flex-col gap-separate">workflow stuff</div>
+      <Banner background={MINDFUL_COLORS.primary}>
+        <h3 className={bannerTextClass}>
+          How might we accommodate and de-stigmatize to improve accessibility?
+        </h3>
+      </Banner>
+      <div className="my-separate mx-[18%] flex gap-8">
+        <div>
+          <h3>Adding design accommodations for blind/low-vision users</h3>
+          <p>
+            Currently, my application uses multiple text input fields. This can
+            be cumbersome for someone using a screen reader.
+          </p>
+          <p>
+            Thus, I created a <strong>modification</strong> where one can
+            <strong>audibly record their tasks/notes</strong> instead of typing.
+            This not only accommodates screen recorders, but also utilizes a
+            de-stigmatized method that is commonly used.
+          </p>
+        </div>
+        <div>
+          {/* TODO: replace this image */}
+          <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
+          <div className={sharedStyles.photoCaptionText}>
+            Accommodating users by creating an audio recording alternative.
+          </div>
+        </div>
+      </div>
+      <div className="mt-separate mb-together mx-text">
+        <h5>de-cluttering the screen</h5>
+        <h3>
+          Making it easier for screen reader users to find primary buttons
+        </h3>
+        <p>
+          Screen readers read from left to right from top to bottom, stopping at
+          every item on the screen.
+        </p>
+        <p>
+          I wanted to make it easier and faster for users who use screen readers
+          to complete their tasks. Thus, I removed unnecessary items from the
+          screen to allow the screen reader to find the main button faster.
+        </p>
+      </div>
+      <div className="mb-separate mx-photo">
+        {/* TODO: replace with image */}
+        <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
+      </div>
+      <div className="bg-iteration-primary py-32 my-separate">
+        <div className="mx-text mb-together">
+          <h5 className="text-white">thinking ahead</h5>
+          <h3 className="text-white">
+            Designing a component library for the basis of future work
+          </h3>
+          <p className="text-white">
+            I created this component library to ensure consistency throughout
+            the application. In the future, if this application were fully
+            developed, the developers will have reusable blocks to create a
+            unified look.
+          </p>
+        </div>
+        <div className="flex gap-8 mb-separate mx-[10%]">
+          {/* TODO: replace both these images */}
+          <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
+          <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
+        </div>
+        <div className="mx-text mb-together">
+          <h3 className="text-white">
+            Developing Instagram ads to publicize my app: <i>Mindful</i>
+          </h3>
+          <p className="text-white">
+            In these Instagram advertisements, I focused on advertising specific
+            mindsets that the application would help cultivate. They intended to
+            evoke a sense of mindfulness and calmness that the app offers.
+          </p>
+        </div>
+        <div className="flex gap-8 mb-separate mx-[10%]">
+          {/* TODO: replace all three of these images */}
+          <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
+          <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
+          <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
+        </div>
+      </div>
+      <div className="mx-text">
+        <h5>final thoughts</h5>
+        <h3>Pivoting is ok, and may even help to create something better</h3>
+        <p>
+          I think the biggest thing I learned through this project is that
+          it&#39;s perfectly normal to change your initial idea. At the
+          beginning, I was set on creating a meditation app, but taking the time
+          to understand my users&#39; needs helped me realize that my initial
+          plan wouldn&#39;t be that helpful.
+        </p>
+      </div>
+      <div className="my-together mx-text">
+        <NumberedList list={FINAL_THOUGHTS_LIST} />
+      </div>
+      {/* MORE PROJECTS THING */}
     </div>
   );
 }

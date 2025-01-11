@@ -81,8 +81,7 @@ export default function FacultyActivityTrackerPage() {
         </h3>
       </Banner>
       <div className="mt-separate mb-together mx-photo">
-        {/* TODO: INCLUDE PHOTO HERE for 'The annoying & tedious annual paper form.' */}
-        <ImageViewer src={`${FOLDER}/fat-title.png`} alt="alt" />
+        <ImageViewer src={`${FOLDER}/paper-form.png`} alt="alt" />
         <div className={sharedStyles.photoCaptionText}>
           The annoying & tedious annual paper form.
         </div>

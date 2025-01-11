@@ -22,7 +22,7 @@ const bannerTextClass = "mb-0 text-white";
 const MY_ROLE_SECTION_DATA = {
   duration: "4 months | Jan - Apr 2024",
   role: ["UI/UX Designer", "UX Researcher"],
-  team: ["Evie Hu / Lead UX Designer @ Google"],
+  advisor: ["Evie Hu / Lead UX Designer @ Google"],
 };
 
 const WORKFLOW_ITEMS = [
@@ -136,6 +136,7 @@ export default function MindfulPage() {
           How might we help students reduce their stress levels?
         </h3>
       </Banner>
+      {/* TODO:fix this to be 2 on top 1 bottom by default */}
       <div className="my-separate mx-text">
         <h5>understanding the people</h5>
         <div className="flex gap-8">
@@ -216,7 +217,7 @@ export default function MindfulPage() {
           “Meditation apps make me feel like I&#39;m wasting time, and I get
           more stressed worrying about the time I&#39;ve wasted.”
         </h3>
-        <h4 className={`${bannerTextClass} font-medium mt-6`}>
+        <h4 className={`${bannerTextClass} font-medium mt-8`}>
           - Participant 1
         </h4>
       </Banner>
@@ -282,7 +283,7 @@ export default function MindfulPage() {
           <p>
             I went through multiple iterations to create a mark that fully
             represented the application. In one of my iterations, I had the idea
-            of combining the icons for the focus and breaks sections to
+            of combining the icons for the <i>focus and breaks</i> sections to
             represent the intersection my app offers.
           </p>
           <p>

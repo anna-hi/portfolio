@@ -15,9 +15,10 @@ const Footer: React.FC = () => {
     <footer className={styles.footerContainer}>
       <div className="flex items-center justify-between relative text-caption">
         <div className="flex items-center gap-2 w-[33%] shrink-0">
-          <div>
-            Wow! You&apos;ve made it to the bottom. Here&apos;s a flower for
-            your troubles :&#41;
+          <div className="text-nowrap">
+            Wow! You&apos;ve made it to the bottom.
+            <br />
+            Here&apos;s a flower for your troubles :&#41;
           </div>
           <div>
             <FlowerIcon color={FLOWER_COLORS.PINK} size={FLOWER_SIZES.MEDIUM} />

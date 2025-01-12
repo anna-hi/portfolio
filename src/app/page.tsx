@@ -27,6 +27,7 @@ const activity_elements = [
   },
 ];
 
+// TODO: REPLACE DIVS WITH SECTIONS AND STUFF LATER
 export default function Main() {
   return (
     <div className={styles.container}>

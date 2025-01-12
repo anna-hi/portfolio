@@ -5,6 +5,7 @@ import MyRoleSection from "../_components/my-role-section";
 import Banner from "../_components/banner";
 import ImageViewer from "../_components/image-viewer";
 import NumberedList from "../_components/numbered-list";
+import { WorkflowList } from "../_components/workflow-list";
 
 // data
 import { MINDFUL_PROJECT_DATA } from "@/data/projects";
@@ -13,7 +14,6 @@ import { MINDFUL_PROJECT_DATA } from "@/data/projects";
 import styles from "./style.module.css";
 import sharedStyles from "../style.module.css";
 import { MINDFUL_COLORS } from "../../../../tailwind.config";
-import { WorkflowList } from "../_components/workflow-list";
 
 const FOLDER = "/mindful-project";
 
@@ -29,7 +29,7 @@ const WORKFLOW_ITEMS = [
   {
     title: "Making task management easier",
     text: (
-      <div>
+      <>
         <p>
           Students often have multiple classes and commitments they must keep
           track of.
@@ -38,7 +38,7 @@ const WORKFLOW_ITEMS = [
           I created a quick and simple fill-in process, featuring checklists and
           a tagging system to simplify managing unique tasks.
         </p>
-      </div>
+      </>
     ),
     src: `${FOLDER}/mindful-cover.png`,
     alt: "",
@@ -47,16 +47,16 @@ const WORKFLOW_ITEMS = [
     title: "Improving focus levels",
     // text: "The Focus section offers curated music/noise from the user's own Spotify to help them lock in. This section also uses generative AI to create longer playlists with similar songs to allow users to focus for longer periods",
     text: (
-      <div>
+      <>
         <p>
-          The Focus section offers curated music/noise from the user&#39;s own
+          The Focus section offers curated music/noise from the user&apos;s own
           Spotify to help them lock in.
         </p>
         <p>
           This section also uses generative AI to create longer playlists with
           similar songs to allow users to focus for longer periods
         </p>
-      </div>
+      </>
     ),
     src: `${FOLDER}/mindful-cover.png`,
     alt: "",
@@ -64,20 +64,20 @@ const WORKFLOW_ITEMS = [
   {
     title: "An option to pause ✨",
     text: (
-      <div>
+      <>
         <p>
-          Amid the tasks and focus pages there&#39;s one <b>key feature</b>: the
-          breaks section.
+          Amid the tasks and focus pages there&apos;s one <b>key feature</b>:
+          the breaks section.
         </p>
         <p>
           Many of the users I talked too, all said one key phrase:{" "}
-          <b>&quot;I don&#39;t take enough breaks.&quot;</b>
+          <b>&quot;I don&apos;t take enough breaks.&quot;</b>
         </p>
         <p>
           Having this breaks section be apart of the same mobile app gives the
           students the opportunity and the chance to take the breaks they need.
         </p>
-      </div>
+      </>
     ),
     src: `${FOLDER}/mindful-cover.png`,
     alt: "",
@@ -118,11 +118,11 @@ export default function MindfulPage() {
         <div className="mb-together">
           <p>
             During my senior year, many of my friends were overloaded with
-            coursework and incredibly <strong>stressed out</strong>. For my
-            senior capstone project, I created Mindful, a mobile app where
-            students can track their tasks, ideas, and find curated music/sounds
-            to study and take breaks. This app will help students finish work
-            more efficiently to reduce stress and encourage breaks.
+            coursework and incredibly <b>stressed out</b>. For my senior
+            capstone project, I created Mindful, a mobile app where students can
+            track their tasks, ideas, and find curated music/sounds to study and
+            take breaks. This app will help students finish work more
+            efficiently to reduce stress and encourage breaks.
           </p>
           <p>
             What makes this mindfulness app different from others, is the
@@ -165,11 +165,11 @@ export default function MindfulPage() {
           </div>
         </div>
       </div>
-      <div className="bg-mindful-bgSecond py-32 my-separate">
+      <div className="bg-mindful-background-secondary py-32 my-separate">
         <div className="mx-photo flex gap-8">
           <div>
             <h5>insights</h5>
-            <h3>Current meditation apps don&#39;t offer task organization</h3>
+            <h3>Current meditation apps don&apos;t offer task organization</h3>
             <p>
               In the apps I analyzed, I found that the meditation apps offered
               multiple avenues of meditation/breaks through sound, stories, and
@@ -178,10 +178,10 @@ export default function MindfulPage() {
             </p>
             <p>
               In the current market,{" "}
-              <strong>
-                there&#39;s no app that offers <i>both</i> an opportunity to
+              <b>
+                there&apos;s no app that offers <i>both</i> an opportunity to
                 take breaks and organize tasks.
-              </strong>
+              </b>
             </p>
           </div>
           <div>
@@ -197,14 +197,14 @@ export default function MindfulPage() {
       <div className="my-separate mx-text">
         <h5>hmmm...plan needs changing</h5>
         <h3>
-          Initial concept testing revealed that students didn&#39;t particularly
-          enjoy meditation
+          Initial concept testing revealed that students didn&apos;t
+          particularly enjoy meditation
         </h3>
         <p>
-          The students I interviewed didn&#39;t find meditation useful and even
-          <strong>worried that meditation would waste their time</strong>.
-          However, 4 out of 5 mentioned that they recognized it was important to
-          take breaks but felt too overwhelmed to do so.
+          The students I interviewed didn&apos;t find meditation useful and even
+          <b>worried that meditation would waste their time</b>. However, 4 out
+          of 5 mentioned that they recognized it was important to take breaks
+          but felt too overwhelmed to do so.
         </p>
         <p>
           They would rather focus on their work than take a break, but not
@@ -214,8 +214,8 @@ export default function MindfulPage() {
       </div>
       <Banner background={MINDFUL_COLORS.primary}>
         <h3 className={bannerTextClass}>
-          “Meditation apps make me feel like I&#39;m wasting time, and I get
-          more stressed worrying about the time I&#39;ve wasted.”
+          “Meditation apps make me feel like I&apos;m wasting time, and I get
+          more stressed worrying about the time I&apos;ve wasted.”
         </h3>
         <h4 className={`${bannerTextClass} font-medium mt-8`}>
           - Participant 1
@@ -229,8 +229,8 @@ export default function MindfulPage() {
         </h3>
         <p>
           After completing my initial research, I realized there was an{" "}
-          <strong>opportunity to create a new application,</strong> that would
-          be ideal for students.
+          <b>opportunity to create a new application,</b> that would be ideal
+          for students.
         </p>
         <p>
           I created a mindfulness mobile app where people can track their tasks,
@@ -239,7 +239,7 @@ export default function MindfulPage() {
           and encourage breaks.
         </p>
       </div>
-      <div className="bg-mindful-bgSecond my-separate py-32">
+      <div className="bg-mindful-background-secondary my-separate py-32">
         <div className="mx-text">
           <h5>work preview</h5>
           <h3>
@@ -287,9 +287,8 @@ export default function MindfulPage() {
             represent the intersection my app offers.
           </p>
           <p>
-            I <strong>actively incorporated feedback</strong> that my professor
-            offered on making the lines coming out of the star go around
-            instead.
+            I <b>actively incorporated feedback</b> that my professor offered on
+            making the lines coming out of the star go around instead.
           </p>
         </div>
         <div>
@@ -300,7 +299,7 @@ export default function MindfulPage() {
           </div>
         </div>
       </div>
-      <div className="bg-mindful-bgSecond py-32 my-separate">
+      <div className="bg-mindful-background-secondary py-32 my-separate">
         <div className="mx-text">
           <div className="mb-together">
             <h5>the solution</h5>
@@ -335,9 +334,9 @@ export default function MindfulPage() {
             be cumbersome for someone using a screen reader.
           </p>
           <p>
-            Thus, I created a <strong>modification</strong> where one can
-            <strong>audibly record their tasks/notes</strong> instead of typing.
-            This not only accommodates screen recorders, but also utilizes a
+            Thus, I created a <b>modification</b> where one can
+            <b>audibly record their tasks/notes</b> instead of typing. This not
+            only accommodates screen recorders, but also utilizes a
             de-stigmatized method that is commonly used.
           </p>
         </div>
@@ -368,7 +367,7 @@ export default function MindfulPage() {
         {/* TODO: replace with image */}
         <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
       </div>
-      <div className="bg-iteration-primary py-32 my-separate">
+      <div className="bg-background-dark py-32 my-separate">
         <div className="mx-text mb-together">
           <h5 className="text-white">thinking ahead</h5>
           <h3 className="text-white">
@@ -408,14 +407,17 @@ export default function MindfulPage() {
         <h3>Pivoting is ok, and may even help to create something better</h3>
         <p>
           I think the biggest thing I learned through this project is that
-          it&#39;s perfectly normal to change your initial idea. At the
+          it&apos;s perfectly normal to change your initial idea. At the
           beginning, I was set on creating a meditation app, but taking the time
-          to understand my users&#39; needs helped me realize that my initial
-          plan wouldn&#39;t be that helpful.
+          to understand my users&apos; needs helped me realize that my initial
+          plan wouldn&apos;t be that helpful.
         </p>
       </div>
       <div className="my-together mx-text">
-        <NumberedList list={FINAL_THOUGHTS_LIST} />
+        <NumberedList
+          numberColor={MINDFUL_COLORS.secondary}
+          list={FINAL_THOUGHTS_LIST}
+        />
       </div>
       {/* MORE PROJECTS THING */}
     </div>

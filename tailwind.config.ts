@@ -5,13 +5,26 @@ const fontSizes = require("tailwindcss/defaultTheme").fontSize;
 
 const FAT_PROJECT_COLORS = {
   background: "#FFFBFB",
-  primary: "#DB4D4D",
+  primary: "#D52A2A",
 };
 
 const MINDFUL_COLORS = {
-  background: "#FFFEFE",
   primary: "#5963B1",
-  bgSecond: "#F2F6FF",
+  secondary: "#ED6745",
+  background: {
+    DEFAULT: "#FFFEFE",
+    secondary: "#F2F6FF",
+  },
+};
+
+const PENELLA_COLORS = {
+  primary: "#673D1F",
+  orange: "#F35916",
+  background: {
+    DEFAULT: "#FEFBF6",
+    banner: "#FFE2E2",
+    secondary: "#FFF4F4",
+  },
 };
 
 const config: Config = {
@@ -36,14 +49,14 @@ const config: Config = {
       white: "#FBF8EC",
       whiteWhite: "#FFFFFF",
       background: {
-        dark: "#25201a",
-      },
-      iteration: {
-        primary: "#25201A",
-        secondary: "#2A2A2A",
+        dark: {
+          DEFAULT: "#25201A",
+          secondary: "#2A2A2A",
+        },
       },
       fatProject: FAT_PROJECT_COLORS,
       mindful: MINDFUL_COLORS,
+      penella: PENELLA_COLORS,
     },
     fontSize: {
       // 'name': ['size', 'line-height'],
@@ -51,15 +64,9 @@ const config: Config = {
       ...fontSizes,
       "6xl": "4.6875rem",
       "5xl": "3.125rem",
-      "4xl": "2.5rem",
-      "3xl": "1.75rem",
-      "2xl": [
-        "1.5rem",
-        {
-          lineHeight: "1.875rem",
-          fontWeight: "600",
-        },
-      ],
+      "4xl": ["2.5rem", { lineHeight: "normal", fontWeight: "500" }],
+      "3xl": ["1.75rem", { lineHeight: "normal", fontWeight: "600" }],
+      "2xl": ["1.5rem", { lineHeight: "normal", fontWeight: "600" }],
       base: "1.25rem",
       caption: "1rem",
     },
@@ -76,6 +83,6 @@ const config: Config = {
   },
 };
 
-export { FAT_PROJECT_COLORS, MINDFUL_COLORS };
+export { FAT_PROJECT_COLORS, MINDFUL_COLORS, PENELLA_COLORS };
 
 export default config;

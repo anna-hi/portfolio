@@ -1,0 +1,6 @@
+/* footer start */
+.footerContainer {
+  @apply bg-whiteWhite text-black;
+  padding: 2.5rem 9% 3.75rem 9%;
+}
+/* footer end */

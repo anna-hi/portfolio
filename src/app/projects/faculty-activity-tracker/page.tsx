@@ -61,9 +61,9 @@ export default function FacultyActivityTrackerPage() {
           <p>
             Every year, the College of Media Arts and Design &#40;CAMD&#41;
             faculty must fill out an{" "}
-            <strong>exhausting 10-page paper form</strong> to track their
+            <b>exhausting 10-page paper form</b> to track their
             completed activities to earn merit. The Merit Committee then sorts
-            through <strong>100s of forms</strong> to approve activities and
+            through <b>100s of forms</b> to approve activities and
             manually assign scores.
           </p>
           <p>
@@ -103,12 +103,12 @@ export default function FacultyActivityTrackerPage() {
       </div>
       {/* ITERATIONS */}
       <div>
-        <div className="bg-iteration-primary pt-32 pb-separate">
+        <div className="bg-background-dark pt-32 pb-separate">
           <div className="mx-text mb-together">
             <h5 className="text-white">iterations</h5>
             <h3 className="text-whiteWhite">
               Condensing necessary information to <i>one page</i> to reduce
-              facultys&#39; cognitive and physical efforts
+              facultys&apos; cognitive and physical efforts
             </h3>
           </div>
           {/* TODO: INSERT THE IMAGE CAROUSEL FOR ITERATIONS */}
@@ -117,7 +117,7 @@ export default function FacultyActivityTrackerPage() {
             First iterations of the activity dashboard.
           </div>
         </div>
-        <div className="bg-iteration-secondary py-32 px-photo">
+        <div className="bg-background-dark-secondary py-32 px-photo">
           {/* TODO update this to size correctly once image is added */}
           <div className="flex gap-8">
             {/* TODO: Card hover iterations photo */}
@@ -138,7 +138,7 @@ export default function FacultyActivityTrackerPage() {
             </div>
           </div>
         </div>
-        <div className="bg-iteration-primary pt-separate pb-32">
+        <div className="bg-background-dark pt-separate pb-32">
           <div className="mx-text mb-together">
             <h5 className="text-white">solution</h5>
             <h3 className="text-whiteWhite">
@@ -186,18 +186,18 @@ export default function FacultyActivityTrackerPage() {
         </h3>
         <p>
           During my second semester on this project, we shifted gears to focus
-          on the Merit Committee&#39;s side of the application. The Merit
-          Committee&#39;s members{" "}
-          <strong>main priority was to quickly and accurately score</strong> the
-          faculty&#39;s submitted activities.
+          on the Merit Committee&apos;s side of the application. The Merit
+          Committee&apos;s members{" "}
+          <b>main priority was to quickly and accurately score</b> the
+          faculty&apos;s submitted activities.
         </p>
         <p>
           For this side of the application,{" "}
-          <strong>the client made a few requests.</strong> In the dashboard of
-          the professors&#39; submitted activities, he wanted to be able to{" "}
-          <strong>
+          <b>the client made a few requests.</b> In the dashboard of
+          the professors&apos; submitted activities, he wanted to be able to{" "}
+          <b>
             see individual activity scores, final score, and any comments
-          </strong>{" "}
+          </b>{" "}
           that were added by other committee members.
         </p>
       </div>
@@ -218,11 +218,11 @@ export default function FacultyActivityTrackerPage() {
         <p>
           For the professor cards, the other designer and I did rapid iteration
           to figure out the best layout to help the Merit Committee understand
-          each professor&#39;s scores at a glance.
+          each professor&apos;s scores at a glance.
         </p>
         <p>
           In the final design,{" "}
-          <strong>I improved the card&#39;s visual hierarchy</strong> through
+          <b>I improved the card&apos;s visual hierarchy</b> through
           highlighting the final score through shape, color, and size.
         </p>
       </div>
@@ -237,7 +237,7 @@ export default function FacultyActivityTrackerPage() {
           score averages.
         </div>
       </div>
-      <div className="bg-iteration-secondary pt-32 pb-separate px-photo">
+      <div className="bg-background-dark-secondary pt-32 pb-separate px-photo">
         <div className="flex gap-8">
           <div className="text-white">
             <h5 className="text-white">problem solving</h5>
@@ -265,7 +265,7 @@ export default function FacultyActivityTrackerPage() {
           </div>
         </div>
       </div>
-      <div className="bg-iteration-primary pt-separate pb-32">
+      <div className="bg-background-dark pt-separate pb-32">
         <div className="mb-together mx-text">
           <h5 className="text-white">final deliverables</h5>
           <h3 className="text-whiteWhite">

@@ -3,26 +3,13 @@
 
   h3 {
     @apply text-mindful-primary;
-    font-weight: 600;
-    margin-bottom: 1.25rem;
-    line-height: 35px;
-    font-style: normal;
   }
 
   h4 {
     @apply text-mindful-primary;
   }
 
-  p {
-    margin-bottom: 1rem;
-  }
-
-  strong {
-    font-weight: 600;
-  }
-
   em {
-    @apply text-mindful-primary italic;
-    font-weight: 600;
+    @apply text-mindful-primary;
   }
 }

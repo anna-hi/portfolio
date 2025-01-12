@@ -3,22 +3,10 @@
 
   h3 {
     @apply text-fatProject-primary;
-    font-weight: 600;
-    margin-bottom: 1.25rem;
     line-height: 35px;
-    font-style: normal;
-  }
-
-  p {
-    margin-bottom: 1rem;
-  }
-
-  strong {
-    font-weight: 600;
   }
 
   em {
-    @apply text-fatProject-primary italic;
-    font-weight: 600;
+    @apply text-fatProject-primary;
   }
 }

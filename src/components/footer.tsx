@@ -1,24 +1,32 @@
 import React from "react";
-import FlowerIcon, { FLOWER_COLORS, FLOWER_SIZES } from "./flower-icon/flower-icon";
+import FlowerIcon, {
+  FLOWER_COLORS,
+  FLOWER_SIZES,
+} from "./flower-icon/flower-icon";
+
+import styles from "./style.module.css";
 
 const email = "annaji@andrew.cmu.edu";
 const linkedin = "https://www.linkedin.com/in/anna-ji/";
+const github = "https://github.com/anna-hi";
 
 const Footer: React.FC = () => {
   return (
-    <div className="footer-container bg-white text-black">
-      {/* <p>&copy; {new Date().getFullYear()} Anna banananananananan Corp</p> */}
-      <div className="flex flex-nowrap mb-3">
-        <div className="me-2">Made with</div>{" "}
-        <FlowerIcon color={FLOWER_COLORS.PINK} size={FLOWER_SIZES.SMALL} />
+    <footer className={styles.footerContainer}>
+      <div className="flex items-center justify-between relative text-caption">
+        <div className="flex items-center gap-2 w-[33%] shrink-0">
+          <div>
+            Wow! You&apos;ve made it to the bottom. Here&apos;s a flower for
+            your troubles :&#41;
+          </div>
+          <div>
+            <FlowerIcon color={FLOWER_COLORS.PINK} size={FLOWER_SIZES.MEDIUM} />
+          </div>
+        </div>
+        <div className="mx-auto text-nowrap text-center">&copy; Anna Ji</div>
+        <div className="w-[33%] text-end">ALL MY LINKS</div>
       </div>
-      <div className="mb-2 underline hover:text-blue-500">
-        <a href={`mailto:${email}`}>{email}</a>
-      </div>
-      <div>
-        <a href={linkedin}>LinkedIn</a>
-      </div>
-    </div>
+    </footer>
   );
 };
 

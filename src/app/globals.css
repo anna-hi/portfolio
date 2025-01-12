@@ -12,7 +12,6 @@ h1,
 h2,
 h3,
 h4,
-h5,
 h6 {
   /* font-weight: bold; */
   font-family: var(--font-lora);
@@ -20,18 +19,13 @@ h6 {
 
 h1 {
   @apply text-4xl;
-  font-weight: 500;
-  line-height: normal;
 }
 h2 {
   @apply text-3xl;
-  font-weight: 600;
 }
 h3 {
   @apply text-2xl;
-  font-weight: 600;
   margin-bottom: 1.25rem;
-  line-height: normal;
   font-style: normal;
 }
 
@@ -42,6 +36,7 @@ h4 {
   line-height: normal;
 }
 
+/* DOING h5 to h3 for the projects might be bad, can use h2 instead? its not used in projects anywhere */
 h5 {
   @apply text-base text-gray-dark;
   font-style: normal;
@@ -49,6 +44,19 @@ h5 {
   line-height: 1.875rem; /* 150% */
   font-family: var(--font-alegreya-sans);
   text-transform: lowercase;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+b {
+  font-weight: 600;
+}
+
+em {
+  font-weight: 600;
+  font-style: italic;
 }
 
 body {
@@ -105,12 +113,6 @@ body {
   transform: translateX(-50%);
 }
 /* navbar end */
-
-/* footer start */
-.footer-container {
-  padding: 2.5rem 9% 3.75rem 9%;
-}
-/* footer end */
 
 /* scroll to top start */
 .scroll-to-top {

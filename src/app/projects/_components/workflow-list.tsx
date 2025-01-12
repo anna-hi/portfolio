@@ -22,7 +22,7 @@ export function WorkflowList({
       {workflowItems.map((item, index) => (
         <div
           key={index}
-          className={`flex items-center gap-8 flex-col ${
+          className={`flex items-center gap-9 flex-col ${
             isAlternating && index % 2 === 1
               ? "md:flex-row-reverse"
               : "md:flex-row"

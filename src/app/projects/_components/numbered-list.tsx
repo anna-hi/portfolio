@@ -1,24 +1,33 @@
+import { LORA } from "@/util/fonts";
+
 export type numberedList = {
   title: string;
-  text: string;
+  text?: string;
 };
 
 type numberedListProps = {
   list: numberedList[];
+  numberColor?: string;
 };
 
-export default function NumberedList({ list }: numberedListProps) {
+// TODO: add ability to customize number color
+export default function NumberedList({ list, numberColor }: numberedListProps) {
   return (
-    <div className="flex flex-col gap-y-8">
+    <ol className="space-y-8">
       {list.map((item, index) => (
-        <div key={index} className="flex items-center gap-x-together">
-          <h1 className="font-semibold">{index + 1}</h1>
-          <div>
-            <h3 className="mb-3">{item.title}</h3>
-            <p className="mb-0">{item.text}</p>
+        <li key={index} className="flex items-center gap-x-together">
+          <div
+            className={`${LORA.className} text-4xl font-semibold`}
+            style={{ color: numberColor || "black" }}
+          >
+            {index + 1}
           </div>
-        </div>
+          <div>
+            <h3 className={item.text ? "mb-3" : "mb-0"}>{item.title}</h3>
+            {item.text && <p className="mb-0">{item.text}</p>}
+          </div>
+        </li>
       ))}
-    </div>
+    </ol>
   );
 }

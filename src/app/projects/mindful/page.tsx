@@ -334,7 +334,7 @@ export default function MindfulPage() {
             be cumbersome for someone using a screen reader.
           </p>
           <p>
-            Thus, I created a <b>modification</b> where one can
+            Thus, I created a <b>modification</b> where one can{" "}
             <b>audibly record their tasks/notes</b> instead of typing. This not
             only accommodates screen recorders, but also utilizes a
             de-stigmatized method that is commonly used.

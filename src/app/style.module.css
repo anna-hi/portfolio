@@ -3,33 +3,10 @@
 }
 
 .introduction {
-  margin: 0 9%;
-  height: 85vh;
-  display: grid;
-  align-content: center;
-  gap: 8rem;
-  @apply grid-cols-1;
-}
-.introBackground1 {
-  /* background: linear-gradient(130deg, rgb(7, 51, 58) 0%, rgb(54, 4, 30) 100%); */
-  background-image: url("/background1.png");
-  opacity: 50%;
+  @apply grid grid-cols-1 gap-32 content-center py-32 px-[9%] min-h-screen w-full;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("/background1.png");
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  z-index: -100;
-  top: 0;
-  left: 0;
-}
-.introBackground2 {
-  background-image: url("/background2.png");
-  opacity: 20%;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  z-index: -100;
-  top: 0;
-  left: 0;
+  background-position: center;
 }

@@ -1,6 +1,6 @@
 /* project header start */
 .projectHeaderContainer {
-  @apply px-photo py-separate;
+  @apply px-photo pt-52 pb-separate;
   background: linear-gradient(
     to bottom,
     var(--background-rgb),

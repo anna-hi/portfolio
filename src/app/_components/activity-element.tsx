@@ -10,7 +10,7 @@ interface ActivityElementProps {
   subtext: string;
   color: flowerColor;
 }
-
+// TODO: FIX FONT WEIGHT AND STUFF ON HERE
 const ActivityElement: React.FC<ActivityElementProps> = ({
   header,
   subtext,
@@ -22,7 +22,7 @@ const ActivityElement: React.FC<ActivityElementProps> = ({
         <FlowerIcon size={FLOWER_SIZES.MEDIUM} color={color} />
       </div>
       <div>
-        <h3 className="italic mb-2">{header}</h3>
+        <h3 className="italic mb-2 font-normal text-[#EEE]">{header}</h3>
         <div className="text-caption text-gray-light mt-2">{subtext}</div>
       </div>
     </div>

@@ -21,25 +21,21 @@ interface ProjectElementProps {
   project: ProjectCardInfo;
 }
 const ProjectElement: React.FC<ProjectElementProps> = ({ project }) => {
+  // width is size text(20rem/320px) + gap(6rem/96px) + image(41.75rem/668px) = 67.75rem/1084px
+  // MAKE SURE THE HOME PROJECT CONTAINER IS THE SAME MAX WIDTH AS THIS
   return (
-    <Link href={project.link} prefetch className="flex flex-wrap gap-x-36">
-      <div className="flex-grow grid grid-cols-1 gap-7 content-center min-w-80 w-80">
-        <div>
-          <h2
-            style={{
-              position: "relative",
-              display: "inline",
-            }}
-          >
-            {project.title}
-            <span style={{ position: "absolute", top: -5, right: -25 }}>
-              <FlowerIcon
-                color={project.flowerColor}
-                size={FLOWER_SIZES.SMALL}
-              />
-            </span>
-          </h2>
-        </div>
+    <Link
+      href={project.link}
+      prefetch
+      className="flex flex-col gap-y-8 md:flex-row gap-x-24"
+    >
+      <div className="grid grid-cols-1 gap-7 content-center w-80 shrink-0">
+        <h2 className="relative w-fit text-nowrap whitespace-pre-line">
+          {project.title}
+          <span style={{ position: "absolute", top: -5, right: -25 }}>
+            <FlowerIcon color={project.flowerColor} size={FLOWER_SIZES.SMALL} />
+          </span>
+        </h2>
         <p className="text-caption">{project.description}</p>
         <div className="flex flex-wrap">
           {project.tags.map((tag) => (
@@ -54,14 +50,16 @@ const ProjectElement: React.FC<ProjectElementProps> = ({ project }) => {
         </div>
       </div>
 
-      <Image
-        src={project.thumbnail}
-        width={668}
-        height={498}
-        priority
-        sizes="100vw"
-        alt={project.title}
-      />
+      <div className="shrink-1 min-w-80">
+        <Image
+          src={project.thumbnail}
+          width={668}
+          height={498}
+          priority
+          sizes="100vw"
+          alt={project.title}
+        />
+      </div>
     </Link>
   );
 };

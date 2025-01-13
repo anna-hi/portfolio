@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { ChevronUpIcon } from "@heroicons/react/16/solid";
-// import FlowerIcon, { FLOWER_COLORS, FLOWER_SIZES } from "./flower-icon";
+
+import styles from "./style.module.css";
 
 const ScrollToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,7 +36,7 @@ const ScrollToTop: React.FC = () => {
     isVisible && (
       <motion.div
         onClick={scrollToTop}
-        className="scroll-to-top"
+        className={styles.scrollToTop}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{

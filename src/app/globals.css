@@ -7,13 +7,11 @@
   --background-rgb: #25201a;
 }
 
-/* TODO: set the header and other text styles */
 h1,
 h2,
 h3,
 h4,
 h6 {
-  /* font-weight: bold; */
   font-family: var(--font-lora);
 }
 
@@ -66,72 +64,8 @@ body {
   font-family: var(--font-source-sans-3);
 }
 
-@layer components {
-  button {
-    min-width: 4rem;
-    flex: none;
-  }
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
-
-/* navbar start */
-.navbar {
-  margin: 2.5rem 9% 1.25rem 9%;
-}
-.navbar-button {
-  /* width: 3rem; */
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  @apply text-caption text-center;
-
-  position: relative;
-  padding-top: 1px;
-}
-
-.navbar-button::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 2px;
-  width: 0;
-  height: 1px;
-  background-color: currentColor;
-  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-  transform: translateX(-50%);
-}
-
-.navbar-button:hover::after,
-.navbar-button:active::after,
-.navbar-button.active::after {
-  width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-/* navbar end */
-
-/* scroll to top start */
-.scroll-to-top {
-  position: fixed;
-  bottom: 1.25rem;
-  right: 1.25rem;
-  z-index: 100;
-  @apply bg-white text-background-dark;
-  border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.scroll-to-top:hover {
-  @apply bg-background-dark text-white;
-}
-/* scroll to top end */

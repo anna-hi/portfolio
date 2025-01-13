@@ -13,6 +13,7 @@ type projectHeader = {
 
 export default function ProjectHeader({ header, tags, photo }: projectHeader) {
   const tagsText = tags && tags.join(" · ");
+
   return (
     <div className={styles.projectHeaderContainer}>
       <div className={styles.projectHeaderText}>

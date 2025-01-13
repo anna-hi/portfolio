@@ -2,9 +2,10 @@ import React from "react";
 import FlowerIcon, {
   FLOWER_COLORS,
   FLOWER_SIZES,
-} from "./flower-icon/flower-icon";
+} from "../flower-icon/flower-icon";
 
 import styles from "./style.module.css";
+import { emailSVG, githubSVG, linkedInSVG } from "./icons";
 
 const email = "annaji@andrew.cmu.edu";
 const linkedin = "https://www.linkedin.com/in/anna-ji/";
@@ -25,7 +26,19 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="mx-auto text-nowrap text-center">&copy; Anna Ji</div>
-        <div className="w-[33%] text-end">ALL MY LINKS</div>
+        <div className="w-[33%]">
+          <div className="float-end flex gap-8 items-center">
+            <a href={`mailto:${email}`} target="_blank">
+              {emailSVG}
+            </a>
+            <a href={linkedin} target="_blank">
+              {linkedInSVG}
+            </a>
+            <a href={github} target="_blank">
+              {githubSVG}
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );

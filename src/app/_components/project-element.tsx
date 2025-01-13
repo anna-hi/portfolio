@@ -21,13 +21,11 @@ interface ProjectElementProps {
   project: ProjectCardInfo;
 }
 const ProjectElement: React.FC<ProjectElementProps> = ({ project }) => {
-  // width is size text(20rem/320px) + gap(6rem/96px) + image(41.75rem/668px) = 67.75rem/1084px
-  // MAKE SURE THE HOME PROJECT CONTAINER IS THE SAME MAX WIDTH AS THIS
   return (
     <Link
       href={project.link}
       prefetch
-      className="flex flex-col gap-y-8 md:flex-row gap-x-24"
+      className="flex flex-col gap-y-8 md:flex-row gap-x-24 w-fit m-auto px-[9%]"
     >
       <div className="grid grid-cols-1 gap-7 content-center w-80 shrink-0">
         <h2 className="relative w-fit text-nowrap whitespace-pre-line">
@@ -50,7 +48,7 @@ const ProjectElement: React.FC<ProjectElementProps> = ({ project }) => {
         </div>
       </div>
 
-      <div className="shrink-1 min-w-80">
+      <div className="shrink-1 flex items-center min-w-80 w-80 md:w-auto">
         <Image
           src={project.thumbnail}
           width={668}

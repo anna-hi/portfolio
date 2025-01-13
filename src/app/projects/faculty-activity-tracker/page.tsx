@@ -5,6 +5,7 @@ import MyRoleSection from "../_components/my-role-section";
 import Banner from "../_components/banner";
 import ImageViewer from "../_components/image-viewer";
 import NumberedList from "../_components/numbered-list";
+import ImageCarousel from "../_components/image-carousel";
 
 // data
 import { FAT_PROJECT_DATA } from "@/data/projects";
@@ -27,6 +28,27 @@ const MY_ROLE_SECTION_DATA = {
     "Christine Cho, Helen Miao",
   ],
 };
+
+const CAROUSEL_FOLDER = `${FOLDER}/carousel-lowfis`;
+
+const IMAGE_CAROUSEL_DATA = [
+  {
+    src: `${CAROUSEL_FOLDER}/lowfi1.png`,
+    alt: "alt",
+  },
+  {
+    src: `${CAROUSEL_FOLDER}/lowfi2.png`,
+    alt: "alt",
+  },
+  {
+    src: `${CAROUSEL_FOLDER}/lowfi3.png`,
+    alt: "alt",
+  },
+  {
+    src: `${CAROUSEL_FOLDER}/lowfi4.png`,
+    alt: "alt",
+  },
+];
 
 const FINAL_THOUGHTS_LIST = [
   {
@@ -60,10 +82,9 @@ export default function FacultyActivityTrackerPage() {
         <div className="mb-together">
           <p>
             Every year, the College of Media Arts and Design &#40;CAMD&#41;
-            faculty must fill out an{" "}
-            <b>exhausting 10-page paper form</b> to track their
-            completed activities to earn merit. The Merit Committee then sorts
-            through <b>100s of forms</b> to approve activities and
+            faculty must fill out an <b>exhausting 10-page paper form</b> to
+            track their completed activities to earn merit. The Merit Committee
+            then sorts through <b>100s of forms</b> to approve activities and
             manually assign scores.
           </p>
           <p>
@@ -112,17 +133,14 @@ export default function FacultyActivityTrackerPage() {
             </h3>
           </div>
           {/* TODO: INSERT THE IMAGE CAROUSEL FOR ITERATIONS */}
-          <ImageViewer src={`${FOLDER}/fat-title.png`} alt="alt" />
+          <ImageCarousel images={IMAGE_CAROUSEL_DATA} />
           <div className={`${sharedStyles.photoCaptionText} mx-photo`}>
             First iterations of the activity dashboard.
           </div>
         </div>
         <div className="bg-background-dark-secondary py-32 px-photo">
-          {/* TODO update this to size correctly once image is added */}
-          <div className="flex gap-8">
-            {/* TODO: Card hover iterations photo */}
-            <ImageViewer src={`${FOLDER}/fat-title.png`} alt="alt" />
-            <div className="text-white">
+          <div className="grid grid-cols-3 gap-8">
+            <div className="text-white col-span-full lg:col-span-1 lg:order-2">
               <h3 className="text-whiteWhite">
                 Adding Micro-Interactions for Utility
               </h3>
@@ -135,6 +153,12 @@ export default function FacultyActivityTrackerPage() {
                 This added a delightful element to the page while simultaneously
                 creating a better user experience.
               </p>
+            </div>
+            <div className="col-span-full lg:col-span-2 lg:order-1">
+              <ImageViewer
+                src={`${FOLDER}/micro-interactions.png`}
+                alt="image showing micro interactions"
+              />
             </div>
           </div>
         </div>
@@ -152,8 +176,8 @@ export default function FacultyActivityTrackerPage() {
           </div>
         </div>
       </div>
-      <div className="my-separate mx-photo flex gap-8">
-        <div className="mt-together">
+      <div className="my-separate mx-photo grid grid-cols-3 gap-8">
+        <div className="mt-together col-span-full lg:col-span-1">
           <h5>design system</h5>
           <h3>Creating a clear design system for developers and future work</h3>
           <p>
@@ -166,9 +190,11 @@ export default function FacultyActivityTrackerPage() {
             documentation.
           </p>
         </div>
-        <div>
-          {/* TODO: update with design system image */}
-          <ImageViewer src={`${FOLDER}/fat-title.png`} alt="alt" />
+        <div className="col-span-full lg:col-span-2">
+          <ImageViewer
+            src={`${FOLDER}/type-colors.png`}
+            alt="image of types and colors"
+          />
         </div>
       </div>
       <Banner background={FAT_PROJECT_COLORS.primary}>
@@ -193,17 +219,17 @@ export default function FacultyActivityTrackerPage() {
         </p>
         <p>
           For this side of the application,{" "}
-          <b>the client made a few requests.</b> In the dashboard of
-          the professors&apos; submitted activities, he wanted to be able to{" "}
-          <b>
-            see individual activity scores, final score, and any comments
-          </b>{" "}
+          <b>the client made a few requests.</b> In the dashboard of the
+          professors&apos; submitted activities, he wanted to be able to{" "}
+          <b>see individual activity scores, final score, and any comments</b>{" "}
           that were added by other committee members.
         </p>
       </div>
       <div className="mt-separate mb-together mx-photo">
-        {/* TODO: replace this with the professor card photo */}
-        <ImageViewer src={`${FOLDER}/fat-title.png`} alt="alt" />
+        <ImageViewer
+          src={`${FOLDER}/professor-card-iter.png`}
+          alt="professor card before and after"
+        />
         <div className={sharedStyles.photoCaptionText}>
           Each professor card required 3 individual activity scores, final
           score, and a possible comment.
@@ -227,19 +253,17 @@ export default function FacultyActivityTrackerPage() {
         </p>
       </div>
       <div className="mx-photo my-separate">
-        {/* TODO: replace these photos with the dashboard and stuff */}
-        <div className="flex gap-8">
-          <ImageViewer src={`${FOLDER}/fat-title.png`} alt="alt" />
-          <ImageViewer src={`${FOLDER}/fat-title.png`} alt="alt" />
+        <div>
+          <ImageViewer src={`${FOLDER}/professor-dashboard.png`} alt="alt" />
         </div>
         <div className={sharedStyles.photoCaptionText}>
           Dashboard of professor cards and graph to to help MC members track
           score averages.
         </div>
       </div>
-      <div className="bg-background-dark-secondary pt-32 pb-separate px-photo">
-        <div className="flex gap-8">
-          <div className="text-white">
+      <div className="bg-background-dark-secondary py-32 px-photo">
+        <div className="grid grid-cols-3 gap-8">
+          <div className="text-white col-span-full lg:col-span-1">
             <h5 className="text-white">problem solving</h5>
             <h3 className="text-whiteWhite">
               Creating a scoring system that offered the easiest and fastest way
@@ -256,16 +280,15 @@ export default function FacultyActivityTrackerPage() {
               confusion and unnecessary mental math calculations.
             </p>
           </div>
-          <div>
-            {/* TODO: replace with image */}
-            <ImageViewer src={`${FOLDER}/fat-title.png`} alt="alt" />
+          <div className="col-span-full lg:col-span-2">
+            <ImageViewer src={`${FOLDER}/sidebar.png`} alt="alt" />
             <div className={sharedStyles.photoCaptionText}>
               The iteration process of the scoring system.
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-background-dark pt-separate pb-32">
+      <div className="bg-background-dark py-32">
         <div className="mb-together mx-text">
           <h5 className="text-white">final deliverables</h5>
           <h3 className="text-whiteWhite">
@@ -275,14 +298,14 @@ export default function FacultyActivityTrackerPage() {
         </div>
         <div className="mx-photo flex gap-8">
           <div>
-            {/* TODO: REPALCE WITH PHOTO */}
+            {/* TODO: REPLACE WITH GIF */}
             <ImageViewer src={`${FOLDER}/fat-title.png`} alt="alt" />
             <div className={sharedStyles.photoCaptionText}>
               Full faculty-facing user experience.
             </div>
           </div>
           <div>
-            {/* TODO: REPALCE WITH PHOTO */}
+            {/* TODO: REPLACE WITH GIF */}
             <ImageViewer src={`${FOLDER}/fat-title.png`} alt="alt" />
             <div className={sharedStyles.photoCaptionText}>
               Full Merit Committee member-facing user experience.
@@ -306,9 +329,10 @@ export default function FacultyActivityTrackerPage() {
       <div className="my-together mx-text">
         <NumberedList list={FINAL_THOUGHTS_LIST} />
       </div>
-      <div className="mt-together mx-text">
-        {/* TODO: replace with photo of team */}
-        <ImageViewer src={`${FOLDER}/fat-title.png`} alt="alt" />
+      <div className="mt-together mx-text border-blu">
+        <div>
+          <ImageViewer src={`${FOLDER}/team-fat.png`} alt="me and my team" />
+        </div>
         <p className="mt-6 mb-0 text-center text-[#8E8E8E]">
           My amazing team &lt;3
         </p>

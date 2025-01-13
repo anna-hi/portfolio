@@ -10,9 +10,16 @@ import styles from "./style.module.css";
 interface ImageViewerProps {
   src: string;
   alt: string;
+  imageClass?: string;
+  inlineClass?: string;
 }
 
-export default function ImageViewer({ src, alt }: ImageViewerProps) {
+export default function ImageViewer({
+  src,
+  alt,
+  imageClass = "",
+  inlineClass = "",
+}: ImageViewerProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleImageClick = () => {
@@ -38,14 +45,17 @@ export default function ImageViewer({ src, alt }: ImageViewerProps) {
 
   return (
     <>
-      <div className={styles.imageViewer} onClick={handleImageClick}>
+      <div
+        className={`${styles.imageViewer} ${inlineClass}`}
+        onClick={handleImageClick}
+      >
         <Image
           src={src}
           width={0}
           height={0}
           alt={alt}
           sizes="100vw"
-          className="w-full h-auto"
+          className={`${imageClass} w-full h-auto`}
         />
       </div>
 
@@ -72,6 +82,7 @@ export default function ImageViewer({ src, alt }: ImageViewerProps) {
                 fill={true}
                 objectFit="contain"
                 sizes="100vw"
+                className={imageClass}
               />
             </motion.div>
           </motion.div>

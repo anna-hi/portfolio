@@ -2,8 +2,6 @@
 
 import { motion } from "motion/react";
 
-import { useRouter } from "next/navigation";
-
 import FlowerIcon, {
   FLOWER_COLORS,
   FLOWER_SIZES,
@@ -13,19 +11,13 @@ import styles from "./style.module.css";
 import Link from "next/link";
 
 const NavBar: React.FC = () => {
-  const router = useRouter();
-
-  const navigateToResume = () => {
-    router.replace(
-      "https://drive.google.com/file/d/1yLEb9JJwInc0XuviAyUEJXIqHC9Z2nax/view?usp=sharing"
-    );
-  };
+  const resumeURL =
+    "https://drive.google.com/file/d/1yLEb9JJwInc0XuviAyUEJXIqHC9Z2nax/view?usp=sharing";
 
   const buttons = [
     { label: "Work", link: "/" },
     { label: "Fun", link: "/fun" },
     { label: "About", link: "/about" },
-    { label: "Resume", link: "/resume" },
   ];
 
   return (
@@ -57,6 +49,14 @@ const NavBar: React.FC = () => {
             {label}
           </Link>
         ))}
+        <a
+          type="button"
+          href={resumeURL}
+          target="_blank"
+          className={styles.navbarButton}
+        >
+          Resume
+        </a>
       </div>
     </nav>
   );

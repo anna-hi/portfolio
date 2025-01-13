@@ -10,7 +10,6 @@ type numberedListProps = {
   numberColor?: string;
 };
 
-// TODO: add ability to customize number color
 export default function NumberedList({ list, numberColor }: numberedListProps) {
   return (
     <ol className="space-y-8">

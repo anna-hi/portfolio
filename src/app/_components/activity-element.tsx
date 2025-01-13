@@ -10,7 +10,7 @@ interface ActivityElementProps {
   subtext: string;
   color: flowerColor;
 }
-// TODO: FIX FONT WEIGHT AND STUFF ON HERE
+
 const ActivityElement: React.FC<ActivityElementProps> = ({
   header,
   subtext,

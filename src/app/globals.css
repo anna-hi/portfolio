@@ -69,3 +69,58 @@ body {
     text-wrap: balance;
   }
 }
+
+/* home page start */
+.home-page-container {
+  margin: 40px 140px;
+}
+
+.introduction {
+  height: 85vh;
+}
+.intro-background {
+  /* background: linear-gradient(130deg, rgb(7, 51, 58) 0%, rgb(54, 4, 30) 100%); */
+  background-image: url("/background.png");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -100;
+  top: 0;
+  left: 0;
+}
+/* home page end */
+
+/* navbar start */
+.navbar {
+  margin: 40px 140px;
+}
+.navbar-button {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  @apply text-base text-pink-light text-center;
+
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.navbar-button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.navbar-button:hover::after,
+.navbar-button:active::after,
+.navbar-button.active::after {
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* navbar end */

@@ -1,0 +1,12 @@
+.container {
+  @apply bg-penella-background text-black pb-32;
+
+  h3 {
+    @apply text-penella-primary;
+    line-height: 35px;
+  }
+
+  em {
+    @apply text-penella-primary;
+  }
+}

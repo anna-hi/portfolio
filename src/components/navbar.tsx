@@ -1,81 +1,64 @@
 "use client";
 
-import React from "react";
+import { motion } from "motion/react";
 
-import { usePathname, useRouter } from "next/navigation";
+import FlowerIcon, {
+  FLOWER_COLORS,
+  FLOWER_SIZES,
+} from "./flower-icon/flower-icon";
 
-import FlowerIcon, { FLOWER_COLORS, FLOWER_SIZES } from "./flower-icon";
+import styles from "./style.module.css";
+import Link from "next/link";
 
 const NavBar: React.FC = () => {
-  const pathname = usePathname();
-  const router = useRouter();
+  const resumeURL =
+    "https://drive.google.com/file/d/1yLEb9JJwInc0XuviAyUEJXIqHC9Z2nax/view?usp=sharing";
 
-  const navigateTo = (path: string) => {
-    router.push(path);
-  };
-
-  const navigateToHome = () => {
-    navigateTo("/");
-  };
-
-  const navigateToAbout = () => {
-    navigateTo("/about");
-  };
-
-  const navigateToResume = () => {
-    // can replace this with a link to hosted resume too
-    navigateTo("/resume");
-  };
-
-  const navigateToFun = () => {
-    navigateTo("/fun");
-  };
-
-  const setActive = (predicate: boolean): string => {
-    return predicate ? "active" : "";
-  };
+  const buttons = [
+    { label: "Work", link: "/" },
+    { label: "Fun", link: "/fun" },
+    { label: "About", link: "/about" },
+  ];
 
   return (
-    <>
-      <nav className="navbar flex bg-transparent">
-        <button type="button" onClick={navigateToHome}>
+    <nav className={styles.navbar}>
+      <Link className="md:mr-32" type="button" href="/">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.2,
+            ease: [0, 0.7, 0.2, 1],
+          }}
+        >
           <FlowerIcon size={FLOWER_SIZES.LARGE} color={FLOWER_COLORS.PINK} />
-        </button>
+        </motion.div>
+      </Link>
 
-        <div className="flex-grow px-2"></div>
+      <div className="flex-grow px-2"></div>
 
-        <button
+      <div className="flex gap-8 md:gap-12">
+        {buttons.map(({ label, link }) => (
+          <Link
+            type="button"
+            href={link}
+            key={label}
+            className={styles.navbarButton}
+          >
+            {label}
+          </Link>
+        ))}
+        <a
           type="button"
-          className={`navbar-button ${setActive(
-            pathname.includes("projects") || pathname === "/"
-          )}`}
-          onClick={navigateToHome}
-        >
-          Work
-        </button>
-        <button
-          type="button"
-          className={`navbar-button ${setActive(pathname === "/fun")}`}
-          onClick={navigateToFun}
-        >
-          Fun
-        </button>
-        <button
-          type="button"
-          className={`navbar-button ${setActive(pathname === "/about")}`}
-          onClick={navigateToAbout}
-        >
-          About
-        </button>
-        <button
-          type="button"
-          className={`navbar-button ${setActive(pathname === "/resume")}`}
-          onClick={navigateToResume}
+          href={resumeURL}
+          target="_blank"
+          className={styles.navbarButton}
         >
           Resume
-        </button>
-      </nav>
-    </>
+        </a>
+      </div>
+    </nav>
   );
 };
 

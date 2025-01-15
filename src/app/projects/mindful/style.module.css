@@ -1,0 +1,15 @@
+.container {
+  @apply bg-mindful-background text-black pb-32;
+
+  h3 {
+    @apply text-mindful-primary;
+  }
+
+  h4 {
+    @apply text-mindful-primary;
+  }
+
+  em {
+    @apply text-mindful-primary;
+  }
+}

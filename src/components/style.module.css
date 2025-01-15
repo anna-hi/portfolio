@@ -1,0 +1,36 @@
+/* navbar start */
+.navbar {
+  display: flex;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 2.5rem 9% 1.25rem 9%;
+}
+.navbarButton {
+  @apply text-caption text-center font-medium;
+}
+/* navbar end */
+
+/* scroll to top start */
+.scrollToTop {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 100;
+  @apply bg-white text-background-dark;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.scrollToTop:hover {
+  @apply bg-background-dark text-white;
+}
+/* scroll to top end */

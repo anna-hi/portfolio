@@ -1,0 +1,12 @@
+.container {
+  margin-bottom: 2.5rem;
+}
+
+.introduction {
+  @apply grid grid-cols-1 gap-32 content-center py-32 px-[9%] min-h-screen w-full;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("/background1.png");
+  background-size: cover;
+  background-position: center;
+}

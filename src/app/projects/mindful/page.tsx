@@ -103,7 +103,7 @@ const FINAL_THOUGHTS_LIST = [
 
 export default function MindfulPage() {
   return (
-    <div className={styles.container}>
+    <div className="mindful-container">
       <ProjectHeader
         header={MINDFUL_PROJECT_DATA.title}
         tags={MINDFUL_PROJECT_DATA.tags}

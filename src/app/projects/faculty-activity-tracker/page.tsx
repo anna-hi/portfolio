@@ -67,7 +67,7 @@ const FINAL_THOUGHTS_LIST = [
 
 export default function FacultyActivityTrackerPage() {
   return (
-    <div className={styles.container}>
+    <div className="fat-container">
       <ProjectHeader
         header={FAT_PROJECT_DATA.title}
         tags={FAT_PROJECT_DATA.tags}
@@ -281,7 +281,11 @@ export default function FacultyActivityTrackerPage() {
             </p>
           </div>
           <div className="col-span-full lg:col-span-2">
-            <ImageViewer src={`${FOLDER}/sidebar.png`} alt="alt" imageClass=" m-[-1rem]" />
+            <ImageViewer
+              src={`${FOLDER}/sidebar.png`}
+              alt="alt"
+              imageClass=" m-[-1rem]"
+            />
             <div className={sharedStyles.photoCaptionText}>
               The iteration process of the scoring system.
             </div>

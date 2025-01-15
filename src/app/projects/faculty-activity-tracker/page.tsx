@@ -139,7 +139,7 @@ export default function FacultyActivityTrackerPage() {
           </div>
         </div>
         <div className="bg-background-dark-secondary py-32 px-photo">
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-3 gap-8 items-center">
             <div className="text-white col-span-full lg:col-span-1 lg:order-2">
               <h3 className="text-whiteWhite">
                 Adding Micro-Interactions for Utility
@@ -176,7 +176,7 @@ export default function FacultyActivityTrackerPage() {
           </div>
         </div>
       </div>
-      <div className="my-separate mx-photo grid grid-cols-3 gap-8">
+      <div className="my-separate mx-photo grid grid-cols-3 gap-8 items-center">
         <div className="mt-together col-span-full lg:col-span-1">
           <h5>design system</h5>
           <h3>Creating a clear design system for developers and future work</h3>
@@ -262,7 +262,7 @@ export default function FacultyActivityTrackerPage() {
         </div>
       </div>
       <div className="bg-background-dark-secondary py-32 px-photo">
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-3 gap-8 items-center">
           <div className="text-white col-span-full lg:col-span-1">
             <h5 className="text-white">problem solving</h5>
             <h3 className="text-whiteWhite">
@@ -281,7 +281,7 @@ export default function FacultyActivityTrackerPage() {
             </p>
           </div>
           <div className="col-span-full lg:col-span-2">
-            <ImageViewer src={`${FOLDER}/sidebar.png`} alt="alt" />
+            <ImageViewer src={`${FOLDER}/sidebar.png`} alt="alt" imageClass=" m-[-1rem]" />
             <div className={sharedStyles.photoCaptionText}>
               The iteration process of the scoring system.
             </div>
@@ -329,7 +329,7 @@ export default function FacultyActivityTrackerPage() {
       <div className="my-together mx-text">
         <NumberedList list={FINAL_THOUGHTS_LIST} />
       </div>
-      <div className="mt-together mx-text border-blu">
+      <div className="mt-separate mx-text">
         <div>
           <ImageViewer src={`${FOLDER}/team-fat.png`} alt="me and my team" />
         </div>

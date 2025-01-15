@@ -72,7 +72,7 @@ const WORKFLOW_ITEMS = [
 
 export default function PenellaPage() {
   return (
-    <div className={styles.container}>
+    <div className="penella-container">
       <ProjectHeader
         header={PENELLA_PROJECT_DATA.title}
         tags={PENELLA_PROJECT_DATA.tags}
@@ -117,7 +117,10 @@ export default function PenellaPage() {
           entry in my Notes app due to lack of time. However, there are 3 main
           issues with this method:
         </p>
-        <NumberedList list={EXISTING_PROBLEM_LIST} numberColor={PENELLA_COLORS.orange} />
+        <NumberedList
+          list={EXISTING_PROBLEM_LIST}
+          numberColor={PENELLA_COLORS.orange}
+        />
       </div>
       <div className="bg-penella-background-secondary py-32 my-separate">
         <div className="mx-photo flex gap-8">

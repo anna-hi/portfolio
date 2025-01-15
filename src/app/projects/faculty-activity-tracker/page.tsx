@@ -11,7 +11,6 @@ import ImageCarousel from "../_components/image-carousel";
 import { FAT_PROJECT_DATA } from "@/data/projects";
 
 // styles
-import styles from "./style.module.css";
 import sharedStyles from "../style.module.css";
 import { FAT_PROJECT_COLORS } from "../../../../tailwind.config";
 

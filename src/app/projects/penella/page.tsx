@@ -11,7 +11,6 @@ import { WorkflowList } from "../_components/workflow-list";
 import { PENELLA_PROJECT_DATA } from "@/data/projects";
 
 // styles
-import styles from "./style.module.css";
 import sharedStyles from "../style.module.css";
 import { PENELLA_COLORS } from "../../../../tailwind.config";
 

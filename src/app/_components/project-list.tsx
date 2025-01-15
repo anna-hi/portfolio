@@ -9,10 +9,20 @@ import styles from "./style.module.css";
 import {
   FAT_PROJECT_DATA,
   MINDFUL_PROJECT_DATA,
+  NEGOTIUM_PROJECT_DATA,
   PENELLA_PROJECT_DATA,
 } from "@/data/projects";
 
 const project_map: ProjectCardInfo[] = [
+  {
+    title: NEGOTIUM_PROJECT_DATA.title,
+    description:
+      "How might we connect people to practice their negotiation skills together?",
+    tags: NEGOTIUM_PROJECT_DATA.tags,
+    flowerColor: FLOWER_COLORS.NEGOTIUM_PURPLE,
+    link: "/projects/negotium",
+    thumbnail: "/negotium-project/negotium-cover.png",
+  },
   {
     title: FAT_PROJECT_DATA.title,
     description:

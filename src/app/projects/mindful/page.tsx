@@ -11,7 +11,6 @@ import { WorkflowList } from "../_components/workflow-list";
 import { MINDFUL_PROJECT_DATA } from "@/data/projects";
 
 // styles
-import styles from "./style.module.css";
 import sharedStyles from "../style.module.css";
 import { MINDFUL_COLORS } from "../../../../tailwind.config";
 
@@ -71,7 +70,7 @@ const WORKFLOW_ITEMS = [
         </p>
         <p>
           Many of the users I talked too, all said one key phrase:{" "}
-          <b>&quot;I don&apos;t take enough breaks.&quot;</b>
+          <b>&ldquo;I don&apos;t take enough breaks.&rdquo;</b>
         </p>
         <p>
           Having this breaks section be apart of the same mobile app gives the

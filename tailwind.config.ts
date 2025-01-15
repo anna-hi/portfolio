@@ -1,5 +1,9 @@
 import type { Config } from "tailwindcss";
 
+const NEGOTIUM_COLORS = {
+  primary: "#C1D374",
+};
+
 const FAT_PROJECT_COLORS = {
   background: "#FFFBFB",
   primary: "#D52A2A",
@@ -51,6 +55,7 @@ const config: Config = {
             secondary: "#2A2A2A",
           },
         },
+        negotium: NEGOTIUM_COLORS,
         fatProject: FAT_PROJECT_COLORS,
         mindful: MINDFUL_COLORS,
         penella: PENELLA_COLORS,
@@ -80,6 +85,6 @@ const config: Config = {
   },
 };
 
-export { FAT_PROJECT_COLORS, MINDFUL_COLORS, PENELLA_COLORS };
+export { NEGOTIUM_COLORS, FAT_PROJECT_COLORS, MINDFUL_COLORS, PENELLA_COLORS };
 
 export default config;

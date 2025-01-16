@@ -62,6 +62,9 @@ body {
   @apply bg-background-dark text-white text-base;
   /* FONT */
   font-family: var(--font-source-sans-3);
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 @layer utilities {

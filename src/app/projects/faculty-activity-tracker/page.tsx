@@ -333,13 +333,12 @@ export default function FacultyActivityTrackerPage() {
         <NumberedList list={FINAL_THOUGHTS_LIST} />
       </div>
       <div className="mt-separate mx-text">
-        <div>
-          <ImageViewer src={`${FOLDER}/team-fat.png`} alt="me and my team" />
-        </div>
+        <ImageViewer src={`${FOLDER}/team-fat.png`} alt="me and my team" />
         <p className="mt-6 mb-0 text-center text-[#8E8E8E]">
           My amazing team &lt;3
         </p>
       </div>
+
       {/* MORE PROJECTS THING */}
     </div>
   );

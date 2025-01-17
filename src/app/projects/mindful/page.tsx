@@ -213,8 +213,8 @@ export default function MindfulPage() {
       </div>
       <Banner background={MINDFUL_COLORS.primary}>
         <h3 className={bannerTextClass}>
-          “Meditation apps make me feel like I&apos;m wasting time, and I get
-          more stressed worrying about the time I&apos;ve wasted.”
+          &ldquo;Meditation apps make me feel like I&apos;m wasting time, and I
+          get more stressed worrying about the time I&apos;ve wasted.&rdquo;
         </h3>
         <h4 className={`${bannerTextClass} font-medium mt-8`}>
           - Participant 1

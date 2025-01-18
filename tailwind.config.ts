@@ -6,7 +6,7 @@ const NEGOTIUM_COLORS = {
 
 const FAT_PROJECT_COLORS = {
   background: "#FFFBFB",
-  primary: "#D52A2A",
+  primary: "#DB4D4D",
 };
 
 const MINDFUL_COLORS = {
@@ -52,7 +52,7 @@ const config: Config = {
         background: {
           dark: {
             DEFAULT: "#25201A",
-            secondary: "#2A2A2A",
+            secondary: "#2D2823",
           },
         },
         negotium: NEGOTIUM_COLORS,

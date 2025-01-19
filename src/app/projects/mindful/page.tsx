@@ -39,7 +39,7 @@ const WORKFLOW_ITEMS = [
         </p>
       </>
     ),
-    src: `${FOLDER}/mindful-cover.png`,
+    src: `${FOLDER}/workflow/gif-1.png`,
     alt: "",
   },
   {
@@ -57,7 +57,7 @@ const WORKFLOW_ITEMS = [
         </p>
       </>
     ),
-    src: `${FOLDER}/mindful-cover.png`,
+    src: `${FOLDER}/workflow/gif-1.png`,
     alt: "",
   },
   {
@@ -78,13 +78,13 @@ const WORKFLOW_ITEMS = [
         </p>
       </>
     ),
-    src: `${FOLDER}/mindful-cover.png`,
+    src: `${FOLDER}/workflow/gif-1.png`,
     alt: "",
   },
   {
     title: "A better way to track ideas",
     text: "In my user interviews, 3 out of 5 participants noted difficulty in remembering random ideas that would pop into their head for an assignment or project.",
-    src: `${FOLDER}/mindful-cover.png`,
+    src: `${FOLDER}/workflow/gif-1.png`,
     alt: "",
   },
 ];
@@ -135,10 +135,9 @@ export default function MindfulPage() {
           How might we help students reduce their stress levels?
         </h3>
       </Banner>
-      {/* TODO:fix this to be 2 on top 1 bottom by default */}
       <div className="my-separate mx-text">
         <h5>understanding the people</h5>
-        <div className="flex gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h3>Conducting competitive analysis</h3>
             <p>
@@ -165,8 +164,8 @@ export default function MindfulPage() {
         </div>
       </div>
       <div className="bg-mindful-background-secondary py-32 my-separate">
-        <div className="mx-photo flex gap-8">
-          <div>
+        <div className="mx-photo grid lg:grid-cols-7 gap-8 items-center">
+          <div className="col-span-3">
             <h5>insights</h5>
             <h3>Current meditation apps don&apos;t offer task organization</h3>
             <p>
@@ -183,9 +182,8 @@ export default function MindfulPage() {
               </b>
             </p>
           </div>
-          <div>
-            {/* TODO: replace with actual photo */}
-            <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
+          <div className="col-span-4">
+            <ImageViewer src={`${FOLDER}/competitive-analysis.jpg`} alt="" />
             <div className={sharedStyles.photoCaptionText}>
               Competitive analysis breakdown with 2 meditation apps and 1 task
               app.
@@ -239,7 +237,7 @@ export default function MindfulPage() {
         </p>
       </div>
       <div className="bg-mindful-background-secondary my-separate py-32">
-        <div className="mx-text">
+        <div className="mx-text mb-together">
           <h5>work preview</h5>
           <h3>
             Produced a component library, high-breadth mobile app, and Instagram
@@ -247,36 +245,33 @@ export default function MindfulPage() {
           </h3>
         </div>
         <div className="mx-[18%]">
-          {/* TODO: replace this image */}
-          <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
+          <ImageViewer src={`${FOLDER}/work-preview.png`} alt="" />
         </div>
       </div>
-      <div className="my-separate mx-photo flex gap-8 items-center">
-        <div>
-          {/* TODO: replace this image */}
-          <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
-          <div className={sharedStyles.photoCaptionText}>
-            First iterations considering features, visual hierarchy layouts, and
-            user experience.
-          </div>
-        </div>
-        <div>
+      <div className="my-separate mx-photo grid md:grid-cols-5 gap-8 items-center">
+        <div className="col-span-2 md:order-2">
           <h5>starting with mobile app</h5>
           <h3>
             Did 20+ iterations to narrow down visual layout, colors, and
             possible features
           </h3>
         </div>
+        <div className="col-span-3">
+          <ImageViewer src={`${FOLDER}/lowfis.jpg`} alt="" />
+          <div className={sharedStyles.photoCaptionText}>
+            First iterations considering features, visual hierarchy layouts, and
+            user experience.
+          </div>
+        </div>
       </div>
       <div className="my-separate mx-photo">
-        {/* TODO: replace this image */}
-        <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
+        <ImageViewer src={`${FOLDER}/iterations.png`} alt="" />
         <div className={sharedStyles.photoCaptionText}>
           Higher fidelity iterations for each feature.
         </div>
       </div>
-      <div className="my-separate mx-photo flex gap-8">
-        <div>
+      <div className="my-separate mx-photo grid lg:grid-cols-5 gap-8 items-center">
+        <div className="col-span-2">
           <h5>brand</h5>
           <h3>Developing a brand that exudes mindfulness</h3>
           <p>
@@ -290,9 +285,8 @@ export default function MindfulPage() {
             making the lines coming out of the star go around instead.
           </p>
         </div>
-        <div>
-          {/* TODO: replace this image */}
-          <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
+        <div className="col-span-3">
+          <ImageViewer src={`${FOLDER}/app-icon.png`} alt="" />
           <div className={sharedStyles.photoCaptionText}>
             Key design iterations for the development of the app mark.
           </div>
@@ -308,7 +302,6 @@ export default function MindfulPage() {
             </h3>
           </div>
           <div>
-            {/* TODO: replace this image later */}
             <ImageViewer src={`${FOLDER}/mindful-images.png`} alt="" />
             <div className={sharedStyles.photoCaptionText}>
               A final solution teaser.
@@ -316,17 +309,19 @@ export default function MindfulPage() {
           </div>
         </div>
       </div>
-      {/* TODO COMPONENT THIS WORKFLOW STEP COMPONENT */}
+
       <div className="my-separate mx-text">
-        <WorkflowList workflowItems={WORKFLOW_ITEMS} isAlternating />
+        <WorkflowList workflowItems={WORKFLOW_ITEMS} isMobileWorkflow />
       </div>
+
       <Banner background={MINDFUL_COLORS.primary}>
         <h3 className={bannerTextClass}>
           How might we accommodate and de-stigmatize to improve accessibility?
         </h3>
       </Banner>
-      <div className="my-separate mx-[18%] flex gap-8">
-        <div>
+
+      <div className="my-separate mx-[18%] grid lg:grid-cols-7 items-center gap-8">
+        <div className="col-span-3">
           <h3>Adding design accommodations for blind/low-vision users</h3>
           <p>
             Currently, my application uses multiple text input fields. This can
@@ -339,9 +334,8 @@ export default function MindfulPage() {
             de-stigmatized method that is commonly used.
           </p>
         </div>
-        <div>
-          {/* TODO: replace this image */}
-          <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
+        <div className="col-span-4">
+          <ImageViewer src={`${FOLDER}/accessibility-1.png`} alt="" />
           <div className={sharedStyles.photoCaptionText}>
             Accommodating users by creating an audio recording alternative.
           </div>
@@ -363,8 +357,10 @@ export default function MindfulPage() {
         </p>
       </div>
       <div className="mb-separate mx-photo">
-        {/* TODO: replace with image */}
-        <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
+        <ImageViewer src={`${FOLDER}/accessibility-2.png`} alt="" />
+        <div className={sharedStyles.photoCaptionText}>
+          Explaining how the screen is optimized for screen readers.
+        </div>
       </div>
       <div className="bg-background-dark py-32 my-separate">
         <div className="mx-text mb-together">
@@ -379,10 +375,9 @@ export default function MindfulPage() {
             unified look.
           </p>
         </div>
-        <div className="flex gap-8 mb-separate mx-[10%]">
-          {/* TODO: replace both these images */}
-          <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
-          <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
+        <div className="grid lg:grid-cols-2 gap-8 mb-separate mx-[10%]">
+          <ImageViewer src={`${FOLDER}/design-system1.jpg`} alt="" />
+          <ImageViewer src={`${FOLDER}/design-system2.jpg`} alt="" />
         </div>
         <div className="mx-text mb-together">
           <h3 className="text-white">
@@ -394,11 +389,9 @@ export default function MindfulPage() {
             evoke a sense of mindfulness and calmness that the app offers.
           </p>
         </div>
-        <div className="flex gap-8 mb-separate mx-[10%]">
-          {/* TODO: replace all three of these images */}
-          <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
-          <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
-          <ImageViewer src={`${FOLDER}/mindful-cover.png`} alt="" />
+        <div className="mx-[10%]">
+          {/* maybe want this to be 3 images? */}
+          <ImageViewer src={`${FOLDER}/instagram-posts.png`} alt="" />
         </div>
       </div>
       <div className="mx-text">

@@ -131,7 +131,6 @@ export default function FacultyActivityTrackerPage() {
               facultys&apos; cognitive and physical efforts
             </h3>
           </div>
-          {/* TODO: INSERT THE IMAGE CAROUSEL FOR ITERATIONS */}
           <ImageCarousel images={IMAGE_CAROUSEL_DATA} />
           <div className={`${sharedStyles.photoCaptionText} mx-photo`}>
             First iterations of the activity dashboard.

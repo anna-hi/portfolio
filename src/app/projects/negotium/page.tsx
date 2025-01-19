@@ -107,13 +107,13 @@ const FINAL_THOUGHTS_LIST = [
   },
 ];
 
+// TODO: GO THROUHG COLORS ON DARK BACKGROUND AND MAEK SURE THEYRE CORRECT
 export default function NegotiumPage() {
   return (
     <div className="negotium-container">
       <ProjectHeader
         header={NEGOTIUM_PROJECT_DATA.title}
         tags={NEGOTIUM_PROJECT_DATA.tags}
-        // TODO: REPLACE THIS WITH ACTUAL PHOTO
         photo={getNegotiumPhoto("negotium-cover.png")}
       />
       <ImpactHeader isPerceivedImpact>
@@ -319,7 +319,7 @@ export default function NegotiumPage() {
       </div>
 
       <div className="my-separate mx-text">
-        <WorkflowList workflowItems={WORKFLOW_ITEMS} isAlternating />
+        <WorkflowList workflowItems={WORKFLOW_ITEMS} isMobileWorkflow />
       </div>
 
       <div className="bg-whiteWhite py-32">

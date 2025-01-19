@@ -114,7 +114,7 @@ export default function NegotiumPage() {
       <ProjectHeader
         header={NEGOTIUM_PROJECT_DATA.title}
         tags={NEGOTIUM_PROJECT_DATA.tags}
-        photo={getNegotiumPhoto("negotium-cover.png")}
+        photo={getNegotiumPhoto("negotium-title.png")}
       />
       <ImpactHeader isPerceivedImpact>
         <em>Millions of women</em> negotiate everyday and could use this mobile
@@ -159,10 +159,7 @@ export default function NegotiumPage() {
         </p>
       </div>
       <div className="mb-separate mx-photo">
-        <div className="grid grid-cols-2 gap-8">
-          <ImageViewer src={getNegotiumPhoto("negotium-cover.png")} alt="" />
-          <ImageViewer src={getNegotiumPhoto("negotium-cover.png")} alt="" />
-        </div>
+        <ImageViewer src={getNegotiumPhoto("whiteboard.png")} alt="" />
         <div className={sharedStyles.photoCaptionTextDark}>
           Whiteboard ideation session and a classification of those ideas based
           on complexity and tone.
@@ -185,14 +182,17 @@ export default function NegotiumPage() {
           </p>
         </div>
         <div className="mx-photo mb-separate">
-          <ImageViewer src={getNegotiumPhoto("negotium-cover.png")} alt="" />
+          <ImageViewer
+            src={getNegotiumPhoto("negotium-compResearch.png")}
+            alt=""
+          />
           <div className={sharedStyles.photoCaptionTextDark}>
             Competitive analysis of Sopu &#40;a negotiation teaching app&#41;
             and italki &#40;a language learning app&#41;.
           </div>
         </div>
-        <div className="mx-photo grid grid-cols-5 gap-8 items-center">
-          <div className="col-span-full lg:col-span-2">
+        <div className="mx-photo grid lg:grid-cols-5 gap-8 items-center">
+          <div className="lg:col-span-2">
             <h5>design sprints</h5>
             <h3>Sketching Crazy 8s to decide practice feature concepts</h3>
             <p>
@@ -206,8 +206,8 @@ export default function NegotiumPage() {
               my sketches.
             </p>
           </div>
-          <div className="col-span-full lg:col-span-3">
-            <ImageViewer src={getNegotiumPhoto("negotium-cover.png")} alt="" />
+          <div className="lg:col-span-3">
+            <ImageViewer src={getNegotiumPhoto("crazy-8s.jpg")} alt="" />
             <div className={sharedStyles.photoCaptionTextDark}>
               8 sketches to communicate my ideas.
             </div>
@@ -239,8 +239,8 @@ export default function NegotiumPage() {
             that greatly improved the usability of our practice feature.
           </p>
         </div>
-        <div className="mx-photo mb-separate grid grid-cols-5 gap-8 items-center text-black">
-          <div className="col-span-full lg:col-span-2">
+        <div className="mx-photo mb-separate grid lg:grid-cols-5 gap-8 items-center text-black">
+          <div className="lg:col-span-2">
             <h5>call sequence</h5>
             <h3 className="text-black">
               Providing users clear signifiers when joining or ending a call
@@ -254,12 +254,12 @@ export default function NegotiumPage() {
               indications of when a call is starting or ending.
             </p>
           </div>
-          <div className="col-span-full lg:col-span-3">
-            <ImageViewer src={getNegotiumPhoto("negotium-cover.png")} alt="" />
+          <div className="lg:col-span-3">
+            <ImageViewer src={getNegotiumPhoto("call-sequence.jpg")} alt="" />
           </div>
         </div>
-        <div className="mx-photo grid grid-cols-5 gap-8 items-center text-black">
-          <div className="col-span-full lg:col-span-2">
+        <div className="mx-photo grid lg:grid-cols-5 gap-8 items-center text-black">
+          <div className="lg:col-span-2">
             <h5>scenario description</h5>
             <h3 className="text-black">
               Improving readability by highlighting text and dividing content
@@ -274,8 +274,8 @@ export default function NegotiumPage() {
               highlighted important information.
             </p>
           </div>
-          <div className="col-span-full lg:col-span-3">
-            <ImageViewer src={getNegotiumPhoto("negotium-cover.png")} alt="" />
+          <div className="lg:col-span-3">
+            <ImageViewer src={getNegotiumPhoto("scenario.jpg")} alt="" />
           </div>
         </div>
       </div>
@@ -298,7 +298,7 @@ export default function NegotiumPage() {
         </p>
       </div>
       <div className="mb-separate mx-photo">
-        <ImageViewer src={getNegotiumPhoto("negotium-cover.png")} alt="" />
+        <ImageViewer src={getNegotiumPhoto("button-iteration.jpg")} alt="" />
         <div className={sharedStyles.photoCaptionTextDark}>
           Pink outline highlights the location of the scenario description
           button in each iteration.
@@ -311,7 +311,8 @@ export default function NegotiumPage() {
           An end-to-end practice experience with 3 levels of practice options
           ranging from multiple choice, chat, and call
         </h3>
-        <ImageViewer src={getNegotiumPhoto("negotium-cover.png")} alt="" />
+        {/* TODO: REPALCE THIS WITH A PNG FOR BACKGROUND */}
+        <ImageViewer src={getNegotiumPhoto("negotium-teaser.jpg")} alt="" />
         <div className={sharedStyles.photoCaptionText}>
           A snapshot of each level from easy to difficult &#40;left to
           right&#41;.
@@ -343,7 +344,8 @@ export default function NegotiumPage() {
           </p>
         </div>
         <div className="mb-separate mx-[20%]">
-          <div className="grid grid-cols-2 gap-8">
+          {/* TOOO: REPLACE THIS IMAGE */}
+          <div className="grid lg:grid-cols-2 gap-8">
             <div className="col-span-full lg:col-span-1">
               <ImageViewer
                 src={getNegotiumPhoto("negotium-cover.png")}
@@ -372,24 +374,22 @@ export default function NegotiumPage() {
           </h4>
         </Banner>
 
-        <div className="mt-separate mx-photo grid grid-cols-5 gap-8 items-center text-black">
-          <div className="col-span-full lg:col-span-2">
-            <h5>scenario description</h5>
-            <h3 className="text-black">
-              Improving readability by highlighting text and dividing content
-              across pages
-            </h3>
+        <div className="mt-separate mx-photo grid lg:grid-cols-5 gap-8 items-center text-black">
+          <div className="lg:col-span-2">
+            <h5>final changes</h5>
+            <h3 className="text-black">Addressing user confusion</h3>
             <p>
-              <b>4 out of 5 participants didn&apos;t read</b> or skipped over
-              this section entirely because of the amount of text on one page.
+              <b>3 out of 5 participants</b> got distracted by the subtext
+              included in the individual topics. It interrupted their experience
+              and they didn’t find it necessary.
             </p>
             <p>
-              To rectify this, I limited the amount of text per page and
-              highlighted important information.
+              In response to user feedback, I modified the content to only
+              include the topic titles.
             </p>
           </div>
-          <div className="col-span-full lg:col-span-3">
-            <ImageViewer src={getNegotiumPhoto("negotium-cover.png")} alt="" />
+          <div className="lg:col-span-3">
+            <ImageViewer src={getNegotiumPhoto("final-changes.jpg")} alt="" />
           </div>
         </div>
       </div>
@@ -405,7 +405,7 @@ export default function NegotiumPage() {
         </p>
         <NumberedList list={FINAL_THOUGHTS_LIST} numberColor="#FFF" />
         <div className="mt-separate">
-          <ImageViewer src={getNegotiumPhoto("negotium-cover.png")} alt="" />
+          <ImageViewer src={getNegotiumPhoto("me-whiteboard.jpg")} alt="" />
           <p className="mt-6 mb-0 text-center text-[#C8C8C8]">
             Myself working on the whiteboard with mini me I created in the app!
           </p>

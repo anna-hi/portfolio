@@ -137,8 +137,8 @@ export default function FacultyActivityTrackerPage() {
           </div>
         </div>
         <div className="bg-background-dark-secondary py-32 px-photo">
-          <div className="grid grid-cols-3 gap-8 items-center">
-            <div className="text-white col-span-full lg:col-span-1 lg:order-2">
+          <div className="grid xl:grid-cols-3 gap-8 items-center">
+            <div className="text-white xl:order-2">
               <h3 className="text-whiteWhite">
                 Adding Micro-Interactions for Utility
               </h3>
@@ -152,7 +152,7 @@ export default function FacultyActivityTrackerPage() {
                 creating a better user experience.
               </p>
             </div>
-            <div className="col-span-full lg:col-span-2 lg:order-1">
+            <div className="xl:col-span-2">
               <ImageViewer
                 src={`${FOLDER}/micro-interactions.png`}
                 alt="image showing micro interactions"
@@ -174,8 +174,8 @@ export default function FacultyActivityTrackerPage() {
           </div>
         </div>
       </div>
-      <div className="my-separate mx-photo grid grid-cols-3 gap-8 items-center">
-        <div className="mt-together col-span-full lg:col-span-1">
+      <div className="my-separate mx-photo grid lg:grid-cols-3 gap-8 items-center">
+        <div className="mt-together">
           <h5>design system</h5>
           <h3>Creating a clear design system for developers and future work</h3>
           <p>
@@ -188,7 +188,7 @@ export default function FacultyActivityTrackerPage() {
             documentation.
           </p>
         </div>
-        <div className="col-span-full lg:col-span-2">
+        <div className="lg:col-span-2">
           <ImageViewer
             src={`${FOLDER}/type-colors.png`}
             alt="image of types and colors"
@@ -260,15 +260,15 @@ export default function FacultyActivityTrackerPage() {
         </div>
       </div>
       <div className="bg-background-dark-secondary py-32 px-photo">
-        <div className="grid grid-cols-3 gap-8 items-center">
-          <div className="text-white col-span-full lg:col-span-1">
+        <div className="grid xl:grid-cols-3 gap-8 items-center">
+          <div className="text-white">
             <h5 className="text-white">problem solving</h5>
             <h3 className="text-whiteWhite">
               Creating a scoring system that offered the easiest and fastest way
               to adjust scores
             </h3>
             <p>
-              We simplified the Google Sheets version of this process on the
+              We simplified the Google Sheets version of this process on thea
               digital application by creating the scoring island.
             </p>
             <p>
@@ -278,7 +278,7 @@ export default function FacultyActivityTrackerPage() {
               confusion and unnecessary mental math calculations.
             </p>
           </div>
-          <div className="col-span-full lg:col-span-2">
+          <div className="xl:col-span-2">
             <ImageViewer
               src={`${FOLDER}/sidebar.png`}
               alt="alt"

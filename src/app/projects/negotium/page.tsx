@@ -311,8 +311,7 @@ export default function NegotiumPage() {
           An end-to-end practice experience with 3 levels of practice options
           ranging from multiple choice, chat, and call
         </h3>
-        {/* TODO: REPALCE THIS WITH A PNG FOR BACKGROUND */}
-        <ImageViewer src={getNegotiumPhoto("negotium-teaser.jpg")} alt="" />
+        <ImageViewer src={getNegotiumPhoto("negotium-teaser.png")} alt="" />
         <div className={sharedStyles.photoCaptionText}>
           A snapshot of each level from easy to difficult &#40;left to
           right&#41;.
@@ -345,20 +344,7 @@ export default function NegotiumPage() {
         </div>
         <div className="mb-separate mx-[20%]">
           {/* TOOO: REPLACE THIS IMAGE */}
-          <div className="grid lg:grid-cols-2 gap-8">
-            <div className="col-span-full lg:col-span-1">
-              <ImageViewer
-                src={getNegotiumPhoto("negotium-cover.png")}
-                alt=""
-              />
-            </div>
-            <div className="col-span-full lg:col-span-1">
-              <ImageViewer
-                src={getNegotiumPhoto("negotium-cover.png")}
-                alt=""
-              />
-            </div>
-          </div>
+          <ImageViewer src={getNegotiumPhoto("guerilla-testing.png")} alt="" />
           <div className={sharedStyles.photoCaptionText}>
             Some quick shots of our participants trying out the new feature.
           </div>

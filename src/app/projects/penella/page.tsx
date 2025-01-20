@@ -201,7 +201,6 @@ export default function PenellaPage() {
             <i>structured and customizable space</i>
           </h3>
         </div>
-        {/* TODO: replace with the image carousel */}
         <ImageCarousel images={IMAGE_CAROUSEL_DATA} />
       </div>
       <div className="bg-background-dark-secondary mb-separate py-32">

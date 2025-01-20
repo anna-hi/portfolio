@@ -17,7 +17,6 @@ export function WorkflowList({
   workflowItems,
   isMobileWorkflow,
 }: workflowListProps) {
-  // TODO: add styles for a non-mobile workflow
   const mobileWorkflowClass =
     "grid items-center justify-between gap-x-8 gap-y-together md:grid-cols-5";
   const getWorkflowClass = () => {

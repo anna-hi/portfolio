@@ -391,7 +391,7 @@ export default function NegotiumPage() {
         </p>
         <NumberedList list={FINAL_THOUGHTS_LIST} numberColor="#FFF" />
         <div className="mt-separate">
-          <ImageViewer src={getNegotiumPhoto("me-whiteboard.jpg")} alt="" />
+          <ImageViewer src={getNegotiumPhoto("me-andMini.jpg")} alt="" />
           <p className="mt-6 mb-0 text-center text-[#C8C8C8]">
             Myself working on the whiteboard with mini me I created in the app!
           </p>

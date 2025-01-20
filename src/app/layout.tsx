@@ -8,8 +8,8 @@ import NavBar from "@/components/navbar";
 import ScrollToTop from "@/components/scroll-to-top";
 
 export const metadata: Metadata = {
-  title: "Anna's Portfolio",
-  description: "I'm stinky",
+  title: "Anna Ji",
+  description: "Anna Ji's portfolio",
 };
 
 export default function RootLayout({

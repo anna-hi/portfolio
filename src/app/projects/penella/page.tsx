@@ -56,10 +56,11 @@ const WORKFLOW_ITEMS = [
   {
     title: "Structured journal entries",
     text: "The structured journal entry allows the user to efficiently type their thoughts with a keyword tagging system to find past entries.",
-    src: `${FOLDER}/penella-cover.png`,
+    src: `${FOLDER}/penella-cover.jpg`,
     alt: "",
   },
   {
+    // TODO: add sparkle emoji or something here
     title: "Adding some sparkle",
     text: (
       <>
@@ -70,7 +71,7 @@ const WORKFLOW_ITEMS = [
         <p>This includes adding stickers and gifs.</p>
       </>
     ),
-    src: `${FOLDER}/penella-cover.png`,
+    src: `${FOLDER}/penella-cover.jpg`,
     alt: "",
   },
   {
@@ -86,7 +87,7 @@ const WORKFLOW_ITEMS = [
         </p>
       </>
     ),
-    src: `${FOLDER}/penella-cover.png`,
+    src: `${FOLDER}/penella-cover.jpg`,
     alt: "",
   },
 ];
@@ -104,8 +105,8 @@ export default function PenellaPage() {
         their creativity and take care of their <em>mental health</em>
       </ImpactHeader>
       <div className="mb-separate mx-text">
-        {/* TODO: ADD EMOJI */}
-        <h3>Bippity Boppity Boo! WAND EMOJI</h3>
+        {/* TODO: ADD WAND EMOJI */}
+        <h3>Bippity Boppity Boo!</h3>
 
         <div className="mb-together">
           <p>
@@ -130,8 +131,8 @@ export default function PenellaPage() {
       </Banner>
       <div className="my-separate mx-text">
         <h5>an existing problem</h5>
-        {/* TODO: add the notes photo */}
-        <h3>The Notes app does not work as a diary NOTES PHOTO</h3>
+        {/* TODO: add the notes photo emoji */}
+        <h3>The Notes app does not work as a diary</h3>
         <p className="mb-together">
           When I often feel overwhelmed or irritated, I feel the urge to write
           down all my thoughts. This usually manifests into a quick journaling

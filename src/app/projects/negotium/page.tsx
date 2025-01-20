@@ -59,7 +59,7 @@ const WORKFLOW_ITEMS = [
         </p>
       </>
     ),
-    src: getNegotiumPhoto("negotium-cover.png"),
+    src: getNegotiumPhoto("workflow/negotium-game.gif"),
     alt: "",
   },
   {
@@ -76,7 +76,7 @@ const WORKFLOW_ITEMS = [
         </p>
       </>
     ),
-    src: getNegotiumPhoto("negotium-cover.png"),
+    src: getNegotiumPhoto("workflow/negotium-chat.gif"),
     alt: "",
   },
   {
@@ -90,7 +90,7 @@ const WORKFLOW_ITEMS = [
         </p>
       </>
     ),
-    src: getNegotiumPhoto("negotium-cover.png"),
+    src: getNegotiumPhoto("workflow/negotium-call.gif"),
 
     alt: "",
   },
@@ -319,7 +319,7 @@ export default function NegotiumPage() {
         </div>
       </div>
 
-      <div className="my-separate mx-text">
+      <div className="my-separate mx-text bg-background-dark">
         <WorkflowList workflowItems={WORKFLOW_ITEMS} isMobileWorkflow />
       </div>
 

@@ -39,7 +39,7 @@ const WORKFLOW_ITEMS = [
         </p>
       </>
     ),
-    src: `${FOLDER}/workflow/gif-1.png`,
+    src: `${FOLDER}/workflow/mindful-tasks.gif`,
     alt: "",
   },
   {
@@ -57,7 +57,7 @@ const WORKFLOW_ITEMS = [
         </p>
       </>
     ),
-    src: `${FOLDER}/workflow/gif-1.png`,
+    src: `${FOLDER}/workflow/mindful-focus.gif`,
     alt: "",
   },
   {
@@ -78,13 +78,13 @@ const WORKFLOW_ITEMS = [
         </p>
       </>
     ),
-    src: `${FOLDER}/workflow/gif-1.png`,
+    src: `${FOLDER}/workflow/mindful-breaks.gif`,
     alt: "",
   },
   {
     title: "A better way to track ideas",
     text: "In my user interviews, 3 out of 5 participants noted difficulty in remembering random ideas that would pop into their head for an assignment or project.",
-    src: `${FOLDER}/workflow/gif-1.png`,
+    src: `${FOLDER}/workflow/mindful-notes.gif`,
     alt: "",
   },
 ];

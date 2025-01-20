@@ -169,8 +169,7 @@ export default function FacultyActivityTrackerPage() {
             </h3>
           </div>
           <div className="mx-[20%]">
-            {/* TODO: add the gif for going through the process */}
-            <ImageViewer src={`${FOLDER}/fat-title.png`} alt="alt" />
+            <ImageViewer src={`${FOLDER}/gifs/fat-hover.gif`} alt="alt" />
           </div>
         </div>
       </div>
@@ -298,17 +297,15 @@ export default function FacultyActivityTrackerPage() {
             from login to scoring
           </h3>
         </div>
-        <div className="mx-photo flex gap-8">
+        <div className="mx-photo grid md:grid-cols-2 gap-8">
           <div>
-            {/* TODO: REPLACE WITH GIF */}
-            <ImageViewer src={`${FOLDER}/fat-title.png`} alt="alt" />
+            <ImageViewer src={`${FOLDER}/gifs/fat-faculty.gif`} alt="alt" />
             <div className={sharedStyles.photoCaptionText}>
               Full faculty-facing user experience.
             </div>
           </div>
           <div>
-            {/* TODO: REPLACE WITH GIF */}
-            <ImageViewer src={`${FOLDER}/fat-title.png`} alt="alt" />
+            <ImageViewer src={`${FOLDER}/gifs/fat-merit.gif`} alt="alt" />
             <div className={sharedStyles.photoCaptionText}>
               Full Merit Committee member-facing user experience.
             </div>

@@ -24,7 +24,7 @@ const PENELLA_COLORS = {
   background: {
     DEFAULT: "#FEFBF6",
     banner: "#FFE2E2",
-    secondary: "#FFF4F4",
+    secondary: "#FDF4F4",
   },
 };
 

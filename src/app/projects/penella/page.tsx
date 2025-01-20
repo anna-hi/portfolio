@@ -56,7 +56,7 @@ const WORKFLOW_ITEMS = [
   {
     title: "Structured journal entries",
     text: "The structured journal entry allows the user to efficiently type their thoughts with a keyword tagging system to find past entries.",
-    src: `${FOLDER}/penella-cover.jpg`,
+    src: `${FOLDER}/workflow/penella-text.gif`,
     alt: "",
   },
   {
@@ -71,7 +71,7 @@ const WORKFLOW_ITEMS = [
         <p>This includes adding stickers and gifs.</p>
       </>
     ),
-    src: `${FOLDER}/penella-cover.jpg`,
+    src: `${FOLDER}/workflow/penella-sticker.gif`,
     alt: "",
   },
   {
@@ -87,7 +87,7 @@ const WORKFLOW_ITEMS = [
         </p>
       </>
     ),
-    src: `${FOLDER}/penella-cover.jpg`,
+    src: `${FOLDER}/workflow/penella-moodboard.gif`,
     alt: "",
   },
 ];

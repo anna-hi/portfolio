@@ -42,10 +42,10 @@ const IMAGE_CAROUSEL_DATA = [
     src: `${CAROUSEL_FOLDER}/penella-sketch2.png`,
     alt: "alt",
   },
-  {
-    src: `${CAROUSEL_FOLDER}/penella-sketch3.png`,
-    alt: "alt",
-  },
+  // {
+  //   src: `${CAROUSEL_FOLDER}/penella-sketch3.png`,
+  //   alt: "alt",
+  // },
   {
     src: `${CAROUSEL_FOLDER}/penella-sketch4.png`,
     alt: "alt",
@@ -153,8 +153,7 @@ export default function PenellaPage() {
               motivations. I referenced these findings from my 5 interviews
               throughout the entire design process.
             </p>
-            {/* TODO: style lists */}
-            <ul>
+            <ul className="list-disc ms-8">
               <li>
                 Users enjoy <b>typing</b> their journals for the{" "}
                 <b>speed and efficiency</b>

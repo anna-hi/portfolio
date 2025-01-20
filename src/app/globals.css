@@ -62,6 +62,9 @@ body {
   @apply bg-background-dark text-white text-base;
   /* FONT */
   font-family: var(--font-source-sans-3);
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 @layer utilities {
@@ -70,12 +73,33 @@ body {
   }
 }
 
+.negotium-container,
+.fat-container,
+.mindful-container,
+.penella-container {
+  h3 {
+    line-height: 35px;
+  }
+  @apply pb-32;
+}
+
+.negotium-container {
+  @apply bg-background-dark text-whiteWhite;
+
+  h3 {
+    @apply text-negotium-primary;
+  }
+
+  em {
+    @apply text-negotium-primary;
+  }
+}
+
 .fat-container {
-  @apply bg-fatProject-background text-black pb-32;
+  @apply bg-fatProject-background text-black;
 
   h3 {
     @apply text-fatProject-primary;
-    line-height: 35px;
   }
 
   em {
@@ -84,7 +108,7 @@ body {
 }
 
 .mindful-container {
-  @apply bg-mindful-background text-black pb-32;
+  @apply bg-mindful-background text-black;
 
   h3 {
     @apply text-mindful-primary;
@@ -100,11 +124,10 @@ body {
 }
 
 .penella-container {
-  @apply bg-penella-background text-black pb-32;
+  @apply bg-penella-background text-black;
 
   h3 {
     @apply text-penella-primary;
-    line-height: 35px;
   }
 
   em {

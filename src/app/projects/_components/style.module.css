@@ -80,3 +80,40 @@
   @apply text-caption;
 }
 /* my role section end */
+
+/* image carousel begin */
+.carouselContainer {
+  position: relative;
+}
+
+.carousel {
+  width: 120%;
+  margin-left: -10%;
+  height: 100%;
+
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.carouselItem {
+  scroll-snap-align: center;
+  margin: 0 0.5rem;
+
+  flex-shrink: none;
+}
+
+.carouselButton {
+  @apply bg-whiteWhite hover:bg-gray-100 text-black text-xl;
+  position: absolute;
+  width: fit-content;
+  padding: 0.5rem;
+  aspect-ratio: 1/1;
+  border: none;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.212));
+}
+
+/* image carousel end */

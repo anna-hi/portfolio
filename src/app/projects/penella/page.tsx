@@ -11,9 +11,9 @@ import { WorkflowList } from "../_components/workflow-list";
 import { PENELLA_PROJECT_DATA } from "@/data/projects";
 
 // styles
-import styles from "./style.module.css";
 import sharedStyles from "../style.module.css";
 import { PENELLA_COLORS } from "../../../../tailwind.config";
+import ImageCarousel from "../_components/image-carousel";
 
 const FOLDER = "/penella-project";
 
@@ -31,14 +31,36 @@ const EXISTING_PROBLEM_LIST = [
   { title: "Not fun to use" },
 ];
 
+const CAROUSEL_FOLDER = `${FOLDER}/carousel`;
+
+const IMAGE_CAROUSEL_DATA = [
+  {
+    src: `${CAROUSEL_FOLDER}/penella-sketch1.png`,
+    alt: "alt",
+  },
+  {
+    src: `${CAROUSEL_FOLDER}/penella-sketch2.png`,
+    alt: "alt",
+  },
+  // {
+  //   src: `${CAROUSEL_FOLDER}/penella-sketch3.png`,
+  //   alt: "alt",
+  // },
+  {
+    src: `${CAROUSEL_FOLDER}/penella-sketch4.png`,
+    alt: "alt",
+  },
+];
+
 const WORKFLOW_ITEMS = [
   {
     title: "Structured journal entries",
     text: "The structured journal entry allows the user to efficiently type their thoughts with a keyword tagging system to find past entries.",
-    src: `${FOLDER}/penella-cover.png`,
+    src: `${FOLDER}/workflow/penella-text.gif`,
     alt: "",
   },
   {
+    // TODO: add sparkle emoji or something here
     title: "Adding some sparkle",
     text: (
       <>
@@ -49,7 +71,7 @@ const WORKFLOW_ITEMS = [
         <p>This includes adding stickers and gifs.</p>
       </>
     ),
-    src: `${FOLDER}/penella-cover.png`,
+    src: `${FOLDER}/workflow/penella-sticker.gif`,
     alt: "",
   },
   {
@@ -65,7 +87,7 @@ const WORKFLOW_ITEMS = [
         </p>
       </>
     ),
-    src: `${FOLDER}/penella-cover.png`,
+    src: `${FOLDER}/workflow/penella-moodboard.gif`,
     alt: "",
   },
 ];
@@ -83,8 +105,8 @@ export default function PenellaPage() {
         their creativity and take care of their <em>mental health</em>
       </ImpactHeader>
       <div className="mb-separate mx-text">
-        {/* TODO: ADD EMOJI */}
-        <h3>Bippity Boppity Boo! WAND EMOJI</h3>
+        {/* TODO: ADD WAND EMOJI */}
+        <h3>Bippity Boppity Boo!</h3>
 
         <div className="mb-together">
           <p>
@@ -109,8 +131,8 @@ export default function PenellaPage() {
       </Banner>
       <div className="my-separate mx-text">
         <h5>an existing problem</h5>
-        {/* TODO: add the notes photo */}
-        <h3>The Notes app does not work as a diary NOTES PHOTO</h3>
+        {/* TODO: add the notes photo emoji */}
+        <h3>The Notes app does not work as a diary</h3>
         <p className="mb-together">
           When I often feel overwhelmed or irritated, I feel the urge to write
           down all my thoughts. This usually manifests into a quick journaling
@@ -123,7 +145,7 @@ export default function PenellaPage() {
         />
       </div>
       <div className="bg-penella-background-secondary py-32 my-separate">
-        <div className="mx-photo flex gap-8">
+        <div className="mx-photo grid xl:grid-cols-3 gap-8">
           <div>
             <h5>understanding the people</h5>
             <h3>Building target personas based on real people</h3>
@@ -132,8 +154,7 @@ export default function PenellaPage() {
               motivations. I referenced these findings from my 5 interviews
               throughout the entire design process.
             </p>
-            {/* TODO: style lists */}
-            <ul>
+            <ul className="list-disc ms-8">
               <li>
                 Users enjoy <b>typing</b> their journals for the{" "}
                 <b>speed and efficiency</b>
@@ -145,9 +166,8 @@ export default function PenellaPage() {
               </li>
             </ul>
           </div>
-          <div>
-            {/* TODO: replace image(s) with actual */}
-            <ImageViewer src={`${FOLDER}/penella-cover.png`} alt="" />
+          <div className="xl:col-span-2">
+            <ImageViewer src={`${FOLDER}/user-personas.png`} alt="" />
             <div className={sharedStyles.photoCaptionText}>
               Key user personas to design for.
             </div>
@@ -182,19 +202,11 @@ export default function PenellaPage() {
           </h3>
         </div>
         {/* TODO: replace with the image carousel */}
-        <ImageViewer src={`${FOLDER}/penella-cover.png`} alt="" />
+        <ImageCarousel images={IMAGE_CAROUSEL_DATA} />
       </div>
       <div className="bg-background-dark-secondary mb-separate py-32">
-        <div className="mx-[20%] flex gap-8 items-center">
-          <div>
-            {/* TODO: rpelace with actual photo */}
-            <ImageViewer src={`${FOLDER}/penella-cover.png`} alt="" />
-            <div className={sharedStyles.photoCaptionText}>
-              A storyboard to understand how people will use Penella.
-              (Bryan&apos;s Story)
-            </div>
-          </div>
-          <div className="text-whiteWhite">
+        <div className="mx-[20%] grid lg:grid-cols-3 gap-8 items-center">
+          <div className="text-whiteWhite lg:order-2">
             <h3 className="text-whiteWhite">
               <i>Visually communicating</i> how Bryan interacts with Penella
             </h3>
@@ -206,6 +218,13 @@ export default function PenellaPage() {
               This helped to communicate how users can use Penella to create
               customized journal entries to commemorate happy memories.
             </p>
+          </div>
+          <div className="lg:col-span-2">
+            <ImageViewer src={`${FOLDER}/storyboard.png`} alt="" />
+            <div className={sharedStyles.photoCaptionText}>
+              A storyboard to understand how people will use Penella.
+              (Bryan&apos;s Story)
+            </div>
           </div>
         </div>
       </div>
@@ -223,10 +242,8 @@ export default function PenellaPage() {
           from a new perspective.
         </p>
       </div>
-      <div className="mt-separate nb-together mx-photo flex gap-8">
-        {/* TODO: replace with images */}
-        <ImageViewer src={`${FOLDER}/penella-cover.png`} alt="" />
-        <ImageViewer src={`${FOLDER}/penella-cover.png`} alt="" />
+      <div className="mt-separate mb-together mx-photo">
+        <ImageViewer src={`${FOLDER}/two-versions.png`} alt="" />
       </div>
       <div className="mt-together mb-separate mx-text">
         <h3>Leveraging peer feedback to choose a design direction</h3>
@@ -254,8 +271,7 @@ export default function PenellaPage() {
             </h3>
           </div>
           <div className="mx-[20%]">
-            {/* TODO: replace this photo */}
-            <ImageViewer src={`${FOLDER}/penella-cover.png`} alt="" />
+            <ImageViewer src={`${FOLDER}/solution-teaser.png`} alt="" />
             <div className={sharedStyles.photoCaptionText}>
               A final solution teaser.
             </div>

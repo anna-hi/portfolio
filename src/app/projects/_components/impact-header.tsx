@@ -12,9 +12,7 @@ export default function ImpactHeader({
 }: impactHeaderProps) {
   return (
     <div className={styles.impactHeaderContainer}>
-      <div className={`${ALEGREYA_SANS.className} text-gray-dark`}>
-        {isPerceivedImpact ? "perceived impact" : "impact"}
-      </div>
+      <h5>{isPerceivedImpact ? "perceived impact" : "impact"}</h5>
       <div className={`${LORA.className} text-2xl font-medium`}>{children}</div>
     </div>
   );

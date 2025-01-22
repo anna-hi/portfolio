@@ -34,9 +34,6 @@
 /* project header end */
 
 /* image viewer start */
-.imageViewer {
-  cursor: zoom-in;
-}
 .imageViewerModal {
   cursor: zoom-out;
   z-index: 1000;
@@ -87,8 +84,8 @@
 }
 
 .carousel {
-  width: 120%;
-  margin-left: -10%;
+  width: 100%;
+  /* margin-left: -10%; */
   height: 100%;
 
   display: flex;

@@ -57,6 +57,16 @@ em {
   font-style: italic;
 }
 
+figcaption {
+  @apply text-caption;
+  font-family: var(--font-source-sans-3);
+  color: #8e8e8e;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.875rem;
+  margin-top: 1rem;
+}
+
 body {
   /* COLORS */
   @apply bg-background-dark text-white text-base;
@@ -90,8 +100,16 @@ body {
     @apply text-negotium-primary;
   }
 
+  h5 {
+    @apply text-gray-light;
+  }
+
   em {
     @apply text-negotium-primary;
+  }
+
+  figcaption {
+    color: #bcb8b8;
   }
 }
 
@@ -132,5 +150,32 @@ body {
 
   em {
     @apply text-penella-primary;
+  }
+}
+
+.light {
+  h5 {
+    @apply text-gray-dark;
+  }
+  h3,
+  p {
+    @apply text-black;
+  }
+  figcaption {
+    color: #8e8e8e;
+  }
+}
+
+.dark {
+  h5 {
+    @apply text-gray-light;
+  }
+  h3,
+  p {
+    @apply text-white;
+  }
+
+  figcaption {
+    color: #bcb8b8;
   }
 }

@@ -25,6 +25,7 @@ export default function ProjectHeader({ header, tags, photo }: projectHeader) {
           src={photo}
           width={0}
           height={0}
+          priority
           alt={header}
           sizes="100vw"
           className={styles.projectHeaderImage}

@@ -17,7 +17,7 @@ export default function MyRoleSection({
   isDark,
 }: MyRoleSectionProps) {
   const headerClass = `${ALEGREYA_SANS.className} ${
-    isDark ? "text-[#C8C8C8]" : "text-gray-dark"
+    isDark ? "text-gray-light" : "text-gray-dark"
   } text-base`;
 
   return (

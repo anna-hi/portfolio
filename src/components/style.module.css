@@ -19,7 +19,7 @@
   bottom: 1.25rem;
   right: 1.25rem;
   z-index: 100;
-  @apply bg-white text-background-dark;
+  @apply bg-whiteWhite text-background-dark;
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
@@ -31,6 +31,6 @@
 }
 
 .scrollToTop:hover {
-  @apply bg-background-dark text-white;
+  @apply bg-background-dark text-whiteWhite;
 }
 /* scroll to top end */

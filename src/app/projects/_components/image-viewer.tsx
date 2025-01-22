@@ -11,14 +11,12 @@ interface ImageViewerProps {
   src: string;
   alt: string;
   imageClass?: string;
-  inlineClass?: string;
 }
 
 export default function ImageViewer({
   src,
   alt,
   imageClass = "",
-  inlineClass = "",
 }: ImageViewerProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -45,19 +43,16 @@ export default function ImageViewer({
 
   return (
     <>
-      <div
-        className={`${styles.imageViewer} ${inlineClass}`}
+      <Image
+        src={src}
+        width={0}
+        height={0}
+        alt={alt}
+        sizes="100vw"
+        priority
+        className={`${imageClass} w-full h-auto rounded-md cursor-zoom-in`}
         onClick={handleImageClick}
-      >
-        <Image
-          src={src}
-          width={0}
-          height={0}
-          alt={alt}
-          sizes="100vw"
-          className={`${imageClass} w-full h-auto`}
-        />
-      </div>
+      />
 
       <AnimatePresence>
         {isModalOpen && (

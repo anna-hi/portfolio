@@ -11,7 +11,6 @@ import { WorkflowList } from "../_components/workflow-list";
 import { MINDFUL_PROJECT_DATA } from "@/data/projects";
 
 // styles
-import sharedStyles from "../style.module.css";
 import { MINDFUL_COLORS } from "../../../../tailwind.config";
 
 const FOLDER = "/mindful-project";
@@ -44,7 +43,6 @@ const WORKFLOW_ITEMS = [
   },
   {
     title: "Improving focus levels",
-    // text: "The Focus section offers curated music/noise from the user's own Spotify to help them lock in. This section also uses generative AI to create longer playlists with similar songs to allow users to focus for longer periods",
     text: (
       <>
         <p>
@@ -102,7 +100,7 @@ const FINAL_THOUGHTS_LIST = [
 
 export default function MindfulPage() {
   return (
-    <div className="mindful-container">
+    <article className="mindful-container">
       <ProjectHeader
         header={MINDFUL_PROJECT_DATA.title}
         tags={MINDFUL_PROJECT_DATA.tags}
@@ -182,13 +180,13 @@ export default function MindfulPage() {
               </b>
             </p>
           </div>
-          <div className="col-span-4">
+          <figure className="col-span-4">
             <ImageViewer src={`${FOLDER}/competitive-analysis.jpg`} alt="" />
-            <div className={sharedStyles.photoCaptionText}>
+            <figcaption>
               Competitive analysis breakdown with 2 meditation apps and 1 task
               app.
-            </div>
-          </div>
+            </figcaption>
+          </figure>
         </div>
       </div>
       <div className="my-separate mx-text">
@@ -244,9 +242,9 @@ export default function MindfulPage() {
             ads
           </h3>
         </div>
-        <div className="mx-[18%]">
+        <figure className="mx-[18%]">
           <ImageViewer src={`${FOLDER}/work-preview.png`} alt="" />
-        </div>
+        </figure>
       </div>
       <div className="my-separate mx-photo grid md:grid-cols-5 gap-8 items-center">
         <div className="col-span-2 md:order-2">
@@ -256,20 +254,18 @@ export default function MindfulPage() {
             possible features
           </h3>
         </div>
-        <div className="col-span-3">
+        <figure className="col-span-3">
           <ImageViewer src={`${FOLDER}/lowfis.jpg`} alt="" />
-          <div className={sharedStyles.photoCaptionText}>
+          <figcaption>
             First iterations considering features, visual hierarchy layouts, and
             user experience.
-          </div>
-        </div>
+          </figcaption>
+        </figure>
       </div>
-      <div className="my-separate mx-photo">
+      <figure className="my-separate mx-photo">
         <ImageViewer src={`${FOLDER}/iterations.png`} alt="" />
-        <div className={sharedStyles.photoCaptionText}>
-          Higher fidelity iterations for each feature.
-        </div>
-      </div>
+        <figcaption>Higher fidelity iterations for each feature.</figcaption>
+      </figure>
       <div className="my-separate mx-photo grid lg:grid-cols-5 gap-8 items-center">
         <div className="col-span-2">
           <h5>brand</h5>
@@ -285,12 +281,12 @@ export default function MindfulPage() {
             making the lines coming out of the star go around instead.
           </p>
         </div>
-        <div className="col-span-3">
+        <figure className="col-span-3">
           <ImageViewer src={`${FOLDER}/app-icon.png`} alt="" />
-          <div className={sharedStyles.photoCaptionText}>
+          <figcaption>
             Key design iterations for the development of the app mark.
-          </div>
-        </div>
+          </figcaption>
+        </figure>
       </div>
       <div className="bg-mindful-background-secondary py-32 my-separate">
         <div className="mx-text">
@@ -301,12 +297,10 @@ export default function MindfulPage() {
               and take valuable breaks: Mindful, the app that does it all
             </h3>
           </div>
-          <div>
+          <figure>
             <ImageViewer src={`${FOLDER}/mindful-images.png`} alt="" />
-            <div className={sharedStyles.photoCaptionText}>
-              A final solution teaser.
-            </div>
-          </div>
+            <figcaption>A final solution teaser.</figcaption>
+          </figure>
         </div>
       </div>
 
@@ -334,12 +328,12 @@ export default function MindfulPage() {
             de-stigmatized method that is commonly used.
           </p>
         </div>
-        <div className="col-span-4">
+        <figure className="col-span-4">
           <ImageViewer src={`${FOLDER}/accessibility-1.png`} alt="" />
-          <div className={sharedStyles.photoCaptionText}>
+          <figcaption>
             Accommodating users by creating an audio recording alternative.
-          </div>
-        </div>
+          </figcaption>
+        </figure>
       </div>
       <div className="mt-separate mb-together mx-text">
         <h5>de-cluttering the screen</h5>
@@ -356,43 +350,40 @@ export default function MindfulPage() {
           screen to allow the screen reader to find the main button faster.
         </p>
       </div>
-      <div className="mb-separate mx-photo">
+      <figure className="mb-separate mx-photo">
         <ImageViewer src={`${FOLDER}/accessibility-2.png`} alt="" />
-        <div className={sharedStyles.photoCaptionText}>
+        <figcaption>
           Explaining how the screen is optimized for screen readers.
-        </div>
-      </div>
-      <div className="bg-background-dark py-32 my-separate">
+        </figcaption>
+      </figure>
+      <div className="bg-background-dark py-32 my-separate dark">
         <div className="mx-text mb-together">
-          <h5 className="text-white">thinking ahead</h5>
-          <h3 className="text-white">
-            Designing a component library for the basis of future work
-          </h3>
-          <p className="text-white">
+          <h5>thinking ahead</h5>
+          <h3>Designing a component library for the basis of future work</h3>
+          <p>
             I created this component library to ensure consistency throughout
             the application. In the future, if this application were fully
             developed, the developers will have reusable blocks to create a
             unified look.
           </p>
         </div>
-        <div className="grid lg:grid-cols-2 gap-8 mb-separate mx-[10%]">
+        <figure className="grid lg:grid-cols-2 gap-8 mb-separate mx-[10%]">
           <ImageViewer src={`${FOLDER}/design-system1.jpg`} alt="" />
           <ImageViewer src={`${FOLDER}/design-system2.jpg`} alt="" />
-        </div>
+        </figure>
         <div className="mx-text mb-together">
-          <h3 className="text-white">
+          <h3>
             Developing Instagram ads to publicize my app: <i>Mindful</i>
           </h3>
-          <p className="text-white">
+          <p>
             In these Instagram advertisements, I focused on advertising specific
             mindsets that the application would help cultivate. They intended to
             evoke a sense of mindfulness and calmness that the app offers.
           </p>
         </div>
-        <div className="mx-[10%]">
-          {/* maybe want this to be 3 images? */}
+        <figure className="mx-[10%]">
           <ImageViewer src={`${FOLDER}/instagram-posts.png`} alt="" />
-        </div>
+        </figure>
       </div>
       <div className="mx-text">
         <h5>final thoughts</h5>
@@ -412,6 +403,6 @@ export default function MindfulPage() {
         />
       </div>
       {/* MORE PROJECTS THING */}
-    </div>
+    </article>
   );
 }

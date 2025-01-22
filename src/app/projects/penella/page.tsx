@@ -6,14 +6,13 @@ import Banner from "../_components/banner";
 import ImageViewer from "../_components/image-viewer";
 import NumberedList from "../_components/numbered-list";
 import { WorkflowList } from "../_components/workflow-list";
+import ImageCarousel from "../_components/image-carousel";
 
 // data
 import { PENELLA_PROJECT_DATA } from "@/data/projects";
 
 // styles
-import sharedStyles from "../style.module.css";
 import { PENELLA_COLORS } from "../../../../tailwind.config";
-import ImageCarousel from "../_components/image-carousel";
 
 const FOLDER = "/penella-project";
 
@@ -94,7 +93,7 @@ const WORKFLOW_ITEMS = [
 
 export default function PenellaPage() {
   return (
-    <div className="penella-container">
+    <article className="penella-container">
       <ProjectHeader
         header={PENELLA_PROJECT_DATA.title}
         tags={PENELLA_PROJECT_DATA.tags}
@@ -166,12 +165,10 @@ export default function PenellaPage() {
               </li>
             </ul>
           </div>
-          <div className="xl:col-span-2">
+          <figure className="xl:col-span-2">
             <ImageViewer src={`${FOLDER}/user-personas.png`} alt="" />
-            <div className={sharedStyles.photoCaptionText}>
-              Key user personas to design for.
-            </div>
-          </div>
+            <figcaption>Key user personas to design for.</figcaption>
+          </figure>
         </div>
       </div>
       <div className="my-separate mx-text">
@@ -193,40 +190,45 @@ export default function PenellaPage() {
           convenient without sacrificing customizability.
         </p>
       </div>
-      <div className="bg-background-dark mt-separate pt-32 pb-separate">
-        <div className="mx-text mb-together">
-          <h5>iterations</h5>
-          <h3 className="text-whiteWhite">
-            Ideating potential user workflows to help create a{" "}
-            <i>structured and customizable space</i>
-          </h3>
-        </div>
-        <ImageCarousel images={IMAGE_CAROUSEL_DATA} />
-      </div>
-      <div className="bg-background-dark-secondary mb-separate py-32">
-        <div className="mx-[20%] grid lg:grid-cols-3 gap-8 items-center">
-          <div className="text-whiteWhite lg:order-2">
-            <h3 className="text-whiteWhite">
-              <i>Visually communicating</i> how Bryan interacts with Penella
+      <div className="dark">
+        <div className="bg-background-dark mt-separate pt-32 pb-separate">
+          <div className="mx-text mb-together">
+            <h5>iterations</h5>
+            <h3>
+              Ideating potential user workflows to help create a{" "}
+              <i>structured and customizable space</i>
             </h3>
-            <p>
-              I created a storyboard to visualize and communicate the
-              users&apos; journey, from the initial spark to its result.
-            </p>
-            <p>
-              This helped to communicate how users can use Penella to create
-              customized journal entries to commemorate happy memories.
-            </p>
           </div>
-          <div className="lg:col-span-2">
-            <ImageViewer src={`${FOLDER}/storyboard.png`} alt="" />
-            <div className={sharedStyles.photoCaptionText}>
-              A storyboard to understand how people will use Penella.
-              (Bryan&apos;s Story)
+          <figure>
+            <ImageCarousel images={IMAGE_CAROUSEL_DATA} />
+          </figure>
+        </div>
+        <div className="bg-background-dark-secondary mb-separate py-32">
+          <div className="mx-[20%] grid lg:grid-cols-3 gap-8 items-center">
+            <div className="lg:order-2">
+              <h3>
+                <i>Visually communicating</i> how Bryan interacts with Penella
+              </h3>
+              <p>
+                I created a storyboard to visualize and communicate the
+                users&apos; journey, from the initial spark to its result.
+              </p>
+              <p>
+                This helped to communicate how users can use Penella to create
+                customized journal entries to commemorate happy memories.
+              </p>
             </div>
+            <figure className="lg:col-span-2">
+              <ImageViewer src={`${FOLDER}/storyboard.png`} alt="" />
+              <figcaption>
+                A storyboard to understand how people will use Penella.
+                (Bryan&apos;s Story)
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>
+
       <div className="my-separate mx-text">
         <h5>adding the it factor</h5>
         <h3>Crafting Penella&apos;s magical aesthetic with group ideation</h3>
@@ -241,9 +243,9 @@ export default function PenellaPage() {
           from a new perspective.
         </p>
       </div>
-      <div className="mt-separate mb-together mx-photo">
+      <figure className="mt-separate mb-together mx-photo">
         <ImageViewer src={`${FOLDER}/two-versions.png`} alt="" />
-      </div>
+      </figure>
       <div className="mt-together mb-separate mx-text">
         <h3>Leveraging peer feedback to choose a design direction</h3>
         <p>
@@ -262,19 +264,17 @@ export default function PenellaPage() {
       </div>
       <div className="bg-penella-background-secondary py-32 my-separate">
         <div className="mb-together">
-          <div className="mx-text">
+          <div className="mx-text mb-together">
             <h5>final deliverables</h5>
             <h3>
               Produced web & mobile design for a digital journal equipped with
               entry tagging, customizability, and fun moodboards{" "}
             </h3>
           </div>
-          <div className="mx-[20%]">
+          <figure className="mx-[20%]">
             <ImageViewer src={`${FOLDER}/solution-teaser.png`} alt="" />
-            <div className={sharedStyles.photoCaptionText}>
-              A final solution teaser.
-            </div>
-          </div>
+            <figcaption>A final solution teaser.</figcaption>
+          </figure>
         </div>
         <div className="mt-together mx-photo">
           <WorkflowList workflowItems={WORKFLOW_ITEMS} />
@@ -293,6 +293,6 @@ export default function PenellaPage() {
           become a real app.
         </p>
       </div>
-    </div>
+    </article>
   );
 }

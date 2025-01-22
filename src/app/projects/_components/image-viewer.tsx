@@ -49,7 +49,7 @@ export default function ImageViewer({
         height={0}
         alt={alt}
         sizes="100vw"
-        // priority={true}
+        priority
         className={`${imageClass} w-full h-auto rounded-md cursor-zoom-in`}
         onClick={handleImageClick}
       />

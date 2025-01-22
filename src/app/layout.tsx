@@ -1,6 +1,10 @@
 import "./globals.css";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
+
 import type { Metadata } from "next";
+
 import { LORA, SOURCE_SANS_3, ALEGREYA_SANS } from "@/util/fonts";
 
 import Footer from "@/components/footer";
@@ -29,6 +33,8 @@ export default function RootLayout({
           <Footer />
           <ScrollToTop />
         </main>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

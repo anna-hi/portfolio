@@ -109,7 +109,7 @@ const FINAL_THOUGHTS_LIST = [
 // TODO: GO THROUHG COLORS ON DARK BACKGROUND AND MAEK SURE THEYRE CORRECT
 export default function NegotiumPage() {
   return (
-    <div className="negotium-container">
+    <article className="negotium-container">
       <ProjectHeader
         header={NEGOTIUM_PROJECT_DATA.title}
         tags={NEGOTIUM_PROJECT_DATA.tags}
@@ -397,6 +397,6 @@ export default function NegotiumPage() {
       </div>
 
       {/* MORE PROJECTS THING */}
-    </div>
+    </article>
   );
 }

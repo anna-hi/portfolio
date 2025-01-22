@@ -93,7 +93,7 @@ const WORKFLOW_ITEMS = [
 
 export default function PenellaPage() {
   return (
-    <div className="penella-container">
+    <article className="penella-container">
       <ProjectHeader
         header={PENELLA_PROJECT_DATA.title}
         tags={PENELLA_PROJECT_DATA.tags}
@@ -293,6 +293,6 @@ export default function PenellaPage() {
           become a real app.
         </p>
       </div>
-    </div>
+    </article>
   );
 }

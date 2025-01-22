@@ -65,7 +65,7 @@ const FINAL_THOUGHTS_LIST = [
 
 export default function FacultyActivityTrackerPage() {
   return (
-    <div className="fat-container">
+    <article className="fat-container">
       <ProjectHeader
         header={FAT_PROJECT_DATA.title}
         tags={FAT_PROJECT_DATA.tags}
@@ -333,6 +333,6 @@ export default function FacultyActivityTrackerPage() {
       </div>
 
       {/* MORE PROJECTS THING */}
-    </div>
+    </article>
   );
 }

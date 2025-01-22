@@ -44,7 +44,7 @@ const config: Config = {
         orange: "#F7BEA9",
         gray: {
           light: "#c8c8c8",
-          DEFAULT: "#8492a6",
+          DEFAULT: "#9B9B9B",
           dark: "#5D5C5C",
         },
         white: "#FBF8EC",

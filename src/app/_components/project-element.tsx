@@ -34,12 +34,12 @@ const ProjectElement: React.FC<ProjectElementProps> = ({ project }) => {
             <FlowerIcon color={project.flowerColor} size={FLOWER_SIZES.SMALL} />
           </span>
         </h2>
-        <p className="text-caption">{project.description}</p>
+        <p className="text-caption mb-0">{project.description}</p>
         <div className="flex flex-wrap">
           {project.tags.map((tag) => (
             <div
-              className={`${ALEGREYA_SANS.className} mr-2 my-1 px-2 py-1 border border-gray-light rounded-3xl 
-              text-xs text-nowrap text-white`}
+              className={`${ALEGREYA_SANS.className} mr-2 my-1 px-2 py-1 border border-gray rounded-3xl 
+              text-xs text-nowrap text-gray`}
               key={tag}
             >
               {tag}

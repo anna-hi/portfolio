@@ -34,9 +34,6 @@
 /* project header end */
 
 /* image viewer start */
-.imageViewer {
-  cursor: zoom-in;
-}
 .imageViewerModal {
   cursor: zoom-out;
   z-index: 1000;

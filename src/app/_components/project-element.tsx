@@ -56,6 +56,7 @@ const ProjectElement: React.FC<ProjectElementProps> = ({ project }) => {
           priority
           sizes="100vw"
           alt={project.title}
+          className="rounded-md"
         />
       </div>
     </Link>

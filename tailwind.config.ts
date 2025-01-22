@@ -43,7 +43,7 @@ const config: Config = {
         },
         orange: "#F7BEA9",
         gray: {
-          light: "#c7c7c7",
+          light: "#c8c8c8",
           DEFAULT: "#8492a6",
           dark: "#5D5C5C",
         },
@@ -61,7 +61,6 @@ const config: Config = {
         penella: PENELLA_COLORS,
       },
       fontSize: {
-        // 'name': ['size', 'line-height'],
         "6xl": "4.6875rem",
         "5xl": "3.125rem",
         "4xl": ["2.5rem", { lineHeight: "normal", fontWeight: "500" }],

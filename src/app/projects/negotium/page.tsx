@@ -11,7 +11,6 @@ import { WorkflowList } from "../_components/workflow-list";
 import { NEGOTIUM_PROJECT_DATA } from "@/data/projects";
 
 // styles
-import sharedStyles from "../style.module.css";
 import { NEGOTIUM_COLORS } from "../../../../tailwind.config";
 
 const FOLDER = "/negotium-project";
@@ -158,13 +157,13 @@ export default function NegotiumPage() {
           them.
         </p>
       </div>
-      <div className="mb-separate mx-photo">
+      <figure className="mb-separate mx-photo">
         <ImageViewer src={getNegotiumPhoto("whiteboard.png")} alt="" />
-        <div className={sharedStyles.photoCaptionTextDark}>
+        <figcaption>
           Whiteboard ideation session and a classification of those ideas based
           on complexity and tone.
-        </div>
-      </div>
+        </figcaption>
+      </figure>
       <div className="bg-background-dark-secondary py-32">
         <div className="mx-text mb-together">
           <h5>competitive analysis</h5>
@@ -181,16 +180,16 @@ export default function NegotiumPage() {
             people could post a variety of content.
           </p>
         </div>
-        <div className="mx-photo mb-separate">
+        <figure className="mx-photo mb-separate">
           <ImageViewer
             src={getNegotiumPhoto("negotium-compResearch.png")}
             alt=""
           />
-          <div className={sharedStyles.photoCaptionTextDark}>
+          <figcaption>
             Competitive analysis of Sopu &#40;a negotiation teaching app&#41;
             and italki &#40;a language learning app&#41;.
-          </div>
-        </div>
+          </figcaption>
+        </figure>
         <div className="mx-photo grid lg:grid-cols-5 gap-8 items-center">
           <div className="lg:col-span-2">
             <h5>design sprints</h5>
@@ -206,12 +205,10 @@ export default function NegotiumPage() {
               my sketches.
             </p>
           </div>
-          <div className="lg:col-span-3">
+          <figure className="lg:col-span-3">
             <ImageViewer src={getNegotiumPhoto("crazy-8s.jpg")} alt="" />
-            <div className={sharedStyles.photoCaptionTextDark}>
-              8 sketches to communicate my ideas.
-            </div>
-          </div>
+            <figcaption>8 sketches to communicate my ideas.</figcaption>
+          </figure>
         </div>
       </div>
       <div className="my-separate mx-text">
@@ -227,9 +224,9 @@ export default function NegotiumPage() {
         </p>
         <NumberedList list={CONVERGENT_THINKING_LIST} numberColor="#FFF" />
       </div>
-      <div className="bg-whiteWhite py-32">
-        <div className="mx-text mb-separate text-black">
-          <h3 className="text-black">
+      <div className="bg-whiteWhite py-32 light">
+        <div className="mx-text mb-separate">
+          <h3>
             Initial testing provided valuable feedback for future iterations
           </h3>
           <p>
@@ -239,10 +236,10 @@ export default function NegotiumPage() {
             that greatly improved the usability of our practice feature.
           </p>
         </div>
-        <div className="mx-photo mb-separate grid lg:grid-cols-5 gap-8 items-center text-black">
+        <div className="mx-photo mb-separate grid lg:grid-cols-5 gap-8 items-center">
           <div className="lg:col-span-2">
             <h5>call sequence</h5>
-            <h3 className="text-black">
+            <h3>
               Providing users clear signifiers when joining or ending a call
             </h3>
             <p>
@@ -254,14 +251,14 @@ export default function NegotiumPage() {
               indications of when a call is starting or ending.
             </p>
           </div>
-          <div className="lg:col-span-3">
+          <figure className="lg:col-span-3">
             <ImageViewer src={getNegotiumPhoto("call-sequence.jpg")} alt="" />
-          </div>
+          </figure>
         </div>
-        <div className="mx-photo grid lg:grid-cols-5 gap-8 items-center text-black">
+        <div className="mx-photo grid lg:grid-cols-5 gap-8 items-center">
           <div className="lg:col-span-2">
             <h5>scenario description</h5>
-            <h3 className="text-black">
+            <h3>
               Improving readability by highlighting text and dividing content
               across pages
             </h3>
@@ -274,9 +271,9 @@ export default function NegotiumPage() {
               highlighted important information.
             </p>
           </div>
-          <div className="lg:col-span-3">
+          <figure className="lg:col-span-3">
             <ImageViewer src={getNegotiumPhoto("scenario.jpg")} alt="" />
-          </div>
+          </figure>
         </div>
       </div>
 
@@ -297,35 +294,37 @@ export default function NegotiumPage() {
           to determine the most intuitive location.
         </p>
       </div>
-      <div className="mb-separate mx-photo">
+      <figure className="mb-separate mx-photo">
         <ImageViewer src={getNegotiumPhoto("button-iteration.jpg")} alt="" />
-        <div className={sharedStyles.photoCaptionTextDark}>
+        <figcaption>
           Pink outline highlights the location of the scenario description
           button in each iteration.
-        </div>
-      </div>
+        </figcaption>
+      </figure>
 
-      <div className="bg-whiteWhite py-32 px-[20%]">
+      <div className="bg-whiteWhite py-32 px-[20%] light">
         <h5>final deliverables</h5>
-        <h3 className="text-black mb-together">
+        <h3 className="mb-together">
           An end-to-end practice experience with 3 levels of practice options
           ranging from multiple choice, chat, and call
         </h3>
-        <ImageViewer src={getNegotiumPhoto("negotium-teaser.png")} alt="" />
-        <div className={sharedStyles.photoCaptionText}>
-          A snapshot of each level from easy to difficult &#40;left to
-          right&#41;.
-        </div>
+        <figure>
+          <ImageViewer src={getNegotiumPhoto("negotium-teaser.png")} alt="" />
+          <figcaption>
+            A snapshot of each level from easy to difficult &#40;left to
+            right&#41;.
+          </figcaption>
+        </figure>
       </div>
 
       <div className="my-separate mx-text bg-background-dark">
         <WorkflowList workflowItems={WORKFLOW_ITEMS} isMobileWorkflow />
       </div>
 
-      <div className="bg-whiteWhite py-32">
-        <div className="mx-text text-black mb-together">
+      <div className="bg-whiteWhite py-32 light">
+        <div className="mx-text mb-together">
           <h5>guerilla testing</h5>
-          <h3 className="text-black">
+          <h3>
             Validating our practice feature with a 2nd round of user testing
           </h3>
           <p>
@@ -342,13 +341,12 @@ export default function NegotiumPage() {
             </b>
           </p>
         </div>
-        <div className="mb-separate mx-[20%]">
-          {/* TOOO: REPLACE THIS IMAGE */}
+        <figure className="mb-separate mx-[20%]">
           <ImageViewer src={getNegotiumPhoto("guerilla-testing.png")} alt="" />
-          <div className={sharedStyles.photoCaptionText}>
+          <figcaption>
             Some quick shots of our participants trying out the new feature.
-          </div>
-        </div>
+          </figcaption>
+        </figure>
 
         <Banner background={NEGOTIUM_COLORS.primary}>
           <h3 className={bannerTextClass}>
@@ -367,16 +365,16 @@ export default function NegotiumPage() {
             <p>
               <b>3 out of 5 participants</b> got distracted by the subtext
               included in the individual topics. It interrupted their experience
-              and they didn’t find it necessary.
+              and they didn&apos;t find it necessary.
             </p>
             <p>
               In response to user feedback, I modified the content to only
               include the topic titles.
             </p>
           </div>
-          <div className="lg:col-span-3">
+          <figure className="lg:col-span-3">
             <ImageViewer src={getNegotiumPhoto("final-changes.jpg")} alt="" />
-          </div>
+          </figure>
         </div>
       </div>
 
@@ -390,12 +388,12 @@ export default function NegotiumPage() {
           feature.
         </p>
         <NumberedList list={FINAL_THOUGHTS_LIST} numberColor="#FFF" />
-        <div className="mt-separate">
+        <figure className="mt-separate">
           <ImageViewer src={getNegotiumPhoto("me-andMini.jpg")} alt="" />
           <p className="mt-6 mb-0 text-center text-[#C8C8C8]">
             Myself working on the whiteboard with mini me I created in the app!
           </p>
-        </div>
+        </figure>
       </div>
 
       {/* MORE PROJECTS THING */}

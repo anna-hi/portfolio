@@ -39,7 +39,7 @@ const ProjectElement: React.FC<ProjectElementProps> = ({ project }) => {
           {project.tags.map((tag) => (
             <div
               className={`${ALEGREYA_SANS.className} mr-2 my-1 px-2 py-1 border border-gray rounded-3xl 
-              text-xs text-nowrap text-gray`}
+              text-xs text-nowrap text-white`}
               key={tag}
             >
               {tag}

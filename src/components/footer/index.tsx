@@ -1,4 +1,9 @@
+"use client";
+
 import React from "react";
+
+import { motion } from "framer-motion";
+
 import FlowerIcon, {
   FLOWER_COLORS,
   FLOWER_SIZES,
@@ -21,9 +26,13 @@ const Footer: React.FC = () => {
             <br />
             Here&apos;s a flower for your troubles :&#41;
           </div>
-          <div>
+          <motion.div
+            className="cursor-grab active:cursor-grabbing"
+            drag
+            whileDrag={{ scale: 1.1 }}
+          >
             <FlowerIcon color={FLOWER_COLORS.PINK} size={FLOWER_SIZES.MEDIUM} />
-          </div>
+          </motion.div>
         </div>
         <div className="mx-auto text-nowrap text-center">&copy; Anna Ji</div>
         <div className="w-[33%]">

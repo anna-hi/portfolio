@@ -1,4 +1,8 @@
+"use client";
+
 import React from "react";
+
+import { motion } from "framer-motion";
 
 import FlowerIcon, {
   FLOWER_SIZES,
@@ -18,9 +22,21 @@ const ActivityElement: React.FC<ActivityElementProps> = ({
 }) => {
   return (
     <div className="flex flex-nowrap w-80">
-      <div className="mx-4 mt-1">
+      <motion.div
+        className="mx-4 mt-1"
+        animate={{
+          y: [0, -25, 0],
+          rotate: [0, 0, 360],
+        }}
+        transition={{
+          duration: 2,
+          ease: "easeInOut",
+          times: [0, 0.2, 0.5, 0.8, 1],
+          repeat: 2,
+        }}
+      >
         <FlowerIcon size={FLOWER_SIZES.MEDIUM} color={color} />
-      </div>
+      </motion.div>
       <div>
         <h3 className="italic mb-2 font-normal text-[#EEE]">{header}</h3>
         <div className="text-caption text-gray-light mt-2">{subtext}</div>

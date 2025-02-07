@@ -2,6 +2,8 @@
 
 import React from "react";
 
+import { usePathname } from "next/navigation";
+
 import { motion } from "framer-motion";
 
 import FlowerIcon, {
@@ -16,7 +18,13 @@ const email = "annaji@andrew.cmu.edu";
 const linkedin = "https://www.linkedin.com/in/anna-ji/";
 const github = "https://github.com/anna-hi";
 
-const Footer: React.FC = () => {
+type FooterProps = {
+  containerRef: React.RefObject<HTMLElement | null>;
+};
+
+const Footer: React.FC<FooterProps> = ({ containerRef }) => {
+  const pathname = usePathname();
+
   return (
     <footer className={styles.footerContainer}>
       <div className="flex items-center justify-between relative text-caption">
@@ -30,6 +38,9 @@ const Footer: React.FC = () => {
             className="cursor-grab active:cursor-grabbing"
             drag
             whileDrag={{ scale: 1.1 }}
+            dragConstraints={containerRef}
+            dragElastic={0}
+            key={pathname}
           >
             <FlowerIcon color={FLOWER_COLORS.PINK} size={FLOWER_SIZES.MEDIUM} />
           </motion.div>

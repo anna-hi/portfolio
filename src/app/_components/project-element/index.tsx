@@ -7,6 +7,7 @@ import FlowerIcon, {
   FLOWER_SIZES,
   flowerColor,
 } from "@/components/flower-icon/flower-icon";
+import ProjectElementPhoto from "./components/image";
 
 export type ProjectCardInfo = {
   title: string;
@@ -48,17 +49,7 @@ const ProjectElement: React.FC<ProjectElementProps> = ({ project }) => {
         </div>
       </div>
 
-      <div className="shrink-1 flex items-center min-w-80 w-80 md:w-auto">
-        <Image
-          src={project.thumbnail}
-          width={668}
-          height={498}
-          priority
-          sizes="100vw"
-          alt={project.title}
-          className="rounded-md"
-        />
-      </div>
+      <ProjectElementPhoto thumbnail={project.thumbnail} alt={project.title} />
     </Link>
   );
 };

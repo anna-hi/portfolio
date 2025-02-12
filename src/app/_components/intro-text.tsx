@@ -15,20 +15,20 @@ export default function IntroText() {
         <br />
         who creates for
         <br />
-        delight and utility
+        delight and function
       </span>
     ),
     md: (
       <span className="hidden md:block home:hidden">
         a <span className="text-pink">product designer</span> who creates
         <br />
-        for delight and utility
+        for delight and function
       </span>
     ),
     lg: (
       <span className="hidden home:block">
         a <span className="text-pink">product designer</span> who creates for
-        delight and utility
+        delight and function
       </span>
     ),
   };

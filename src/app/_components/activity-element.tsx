@@ -32,7 +32,7 @@ const ActivityElement: React.FC<ActivityElementProps> = ({
           duration: 2,
           ease: "easeInOut",
           times: [0, 0.2, 0.5, 0.8, 1],
-          repeat: 2,
+          repeat: 1,
         }}
       >
         <FlowerIcon size={FLOWER_SIZES.MEDIUM} color={color} />

@@ -172,10 +172,10 @@ export default function FacultyActivityTrackerPage() {
       </div>
       <div className="my-separate mx-photo grid lg:grid-cols-3 gap-8 items-center">
         <div className="mt-together">
-          <h5>design system</h5>
-          <h3>Creating a clear design system for developers and future work</h3>
+          <h5>design guidelines</h5>
+          <h3>Creating clear design guidelines for developers and future work</h3>
           <p>
-            We created a design system to maintain consistency throughout the
+            We created design guidelines to maintain consistency throughout the
             website to improve user experience and provide developers with a
             reusable pattern.
           </p>

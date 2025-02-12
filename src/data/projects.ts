@@ -1,11 +1,11 @@
 export const FAT_PROJECT_DATA = {
   title: "Streamlining Form and\nScoring Experiences",
-  tags: ["product design", "design systems"],
+  tags: ["product design", "ux design"],
 };
 
 export const MINDFUL_PROJECT_DATA = {
   title: "Pairing Mindfulness with\nTask Organization",
-  tags: ["design systems", "ux research"],
+  tags: ["visual design", "ux research"],
 };
 
 export const PENELLA_PROJECT_DATA = {
@@ -14,6 +14,6 @@ export const PENELLA_PROJECT_DATA = {
 };
 
 export const NEGOTIUM_PROJECT_DATA = {
-  title: "Empowering Women with\nNegotiation Skills",
+  title: "Empowering People with\nNegotiation Skills",
   tags: ["product design", " user testing"],
 };

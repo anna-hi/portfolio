@@ -12,7 +12,7 @@ import Link from "next/link";
 
 const NavBar: React.FC = () => {
   const resumeURL =
-    "https://drive.google.com/file/d/1yLEb9JJwInc0XuviAyUEJXIqHC9Z2nax/view?usp=sharing";
+    "https://drive.google.com/file/d/1VlE1NctNL2japj9nKU_DiXkNXPS3uCHG/view?usp=sharing";
 
   const buttons = [
     { label: "Work", link: "/" },

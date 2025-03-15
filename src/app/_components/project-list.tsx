@@ -15,15 +15,6 @@ import {
 
 const project_map: ProjectCardInfo[] = [
   {
-    title: NEGOTIUM_PROJECT_DATA.title,
-    description:
-      "How might we connect people to practice their negotiation skills together?",
-    tags: NEGOTIUM_PROJECT_DATA.tags,
-    flowerColor: FLOWER_COLORS.NEGOTIUM_PURPLE,
-    link: "/projects/negotium",
-    thumbnail: "/negotium-project/negotium-cover.jpg",
-  },
-  {
     title: FAT_PROJECT_DATA.title,
     description:
       "How might we make it easier for faculty to fill out an annual form? How might we optimize efficiency for the committee who scores those forms?",
@@ -31,6 +22,15 @@ const project_map: ProjectCardInfo[] = [
     flowerColor: FLOWER_COLORS.FAT_RED,
     link: "/projects/faculty-activity-tracker",
     thumbnail: "/fat-project/fat-cover.jpg",
+  },
+  {
+    title: NEGOTIUM_PROJECT_DATA.title,
+    description:
+      "How might we connect people to practice their negotiation skills together?",
+    tags: NEGOTIUM_PROJECT_DATA.tags,
+    flowerColor: FLOWER_COLORS.NEGOTIUM_PURPLE,
+    link: "/projects/negotium",
+    thumbnail: "/negotium-project/negotium-cover.jpg",
   },
   {
     title: MINDFUL_PROJECT_DATA.title,

@@ -14,6 +14,6 @@ export const PENELLA_PROJECT_DATA = {
 };
 
 export const NEGOTIUM_PROJECT_DATA = {
-  title: "Empowering People with\nNegotiation Skills",
+  title: "Empowering Women with\nNegotiation Skills",
   tags: ["product design", " user testing"],
 };

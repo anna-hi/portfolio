@@ -120,7 +120,7 @@ export default function NegotiumPage() {
         app to improve their skills.
       </ImpactHeader>
       <div className="mb-separate mx-text">
-        <h3>Practice Makes Perfect</h3>
+        <h3>Practice makes perfect</h3>
         <div className="mb-together">
           <p>
             I worked as a Product Designer at CoEx Lab within the Human Computer

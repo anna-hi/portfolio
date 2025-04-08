@@ -105,7 +105,7 @@ export default function PenellaPage() {
       </ImpactHeader>
       <div className="mb-separate mx-text">
         {/* TODO: ADD WAND EMOJI */}
-        <h3>Bippity Boppity Boo!</h3>
+        <h3>Bippity boppity boo!</h3>
 
         <div className="mb-together">
           <p>

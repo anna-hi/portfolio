@@ -7,74 +7,76 @@
   --background-rgb: #25201a;
 }
 
-h1,
-h2,
-h3,
-h4,
-h6 {
-  font-family: var(--font-lora);
-}
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h6 {
+    font-family: var(--font-lora);
+  }
 
-h1 {
-  @apply text-4xl;
-}
-h2 {
-  @apply text-3xl;
-}
-h3 {
-  @apply text-2xl;
-  margin-bottom: 1.25rem;
-  font-style: normal;
-}
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-2xl;
+    margin-bottom: 1.25rem;
+    font-style: normal;
+  }
 
-h4 {
-  @apply text-base;
-  font-weight: 600;
-  font-style: normal;
-  line-height: normal;
-}
+  h4 {
+    @apply text-base;
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+  }
 
-/* DOING h5 to h3 for the projects might be bad, can use h2 instead? its not used in projects anywhere */
-h5 {
-  @apply text-base text-gray-dark;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.875rem; /* 150% */
-  font-family: var(--font-alegreya-sans);
-  text-transform: lowercase;
-}
+  /* DOING h5 to h3 for the projects might be bad, can use h2 instead? its not used in projects anywhere */
+  h5 {
+    @apply text-base text-gray-dark;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875rem; /* 150% */
+    font-family: var(--font-alegreya-sans);
+    text-transform: lowercase;
+  }
 
-p {
-  margin-bottom: 1rem;
-}
+  p {
+    margin-bottom: 1rem;
+  }
 
-b {
-  font-weight: 600;
-}
+  b {
+    font-weight: 600;
+  }
 
-em {
-  font-weight: 600;
-  font-style: italic;
-}
+  em {
+    font-weight: 600;
+    font-style: italic;
+  }
 
-figcaption {
-  @apply text-caption;
-  font-family: var(--font-source-sans-3);
-  color: #8e8e8e;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.875rem;
-  margin-top: 1rem;
-}
+  figcaption {
+    @apply text-caption;
+    font-family: var(--font-source-sans-3);
+    color: #8e8e8e;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.875rem;
+    margin-top: 1rem;
+  }
 
-body {
-  /* COLORS */
-  @apply bg-background-dark text-white text-base;
-  /* FONT */
-  font-family: var(--font-source-sans-3);
+  body {
+    /* COLORS */
+    @apply bg-background-dark text-white text-base;
+    /* FONT */
+    font-family: var(--font-source-sans-3);
 
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
 @layer utilities {
@@ -86,7 +88,8 @@ body {
 .negotium-container,
 .fat-container,
 .mindful-container,
-.penella-container {
+.penella-container,
+.about-container {
   h3 {
     line-height: 35px;
   }

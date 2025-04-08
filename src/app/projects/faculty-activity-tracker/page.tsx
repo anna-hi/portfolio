@@ -76,19 +76,28 @@ export default function FacultyActivityTrackerPage() {
         this application <em>each year.</em>
       </ImpactHeader>
       <div className="mb-separate mx-text">
-        <h3>The Spark</h3>
+        <h3>Simplifying workflows for 2 distinct users</h3>
         <div className="mb-together">
           <p>
-            Every year, the College of Media Arts and Design &#40;CAMD&#41;
+            {/* Every year, the College of Media Arts and Design &#40;CAMD&#41;
             faculty must fill out an <b>exhausting 10-page paper form</b> to
             track their completed activities to earn merit. The Merit Committee
             then sorts through <b>100s of forms</b> to approve activities and
-            manually assign scores.
+            manually assign scores. */}
+            Every year, Northeastern University&apos;s College of Media Arts and
+            Design &#40;CAMD&#41; faculty are required to fill out an exhausting
+            10-page paper form to track their completed activities to earn
+            merit. The Merit Committee then sorts through 100s of forms to
+            approve activities and manually assign scores.
           </p>
           <p>
             This tedious process led our client, Mark Sivak, head of the Merit
-            Committee, to task us to create a digital solution to streamline the
-            process.
+            Committee, to task us to create a digital solution to{" "}
+            <b>
+              <i>
+                streamline the process for both faculty and the Merit Committee.
+              </i>
+            </b>
           </p>
         </div>
         <MyRoleSection {...MY_ROLE_SECTION_DATA} />
@@ -173,7 +182,9 @@ export default function FacultyActivityTrackerPage() {
       <div className="my-separate mx-photo grid lg:grid-cols-3 gap-8 items-center">
         <div className="mt-together">
           <h5>design guidelines</h5>
-          <h3>Creating clear design guidelines for developers and future work</h3>
+          <h3>
+            Creating clear design guidelines for developers and future work
+          </h3>
           <p>
             We created design guidelines to maintain consistency throughout the
             website to improve user experience and provide developers with a

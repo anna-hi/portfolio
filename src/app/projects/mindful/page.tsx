@@ -111,7 +111,7 @@ export default function MindfulPage() {
         <em>students</em> could use this mobile app every semester.
       </ImpactHeader>
       <div className="mb-separate mx-text">
-        <h3>Helping my Friends</h3>
+        <h3>Helping my friends focus and take breaks</h3>
         <div className="mb-together">
           <p>
             During my senior year, many of my friends were overloaded with

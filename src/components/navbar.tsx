@@ -17,7 +17,7 @@ const NavBar: React.FC = () => {
   const buttons = [
     { label: "Work", link: "/" },
     // { label: "Fun", link: "/fun" },
-    // { label: "About", link: "/about" },
+    { label: "About", link: "/about" },
   ];
 
   return (

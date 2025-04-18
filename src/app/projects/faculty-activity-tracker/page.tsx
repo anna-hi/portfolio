@@ -94,9 +94,7 @@ export default function FacultyActivityTrackerPage() {
             This tedious process led our client, Mark Sivak, head of the Merit
             Committee, to task us to create a digital solution to{" "}
             <b>
-              <i>
-                streamline the process for both faculty and the Merit Committee.
-              </i>
+              streamline the process for both faculty and the Merit Committee.
             </b>
           </p>
         </div>

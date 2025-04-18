@@ -1,3 +1,3 @@
 .container {
-  @apply grid grid-cols-1 gap-32 content-center py-32 px-[9%] min-h-screen w-full;
+  @apply grid grid-cols-1 gap-32 content-center py-32 px-[9%] min-h-[85vh] w-full;
 }

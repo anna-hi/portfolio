@@ -9,7 +9,24 @@
   margin: 2.5rem 9% 1.25rem 9%;
 }
 .navbarButton {
-  @apply text-caption text-center font-medium;
+  @apply text-caption text-center font-medium relative;
+}
+.navbarButton::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0.5rem;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbarButton:hover::after {
+  width: 100%;
+  left: 50%;
 }
 /* navbar end */
 

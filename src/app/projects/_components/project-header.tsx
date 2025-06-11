@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 // styles
 import styles from "./style.module.css";
@@ -16,21 +19,36 @@ export default function ProjectHeader({ header, tags, photo }: projectHeader) {
 
   return (
     <div className={styles.projectHeaderContainer}>
-      <div className={styles.projectHeaderText}>
-        <h1>{header}</h1>
-        <div className={`${ALEGREYA_SANS.className} text-base`}>{tagsText}</div>
-      </div>
-      {photo && (
-        <Image
-          src={photo}
-          width={0}
-          height={0}
-          priority
-          alt={header}
-          sizes="100vw"
-          className={styles.projectHeaderImage}
-        />
-      )}
+      <motion.div
+        className="box"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+      >
+        <div className={styles.projectHeaderText}>
+          <h1>{header}</h1>
+          {tags && (
+            <div className={`${ALEGREYA_SANS.className} text-base`}>
+              {tagsText}
+            </div>
+          )}
+        </div>
+        {photo && (
+          <Image
+            src={photo}
+            width={0}
+            height={0}
+            priority
+            alt={header}
+            sizes="100vw"
+            className={styles.projectHeaderImage}
+          />
+        )}
+      </motion.div>
     </div>
   );
 }

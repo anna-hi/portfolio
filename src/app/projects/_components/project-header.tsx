@@ -12,10 +12,20 @@ type projectHeader = {
   header: string;
   tags?: string[];
   photo?: string;
+  dropShadow?: boolean;
 };
 
-export default function ProjectHeader({ header, tags, photo }: projectHeader) {
+export default function ProjectHeader({
+  header,
+  tags,
+  photo,
+  dropShadow = false,
+}: projectHeader) {
   const tagsText = tags && tags.join(" · ");
+  
+  const photoClass = dropShadow
+    ? styles.projectHeaderImage + " " + styles.projectHeaderImageDropShadow
+    : styles.projectHeaderImage;
 
   return (
     <div className={styles.projectHeaderContainer}>
@@ -45,7 +55,7 @@ export default function ProjectHeader({ header, tags, photo }: projectHeader) {
             priority
             alt={header}
             sizes="100vw"
-            className={styles.projectHeaderImage}
+            className={photoClass}
           />
         )}
       </motion.div>

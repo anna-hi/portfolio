@@ -70,6 +70,7 @@ export default function FacultyActivityTrackerPage() {
         header={FAT_PROJECT_DATA.title}
         tags={FAT_PROJECT_DATA.tags}
         photo={`${FOLDER}/fat-title.png`}
+        dropShadow
       />
       <ImpactHeader>
         <em>100s of Faculty & 10+ Members</em> of the Merit Committee will use

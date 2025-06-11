@@ -157,7 +157,7 @@ export default function NegotiumPage() {
           them.
         </p>
       </div>
-      <figure className="mb-separate mx-photo">
+      <figure className="mb-separate mx-text">
         <ImageViewer src={getNegotiumPhoto("whiteboard.png")} alt="" />
         <figcaption>
           Whiteboard ideation session and a classification of those ideas based
@@ -180,7 +180,7 @@ export default function NegotiumPage() {
             people could post a variety of content.
           </p>
         </div>
-        <figure className="mx-photo mb-separate">
+        <figure className="mx-text mb-separate">
           <ImageViewer
             src={getNegotiumPhoto("negotium-compResearch.png")}
             alt=""
@@ -190,7 +190,7 @@ export default function NegotiumPage() {
             and italki &#40;a language learning app&#41;.
           </figcaption>
         </figure>
-        <div className="mx-photo grid lg:grid-cols-5 gap-8 items-center">
+        <div className="mx-text grid lg:grid-cols-5 gap-8 items-center">
           <div className="lg:col-span-2">
             <h5>design sprints</h5>
             <h3>Sketching Crazy 8s to decide practice feature concepts</h3>
@@ -236,7 +236,7 @@ export default function NegotiumPage() {
             that greatly improved the usability of our practice feature.
           </p>
         </div>
-        <div className="mx-photo mb-separate grid lg:grid-cols-5 gap-8 items-center">
+        <div className="mx-text mb-separate grid lg:grid-cols-5 gap-8 items-center">
           <div className="lg:col-span-2">
             <h5>call sequence</h5>
             <h3>
@@ -255,7 +255,7 @@ export default function NegotiumPage() {
             <ImageViewer src={getNegotiumPhoto("call-sequence.jpg")} alt="" />
           </figure>
         </div>
-        <div className="mx-photo grid lg:grid-cols-5 gap-8 items-center">
+        <div className="mx-text grid lg:grid-cols-5 gap-8 items-center">
           <div className="lg:col-span-2">
             <h5>scenario description</h5>
             <h3>
@@ -294,7 +294,7 @@ export default function NegotiumPage() {
           to determine the most intuitive location.
         </p>
       </div>
-      <figure className="mb-separate mx-photo">
+      <figure className="mb-separate mx-text">
         <ImageViewer src={getNegotiumPhoto("button-iteration.jpg")} alt="" />
         <figcaption>
           Pink outline highlights the location of the scenario description
@@ -302,7 +302,7 @@ export default function NegotiumPage() {
         </figcaption>
       </figure>
 
-      <div className="bg-whiteWhite py-32 px-[20%] light">
+      <div className="bg-whiteWhite py-32 px-text light">
         <h5>final deliverables</h5>
         <h3 className="mb-together">
           An end-to-end practice experience with 3 levels of practice options
@@ -341,7 +341,7 @@ export default function NegotiumPage() {
             </b>
           </p>
         </div>
-        <figure className="mb-separate mx-[20%]">
+        <figure className="mb-separate mx-text">
           <ImageViewer src={getNegotiumPhoto("guerilla-testing.png")} alt="" />
           <figcaption>
             Some quick shots of our participants trying out the new feature.
@@ -358,7 +358,7 @@ export default function NegotiumPage() {
           </h4>
         </Banner>
 
-        <div className="mt-separate mx-photo grid lg:grid-cols-5 gap-8 items-center text-black">
+        <div className="mt-separate mx-text grid lg:grid-cols-5 gap-8 items-center text-black">
           <div className="lg:col-span-2">
             <h5>final changes</h5>
             <h3 className="text-black">Addressing user confusion</h3>

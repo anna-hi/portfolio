@@ -11,12 +11,14 @@ interface ImageViewerProps {
   src: string;
   alt: string;
   imageClass?: string;
+  useImg?: boolean; // Optional prop to use <img> instead of <Image>
 }
 
 export default function ImageViewer({
   src,
   alt,
   imageClass = "",
+  useImg = false, // Default to using <Image>
 }: ImageViewerProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -41,19 +43,30 @@ export default function ImageViewer({
     };
   }, [isModalOpen]);
 
+  const MainImageComponent = useImg ? (
+    <Image
+      src={src}
+      width={0}
+      height={0}
+      alt={alt}
+      sizes="100vw"
+      priority
+      className={`${imageClass} w-full h-auto rounded-md cursor-zoom-in`}
+      onClick={handleImageClick}
+    />
+  ) : (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={src}
+      alt={alt}
+      className={`${imageClass} w-full h-auto rounded-md cursor-zoom-in`}
+      onClick={handleImageClick}
+    />
+  );
+
   return (
     <>
-      <Image
-        src={src}
-        width={0}
-        height={0}
-        alt={alt}
-        sizes="100vw"
-        priority
-        className={`${imageClass} w-full h-auto rounded-md cursor-zoom-in`}
-        onClick={handleImageClick}
-      />
-
+      {MainImageComponent}
       <AnimatePresence>
         {isModalOpen && (
           <motion.div
@@ -71,6 +84,7 @@ export default function ImageViewer({
               exit={{ scale: 0.8 }}
               transition={{ duration: 0.5 }}
             >
+              {/* TODO: maybe replace this if gifs are also failing on this */}
               <Image
                 src={src}
                 alt={alt}

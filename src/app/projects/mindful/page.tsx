@@ -162,7 +162,7 @@ export default function MindfulPage() {
         </div>
       </div>
       <div className="bg-mindful-background-secondary py-32 my-separate">
-        <div className="mx-photo grid lg:grid-cols-7 gap-8 items-center">
+        <div className="mx-text grid lg:grid-cols-7 gap-8 items-center">
           <div className="col-span-3">
             <h5>insights</h5>
             <h3>Current meditation apps don&apos;t offer task organization</h3>
@@ -242,11 +242,11 @@ export default function MindfulPage() {
             ads
           </h3>
         </div>
-        <figure className="mx-[18%]">
+        <figure className="mx-text">
           <ImageViewer src={`${FOLDER}/work-preview.png`} alt="" />
         </figure>
       </div>
-      <div className="my-separate mx-photo grid md:grid-cols-5 gap-8 items-center">
+      <div className="my-separate mx-text grid md:grid-cols-5 gap-8 items-center">
         <div className="col-span-2 md:order-2">
           <h5>starting with mobile app</h5>
           <h3>
@@ -262,11 +262,11 @@ export default function MindfulPage() {
           </figcaption>
         </figure>
       </div>
-      <figure className="my-separate mx-photo">
+      <figure className="my-separate mx-text">
         <ImageViewer src={`${FOLDER}/iterations.png`} alt="" />
         <figcaption>Higher fidelity iterations for each feature.</figcaption>
       </figure>
-      <div className="my-separate mx-photo grid lg:grid-cols-5 gap-8 items-center">
+      <div className="my-separate mx-text grid lg:grid-cols-5 gap-8 items-center">
         <div className="col-span-2">
           <h5>brand</h5>
           <h3>Developing a brand that exudes mindfulness</h3>
@@ -314,7 +314,7 @@ export default function MindfulPage() {
         </h3>
       </Banner>
 
-      <div className="my-separate mx-[18%] grid lg:grid-cols-7 items-center gap-8">
+      <div className="my-separate mx-text grid lg:grid-cols-7 items-center gap-8">
         <div className="col-span-3">
           <h3>Adding design accommodations for blind/low-vision users</h3>
           <p>
@@ -350,7 +350,7 @@ export default function MindfulPage() {
           screen to allow the screen reader to find the main button faster.
         </p>
       </div>
-      <figure className="mb-separate mx-photo">
+      <figure className="mb-separate mx-text">
         <ImageViewer src={`${FOLDER}/accessibility-2.png`} alt="" />
         <figcaption>
           Explaining how the screen is optimized for screen readers.
@@ -367,7 +367,7 @@ export default function MindfulPage() {
             unified look.
           </p>
         </div>
-        <figure className="grid lg:grid-cols-2 gap-8 mb-separate mx-[10%]">
+        <figure className="grid lg:grid-cols-2 gap-8 mb-separate mx-text">
           <ImageViewer src={`${FOLDER}/design-system1.jpg`} alt="" />
           <ImageViewer src={`${FOLDER}/design-system2.jpg`} alt="" />
         </figure>
@@ -381,7 +381,7 @@ export default function MindfulPage() {
             evoke a sense of mindfulness and calmness that the app offers.
           </p>
         </div>
-        <figure className="mx-[10%]">
+        <figure className="mx-text">
           <ImageViewer src={`${FOLDER}/instagram-posts.png`} alt="" />
         </figure>
       </div>

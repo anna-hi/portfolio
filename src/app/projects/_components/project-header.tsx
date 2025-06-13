@@ -22,7 +22,7 @@ export default function ProjectHeader({
   dropShadow = false,
 }: projectHeader) {
   const tagsText = tags && tags.join(" · ");
-  
+
   const photoClass = dropShadow
     ? styles.projectHeaderImage + " " + styles.projectHeaderImageDropShadow
     : styles.projectHeaderImage;
@@ -34,8 +34,7 @@ export default function ProjectHeader({
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
-          duration: 0.8,
-          delay: 0.5,
+          duration: 0.6,
           ease: [0, 0.71, 0.2, 1.01],
         }}
       >
@@ -48,15 +47,18 @@ export default function ProjectHeader({
           )}
         </div>
         {photo && (
-          <Image
-            src={photo}
-            width={0}
-            height={0}
-            priority
-            alt={header}
-            sizes="100vw"
-            className={photoClass}
-          />
+          // <Image
+          //   src={photo}
+          //   width={0}
+          //   height={0}
+          //   priority
+          //   alt={header}
+          //   sizes="100vw"
+          //   className={photoClass}
+          // />
+
+          // eslint-disable-next-line @next/next/no-img-element
+          <img className={photoClass} alt={header} src={photo} />
         )}
       </motion.div>
     </div>

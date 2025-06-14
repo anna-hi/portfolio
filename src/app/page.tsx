@@ -11,12 +11,12 @@ import styles from "./style.module.css";
 const activity_elements = [
   {
     header: "Currently",
-    subtext: "Studying HCI @ Carnegie Mellon",
+    subtext: "Product Designer @ ARM Institute",
     color: FLOWER_COLORS.PURPLE,
   },
   {
     header: "Constantly",
-    subtext: "Thinking how to improve human lives",
+    subtext: "Finding opportunities to embed joy into human experiences",
     color: FLOWER_COLORS.BLUE,
   },
 ];
@@ -26,7 +26,7 @@ export default function Main() {
     <div className={styles.container}>
       <div className={styles.introduction}>
         <IntroText />
-        <div className="flex flex-col gap-y-8 gap-x-32 md:flex-row">
+        <div className="flex flex-col gap-y-8 gap-x-32 lg:flex-row">
           {activity_elements.map((activity) => (
             <ActivityElement key={activity.header} {...activity} />
           ))}

@@ -3,4 +3,25 @@
   @apply bg-whiteWhite text-black;
   padding: 3.125rem 9%;
 }
+
+.links {
+  position: relative;
+}
+.links::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -0.5rem;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.links:hover::after {
+  width: 100%;
+  left: 50%;
+}
 /* footer end */

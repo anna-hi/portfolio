@@ -1,3 +1,5 @@
+// TODO: delete this file as it is no longer needed
+
 const emailSVG = (
   <span>
     <svg

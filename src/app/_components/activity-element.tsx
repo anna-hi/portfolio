@@ -21,7 +21,7 @@ const ActivityElement: React.FC<ActivityElementProps> = ({
   color,
 }) => {
   return (
-    <div className="flex flex-nowrap w-80">
+    <div className="flex flex-nowrap min-w-80 max-w-lg">
       <motion.div
         className="mx-4 mt-1"
         animate={{

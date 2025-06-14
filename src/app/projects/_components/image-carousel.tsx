@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 
 import ImageViewer from "./image-viewer";
 
@@ -19,12 +19,14 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
 
   useEffect(() => {
     const handleResize = () => {
-      console.log(window.innerWidth);
+      // console.log("debug", window.innerWidth);
 
       if (window.innerWidth < 768) {
-        setNumberToShow(1);
-      } else {
         setNumberToShow(2);
+      } else if (window.innerWidth < 1192) {
+        setNumberToShow(3);
+      } else {
+        setNumberToShow(4);
       }
     };
 
@@ -37,8 +39,6 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  const imagesLength = images.length;
 
   const nextImage = () => {
     setAllImages((prevList) => {
@@ -66,10 +66,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
     });
   };
 
-  const visibleImages = allImages.slice(
-    imagesLength - (numberToShow + 1),
-    imagesLength + numberToShow
-  );
+  const visibleImages = allImages.slice(0, numberToShow);
 
   // TODO: ADD ANIMATION FOR WHEN IT SCROLLS
   return (

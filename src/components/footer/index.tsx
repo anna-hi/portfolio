@@ -12,7 +12,6 @@ import FlowerIcon, {
 } from "../flower-icon/flower-icon";
 
 import styles from "./style.module.css";
-import { emailSVG, githubSVG, linkedInSVG } from "./icons";
 
 const email = "annaji@andrew.cmu.edu";
 const linkedin = "https://www.linkedin.com/in/anna-ji/";
@@ -48,14 +47,18 @@ const Footer: React.FC<FooterProps> = ({ containerRef }) => {
         <div className="mx-auto text-nowrap text-center">&copy; Anna Ji</div>
         <div className="w-[33%]">
           <div className="float-end flex gap-8 items-center">
-            <a href={`mailto:${email}`} target="_blank">
-              {emailSVG}
+            <a
+              href={`mailto:${email}`}
+              target="_blank"
+              className={styles.links}
+            >
+              Email
             </a>
-            <a href={linkedin} target="_blank">
-              {linkedInSVG}
+            <a href={linkedin} target="_blank" className={styles.links}>
+              Linkedin
             </a>
-            <a href={github} target="_blank">
-              {githubSVG}
+            <a href={github} target="_blank" className={styles.links}>
+              Github
             </a>
           </div>
         </div>

@@ -13,7 +13,7 @@
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
     "motion": "^12.0.0-alpha.2",
-    "next": "15.0.4",
+    "next": "15.0.7",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "sharp": "^0.33.5"

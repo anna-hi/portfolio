@@ -107,7 +107,7 @@ export default function FacultyActivityTrackerPage() {
           more efficient than the traditional paper form?
         </h3>
       </Banner>
-      <figure className="mt-separate mb-together mx-photo">
+      <figure className="mt-separate mb-together mx-text">
         <ImageViewer src={`${FOLDER}/paper-form.png`} alt="alt" />
         <figcaption>The annoying & tedious annual paper form.</figcaption>
       </figure>
@@ -138,12 +138,12 @@ export default function FacultyActivityTrackerPage() {
           </div>
           <figure>
             <ImageCarousel images={IMAGE_CAROUSEL_DATA} />
-            <figcaption className="mx-photo">
+            <figcaption className="mx-text">
               First iterations of the activity dashboard.
             </figcaption>
           </figure>
         </div>
-        <div className="bg-background-dark-secondary py-32 px-photo">
+        <div className="bg-background-dark-secondary py-32 px-text">
           <div className="grid xl:grid-cols-3 gap-8 items-center">
             <div className="xl:order-2">
               <h3>Adding Micro-Interactions for Utility</h3>
@@ -173,7 +173,7 @@ export default function FacultyActivityTrackerPage() {
               each category <i>for you</i>
             </h3>
           </div>
-          <figure className="mx-[20%]">
+          <figure className="mx-text">
             <ImageViewer
               src={`${FOLDER}/gifs/fat-hover.gif`}
               alt="alt"
@@ -182,7 +182,7 @@ export default function FacultyActivityTrackerPage() {
           </figure>
         </div>
       </div>
-      <div className="my-separate mx-photo grid lg:grid-cols-3 gap-8 items-center">
+      <div className="my-separate mx-text grid lg:grid-cols-3 gap-8 items-center">
         <div className="mt-together">
           <h5>design guidelines</h5>
           <h3>
@@ -233,7 +233,7 @@ export default function FacultyActivityTrackerPage() {
           that were added by other committee members.
         </p>
       </div>
-      <figure className="mt-separate mb-together mx-photo">
+      <figure className="mt-separate mb-together mx-text">
         <ImageViewer
           src={`${FOLDER}/professor-card-iter.png`}
           alt="professor card before and after"
@@ -260,7 +260,7 @@ export default function FacultyActivityTrackerPage() {
           highlighting the final score through shape, color, and size.
         </p>
       </div>
-      <figure className="mx-photo my-separate">
+      <figure className="mx-text my-separate">
         <ImageViewer src={`${FOLDER}/professor-dashboard.png`} alt="alt" />
         <figcaption>
           Dashboard of professor cards and graph to to help MC members track
@@ -269,7 +269,7 @@ export default function FacultyActivityTrackerPage() {
       </figure>
 
       <div className="dark">
-        <div className="bg-background-dark-secondary py-32 px-photo">
+        <div className="bg-background-dark-secondary py-32 px-text">
           <div className="grid xl:grid-cols-3 gap-8 items-center">
             <div>
               <h5>problem solving</h5>
@@ -308,7 +308,7 @@ export default function FacultyActivityTrackerPage() {
               from login to scoring
             </h3>
           </div>
-          <div className="mx-photo grid md:grid-cols-2 gap-8">
+          <div className="mx-text grid md:grid-cols-2 gap-8">
             <figure>
               <ImageViewer
                 src={`${FOLDER}/gifs/fat-faculty.gif`}

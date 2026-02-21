@@ -144,7 +144,7 @@ export default function PenellaPage() {
         />
       </div>
       <div className="bg-penella-background-secondary py-32 my-separate">
-        <div className="mx-photo grid xl:grid-cols-3 gap-8">
+        <div className="mx-text grid xl:grid-cols-3 gap-8">
           <div>
             <h5>understanding the people</h5>
             <h3>Building target personas based on real people</h3>
@@ -204,7 +204,7 @@ export default function PenellaPage() {
           </figure>
         </div>
         <div className="bg-background-dark-secondary mb-separate py-32">
-          <div className="mx-[20%] grid lg:grid-cols-3 gap-8 items-center">
+          <div className="mx-text grid lg:grid-cols-3 gap-8 items-center">
             <div className="lg:order-2">
               <h3>
                 <i>Visually communicating</i> how Bryan interacts with Penella
@@ -243,7 +243,7 @@ export default function PenellaPage() {
           from a new perspective.
         </p>
       </div>
-      <figure className="mt-separate mb-together mx-photo">
+      <figure className="mt-separate mb-together mx-text">
         <ImageViewer src={`${FOLDER}/two-versions.png`} alt="" />
       </figure>
       <div className="mt-together mb-separate mx-text">
@@ -271,12 +271,12 @@ export default function PenellaPage() {
               entry tagging, customizability, and fun moodboards{" "}
             </h3>
           </div>
-          <figure className="mx-[20%]">
+          <figure className="mx-text">
             <ImageViewer src={`${FOLDER}/solution-teaser.png`} alt="" />
             <figcaption>A final solution teaser.</figcaption>
           </figure>
         </div>
-        <div className="mt-together mx-photo">
+        <div className="mt-together mx-text">
           <WorkflowList workflowItems={WORKFLOW_ITEMS} />
         </div>
       </div>

@@ -11,7 +11,7 @@ import styles from "./style.module.css";
 const activity_elements = [
   {
     header: "Currently",
-    subtext: "Product Designer @ ARM Institute",
+    subtext: "UX Designer @ Ford Motor Company",
     color: FLOWER_COLORS.PURPLE,
   },
   {

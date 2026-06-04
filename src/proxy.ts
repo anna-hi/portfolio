@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server";
 
 import { AUTH_COOKIE_NAME, isAuthenticated } from "@/lib/auth";
 
-const PUBLIC_ROUTES = ["/auth", "/api/login"];
+const PUBLIC_ROUTES = ["/auth", "/api/login", "/resume"];
 
 function isPublicRoute(pathname: string) {
   return PUBLIC_ROUTES.some(

@@ -1,7 +1,8 @@
+import { redirect } from "next/navigation";
+
+const resumeUrl =
+  "https://drive.google.com/file/d/1VlE1NctNL2japj9nKU_DiXkNXPS3uCHG/view?usp=sharing";
+
 export default function Resume() {
-  return (
-    <div className="p-2">
-      <h1>Resume</h1>
-    </div>
-  );
+  redirect(resumeUrl);
 }

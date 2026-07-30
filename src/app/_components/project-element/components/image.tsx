@@ -13,7 +13,7 @@ export default function ProjectElementPhoto({
 }) {
   return (
     <motion.div
-      className="shrink-1 flex items-center min-w-80 w-80 md:w-auto"
+      className="shrink-1 flex items-center min-w-80 w-auto max-w-96 lg:max-w-none"
       whileHover={{ scale: 1.05 }}
     >
       <Image

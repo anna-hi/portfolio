@@ -75,7 +75,7 @@
   left: 50%;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .footerContainer {
     padding: 2.5rem 9%;
   }

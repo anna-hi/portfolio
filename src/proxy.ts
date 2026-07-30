@@ -5,10 +5,12 @@ import { AUTH_COOKIE_NAME, isAuthenticated } from "@/lib/auth";
 
 const PUBLIC_ROUTES = ["/auth", "/api/login", "/resume"];
 
+// temp set to true to allow access to all routes without authentication
 function isPublicRoute(pathname: string) {
-  return PUBLIC_ROUTES.some(
-    (route) => pathname === route || pathname.startsWith(`${route}/`),
-  );
+  return true;
+  // return PUBLIC_ROUTES.some(
+  //   (route) => pathname === route || pathname.startsWith(`${route}/`),
+  // );
 }
 
 export function proxy(request: NextRequest) {

@@ -48,7 +48,6 @@ export default function AuthPage() {
         <input type="hidden" name="next" value={nextPath} />
 
         <div className="mb-1">
-          {/* <h1 className="mb-3 text-3xl">Portfolio access</h1>/ */}
           <h1 className="mb-0 text-2xl leading-8 text-white">
             What's the secret code?
           </h1>

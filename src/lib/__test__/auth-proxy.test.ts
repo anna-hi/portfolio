@@ -1,6 +1,7 @@
 /** @jest-environment node */
 import { AUTH_COOKIE_NAME, AUTH_COOKIE_VALUE, isAuthenticated } from "@/lib/auth";
 import { proxy } from "@/proxy";
+import type { NextRequest } from "next/server";
 
 function requestWithForm(password: string, next?: string) {
   const form = new FormData();
@@ -43,7 +44,7 @@ describe("proxy", () => {
     return {
       url: url.toString(), nextUrl: url,
       cookies: { get: jest.fn(() => cookie ? { value: cookie } : undefined) },
-    } as any;
+    } as unknown as NextRequest;
   };
 
   it("sends an authenticated auth-page visitor to their requested destination", () => {

@@ -49,7 +49,7 @@ function AuthForm() {
 
         <div className="mb-1">
           <h1 className="mb-0 text-2xl leading-8 text-white">
-            What's the secret code?
+            What&apos;s the secret code?
           </h1>
         </div>
 

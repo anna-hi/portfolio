@@ -89,8 +89,8 @@ export default function ImageViewer({
                 src={src}
                 alt={alt}
                 fill={true}
-                objectFit="contain"
                 sizes="100vw"
+                style={{ objectFit: "contain" }}
                 className={imageClass}
               />
             </motion.div>

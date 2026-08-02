@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom";
-import type React from "react";
+import React from "react";
 
 jest.mock("next/image", () => ({
   __esModule: true,
@@ -12,16 +12,16 @@ jest.mock("next/link", () => ({
 }));
 
 const motionProps = new Set(["animate", "initial", "exit", "transition", "whileHover", "whileDrag", "drag", "dragConstraints", "dragElastic", "dragMomentum", "dragTransition"]);
-const motionComponent = ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => {
+const motionComponent = (tag: string) => ({ children, ...props }: React.HTMLAttributes<HTMLElement>) => {
   const domProps = Object.fromEntries(Object.entries(props).filter(([key]) => !motionProps.has(key)));
-  return <div {...domProps}>{children}</div>;
+  return React.createElement(tag, domProps, children);
 };
 jest.mock("framer-motion", () => ({
-  motion: new Proxy({}, { get: () => motionComponent }),
+  motion: new Proxy({}, { get: (_target, tag) => motionComponent(String(tag)) }),
   AnimatePresence: ({ children }: { children: React.ReactNode }) => <>{children}</>,
   useMotionValue: jest.fn(),
 }));
-jest.mock("motion/react", () => ({ motion: new Proxy({}, { get: () => motionComponent }) }));
+jest.mock("motion/react", () => ({ motion: new Proxy({}, { get: (_target, tag) => motionComponent(String(tag)) }) }));
 
 jest.mock("next/font/google", () => {
   const font = () => ({ className: "font", variable: "font-variable" });

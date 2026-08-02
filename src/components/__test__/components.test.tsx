@@ -12,8 +12,8 @@ describe("shared components", () => {
   it("shows a scroll control after scrolling and scrolls to the top", () => {
     Object.defineProperty(window, "scrollY", { value: 500, configurable: true });
     const scrollTo = jest.fn(); Object.defineProperty(window, "scrollTo", { value: scrollTo, configurable: true });
-    const { container } = render(<ScrollToTop />);
-    fireEvent.scroll(window); fireEvent.click(container.querySelector("div")!);
+    render(<ScrollToTop />);
+    fireEvent.scroll(window); fireEvent.click(screen.getByRole("button", { name: "Scroll to top" }));
     expect(scrollTo).toHaveBeenCalledWith({ top: 0, behavior: "smooth" });
   });
 

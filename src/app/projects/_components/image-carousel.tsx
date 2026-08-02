@@ -80,6 +80,8 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
       </div>
 
       <button
+        type="button"
+        aria-label="Previous carousel image"
         className={styles.carouselButton}
         style={{ left: "1rem" }}
         onClick={prevImage}
@@ -101,6 +103,8 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
         </svg>
       </button>
       <button
+        type="button"
+        aria-label="Next carousel image"
         className={styles.carouselButton}
         style={{ right: "1rem" }}
         onClick={nextImage}

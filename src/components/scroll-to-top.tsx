@@ -34,7 +34,9 @@ const ScrollToTop: React.FC = () => {
 
   return (
     isVisible && (
-      <motion.div
+      <motion.button
+        type="button"
+        aria-label="Scroll to top"
         onClick={scrollToTop}
         className={styles.scrollToTop}
         initial={{ opacity: 0, scale: 0 }}
@@ -46,7 +48,7 @@ const ScrollToTop: React.FC = () => {
         }}
       >
         <ChevronUpIcon />
-      </motion.div>
+      </motion.button>
     )
   );
 };

@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Anna Ji — Product Design Portfolio
 
-## Getting Started
+Anna's portfolio site, featuring product-design case studies that balance thoughtful research, visual craft, and joyful interactions.
 
-First, run the development server:
+## Featured work
+
+- **Faculty Activity Tracker** — Streamlining form completion and scoring workflows for faculty and review committees.
+- **Negotium** — Helping women practice negotiation skills through conversational AI.
+- **Mindful** — Pairing mindfulness practices with task organization for college students.
+- **Penella** — A personalized digital space for emotional expression, mood tracking, and creativity.
+
+## Run locally
+
+Install dependencies, then start the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Optional login configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The login API checks the `SECRET_CODE` environment variable. To exercise that flow locally, add it to `.env.local`:
 
-## Learn More
+```bash
+SECRET_CODE=your-local-secret
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Testing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Run the Jest unit tests:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+npm test
+```
 
-## Deploy on Vercel
+Run the functional Playwright tests. They start the local development server automatically:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npx playwright install chromium # once per machine
+npm run test:e2e
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+For Playwright's interactive UI mode, use `npm run test:e2e:ui`. Run both suites with `npm run test:all`.

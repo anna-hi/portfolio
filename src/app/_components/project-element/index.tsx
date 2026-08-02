@@ -26,7 +26,7 @@ const ProjectElement: React.FC<ProjectElementProps> = ({ project }) => {
     <Link
       href={project.link}
       prefetch
-      className="flex flex-col gap-y-8 md:flex-row md:gap-x-14 lg:gap-x-[6.8125rem] w-fit m-auto px-[9%]"
+      className="flex flex-col gap-y-8 lg:flex-row md:gap-x-14 lg:gap-x-[6.8125rem] w-fit m-auto px-[9%]"
     >
       <div className="grid grid-cols-1 gap-7 content-center max-w-96 shrink-0">
         <h2 className="relative w-fit text-nowrap whitespace-pre-line">

@@ -11,13 +11,11 @@ import styles from "./style.module.css";
 import Link from "next/link";
 
 const NavBar: React.FC = () => {
-  const resumeURL =
-    "https://drive.google.com/file/d/1VlE1NctNL2japj9nKU_DiXkNXPS3uCHG/view?usp=sharing";
-
   const buttons = [
     { label: "Work", link: "/" },
     // { label: "Fun", link: "/fun" },
     // { label: "About", link: "/about" },
+    { label: "Resume", link: "/resume", newTab: true },
   ];
 
   return (
@@ -39,24 +37,18 @@ const NavBar: React.FC = () => {
       <div className="flex-grow px-2"></div>
 
       <div className="flex gap-8 md:gap-12">
-        {buttons.map(({ label, link }) => (
+        {buttons.map(({ label, link, newTab }) => (
           <Link
             type="button"
             href={link}
             key={label}
+            target={newTab ? "_blank" : undefined}
+            rel={newTab ? "noopener noreferrer" : undefined}
             className={styles.navbarButton}
           >
             {label}
           </Link>
         ))}
-        <a
-          type="button"
-          href={resumeURL}
-          target="_blank"
-          className={styles.navbarButton}
-        >
-          Resume
-        </a>
       </div>
     </nav>
   );

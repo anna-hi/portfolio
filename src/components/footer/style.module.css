@@ -4,9 +4,59 @@
   padding: 3.125rem 9%;
 }
 
+.footerGrid {
+  @apply text-caption;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.flowerGroup {
+  display: inline-grid;
+  grid-template-columns: minmax(0, max-content) auto;
+  align-items: center;
+  column-gap: 0.5rem;
+  justify-self: start;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.flowerText {
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.flowerAnchor {
+  position: relative;
+  display: flex;
+  width: 35px;
+  height: 33px;
+}
+
+.flowerDrag {
+  position: absolute;
+  inset: 0;
+  display: flex;
+}
+
+.copyright {
+  justify-self: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.linkGroup {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 2rem;
+}
+
 .links {
   position: relative;
 }
+
 .links::after {
   content: "";
   display: block;
@@ -23,5 +73,34 @@
 .links:hover::after {
   width: 100%;
   left: 50%;
+}
+
+@media (max-width: 800px) {
+  .footerContainer {
+    padding: 2.5rem 9%;
+  }
+
+  .footerGrid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  .flowerText {
+    white-space: normal;
+    max-width: calc(82vw - 35px - 0.5rem);
+  }
+
+  .flowerGroup {
+    justify-self: center;
+  }
+
+  .linkGroup {
+    justify-self: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 1.5rem;
+  }
 }
 /* footer end */

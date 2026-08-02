@@ -89,8 +89,8 @@ function AnimatedImageViewer({ src, alt, imageClass }: ImageViewerProps) {
                 poster={poster}
                 aria-label={alt}
               >
-                <source src={`${videoBase}.webm`} type="video/webm" />
-                <source src={`${videoBase}.mp4`} type="video/mp4" />
+                <source src={`${videoBase}.full.webm`} type="video/webm" />
+                <source src={`${videoBase}.full.mp4`} type="video/mp4" />
               </video>
             </motion.div>
           </motion.div>

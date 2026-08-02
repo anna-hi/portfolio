@@ -12,12 +12,7 @@
     "test:coverage": "jest --coverage",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "test:all": "npm test && npm run test:e2e",
-    "convert:gifs": "node scripts/convert-gifs-to-video.mjs",
-    "convert:background": "node scripts/convert-background-image.mjs",
-    "convert:images": "node scripts/convert-static-images.mjs",
-    "convert:modal-images": "node scripts/generate-full-resolution-images.mjs",
-    "convert:modal-videos": "node scripts/generate-full-resolution-videos.mjs"
+    "test:all": "npm test && npm run test:e2e"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
@@ -43,7 +38,6 @@
     "eslint-config-next": "16.0.10",
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
-    "ffmpeg-static": "^5.3.0",
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.4",
     "ts-jest": "^29.4.12",

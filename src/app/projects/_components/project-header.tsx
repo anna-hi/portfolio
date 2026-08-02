@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 // styles
 import styles from "./style.module.css";
 import { ALEGREYA_SANS } from "@/util/fonts";
-import { optimizedImageSource } from "@/util/image";
 
 type projectHeader = {
   header: string;
@@ -48,15 +47,18 @@ export default function ProjectHeader({
           )}
         </div>
         {photo && (
-          <Image
-            src={optimizedImageSource(photo)}
-            width={0}
-            height={0}
-            priority
-            alt={header}
-            sizes="(min-width: 768px) 70vw, 100vw"
-            className={photoClass}
-          />
+          // <Image
+          //   src={photo}
+          //   width={0}
+          //   height={0}
+          //   priority
+          //   alt={header}
+          //   sizes="100vw"
+          //   className={photoClass}
+          // />
+
+          // eslint-disable-next-line @next/next/no-img-element
+          <img className={photoClass} alt={header} src={photo} />
         )}
       </motion.div>
     </div>

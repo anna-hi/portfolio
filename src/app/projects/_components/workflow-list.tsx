@@ -55,7 +55,7 @@ export function WorkflowList({
             {item.text}
           </div>
           <div className={getImageClass()}>
-            <ImageViewer src={item.src} alt={item.alt} />
+            <ImageViewer src={item.src} alt={item.alt} useImg />
           </div>
         </div>
       ))}

@@ -27,10 +27,13 @@ const requestedGifs = process.argv.slice(2).map((path) => join(publicDirectory, 
 for (const gif of requestedGifs.length > 0 ? requestedGifs : findGifs(publicDirectory)) {
   const outputBase = gif.slice(0, -4);
   const filter = "fps=20,scale='min(1280,iw)':-2:flags=lanczos";
+  const fullResolutionFilter = "fps=24";
 
   console.log(`Converting ${relative(publicDirectory, gif)}`);
   run(["-i", gif, "-vf", filter, "-c:v", "libvpx-vp9", "-crf", "32", "-b:v", "0", "-deadline", "good", "-cpu-used", "4", `${outputBase}.webm`]);
   run(["-i", gif, "-vf", filter, "-c:v", "libx264", "-crf", "25", "-preset", "slow", "-pix_fmt", "yuv420p", "-movflags", "+faststart", `${outputBase}.mp4`]);
+  run(["-i", gif, "-vf", fullResolutionFilter, "-c:v", "libvpx-vp9", "-crf", "28", "-b:v", "0", "-deadline", "good", "-cpu-used", "4", `${outputBase}.full.webm`]);
+  run(["-i", gif, "-vf", fullResolutionFilter, "-c:v", "libx264", "-crf", "22", "-preset", "slow", "-pix_fmt", "yuv420p", "-movflags", "+faststart", `${outputBase}.full.mp4`]);
   run(["-i", gif, "-frames:v", "1", "-c:v", "libwebp", "-q:v", "78", `${outputBase}.webp`]);
   unlinkSync(gif);
 }

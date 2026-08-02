@@ -16,7 +16,8 @@
     "convert:gifs": "node scripts/convert-gifs-to-video.mjs",
     "convert:background": "node scripts/convert-background-image.mjs",
     "convert:images": "node scripts/convert-static-images.mjs",
-    "convert:modal-images": "node scripts/generate-full-resolution-images.mjs"
+    "convert:modal-images": "node scripts/generate-full-resolution-images.mjs",
+    "convert:modal-videos": "node scripts/generate-full-resolution-videos.mjs"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",

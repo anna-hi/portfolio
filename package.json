@@ -13,7 +13,10 @@
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "test:all": "npm test && npm run test:e2e",
-    "convert:gifs": "node scripts/convert-gifs-to-video.mjs"
+    "convert:gifs": "node scripts/convert-gifs-to-video.mjs",
+    "convert:background": "node scripts/convert-background-image.mjs",
+    "convert:images": "node scripts/convert-static-images.mjs",
+    "convert:modal-images": "node scripts/generate-full-resolution-images.mjs"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",

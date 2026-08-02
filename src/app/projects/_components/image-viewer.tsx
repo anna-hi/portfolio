@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import { fullResolutionImageSource, optimizedImageSource } from "@/util/image";
 
 // styles
 import styles from "./style.module.css";
@@ -108,6 +109,9 @@ export default function ImageViewer({
     return <AnimatedImageViewer src={src} alt={alt} imageClass={imageClass} />;
   }
 
+  const optimizedSrc = optimizedImageSource(src);
+  const fullResolutionSrc = fullResolutionImageSource(src);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleImageClick = () => {
@@ -133,7 +137,7 @@ export default function ImageViewer({
 
   const MainImageComponent = (
     <Image
-      src={src}
+      src={optimizedSrc}
       width={0}
       height={0}
       alt={alt}
@@ -165,11 +169,12 @@ export default function ImageViewer({
             >
               {/* TODO: maybe replace this if gifs are also failing on this */}
               <Image
-                src={src}
+                src={fullResolutionSrc}
                 alt={alt}
                 fill={true}
                 objectFit="contain"
                 sizes="100vw"
+                quality={90}
                 className={imageClass}
               />
             </motion.div>

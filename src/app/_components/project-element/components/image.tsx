@@ -20,8 +20,7 @@ export default function ProjectElementPhoto({
         src={thumbnail}
         width={668}
         height={498}
-        priority
-        sizes="100vw"
+        sizes="(min-width: 1024px) 50vw, 100vw"
         alt={alt}
         className="rounded-md"
       />

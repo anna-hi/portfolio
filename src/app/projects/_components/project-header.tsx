@@ -52,7 +52,7 @@ export default function ProjectHeader({
             src={optimizedImageSource(photo)}
             width={0}
             height={0}
-            priority
+            preload
             alt={header}
             sizes="(min-width: 768px) 70vw, 100vw"
             className={photoClass}

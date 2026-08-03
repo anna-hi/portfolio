@@ -23,6 +23,7 @@ export default function ProjectElementPhoto({
         height={498}
         sizes="(min-width: 1024px) 50vw, 100vw"
         alt={alt}
+        loading="eager"
         className="rounded-md"
       />
     </motion.div>

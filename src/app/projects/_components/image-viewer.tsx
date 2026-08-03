@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import { PlaceholderValue } from "next/dist/shared/lib/get-img-props";
 import { fullResolutionImageSource, optimizedImageSource } from "@/util/image";
 
 // styles
@@ -13,6 +14,28 @@ interface ImageViewerProps {
   alt: string;
   imageClass?: string;
 }
+
+const shimmer = (w: number, h: number) => `
+<svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="g">
+      <stop stop-color="#C8C8C8" offset="20%" />
+      <stop stop-color="#FBF8EC" offset="50%" />
+      <stop stop-color="#C8C8C8" offset="70%" />
+    </linearGradient>
+  </defs>
+  <rect width="${w}" height="${h}" fill="#C8C8C8" />
+  <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
+  <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
+</svg>`;
+
+const toBase64 = (str: string) =>
+  typeof window === "undefined"
+    ? Buffer.from(str).toString("base64")
+    : window.btoa(str);
+
+const shimmerPlaceholder = (w: number, h: number) =>
+  `data:image/svg+xml;base64,${toBase64(shimmer(w, h))}` as PlaceholderValue;
 
 function AnimatedImageViewer({ src, alt, imageClass }: ImageViewerProps) {
   const [shouldLoad, setShouldLoad] = useState(false);
@@ -100,15 +123,7 @@ function AnimatedImageViewer({ src, alt, imageClass }: ImageViewerProps) {
   );
 }
 
-export default function ImageViewer({
-  src,
-  alt,
-  imageClass = "",
-}: ImageViewerProps) {
-  if (src.toLowerCase().endsWith(".gif")) {
-    return <AnimatedImageViewer src={src} alt={alt} imageClass={imageClass} />;
-  }
-
+function NormalImageViewer({ src, alt, imageClass }: ImageViewerProps) {
   const optimizedSrc = optimizedImageSource(src);
   const fullResolutionSrc = fullResolutionImageSource(src);
 
@@ -141,6 +156,7 @@ export default function ImageViewer({
       width={0}
       height={0}
       alt={alt}
+      loading="eager"
       sizes="(min-width: 1024px) 60vw, 100vw"
       className={`${imageClass} w-full h-auto rounded-md cursor-zoom-in`}
       onClick={handleImageClick}
@@ -167,7 +183,6 @@ export default function ImageViewer({
               exit={{ scale: 0.8 }}
               transition={{ duration: 0.5 }}
             >
-              {/* TODO: maybe replace this if gifs are also failing on this */}
               <Image
                 src={fullResolutionSrc}
                 alt={alt}
@@ -176,6 +191,7 @@ export default function ImageViewer({
                 style={{ objectFit: "contain" }}
                 quality={90}
                 className={imageClass}
+                placeholder={shimmerPlaceholder(700, 475)}
               />
             </motion.div>
           </motion.div>
@@ -183,4 +199,11 @@ export default function ImageViewer({
       </AnimatePresence>
     </>
   );
+}
+
+export default function ImageViewer(props: ImageViewerProps) {
+  if (props.src.toLowerCase().endsWith(".gif")) {
+    return <AnimatedImageViewer {...props} />;
+  }
+  return <NormalImageViewer {...props} />;
 }

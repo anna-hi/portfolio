@@ -27,10 +27,10 @@ describe("pages and content data", () => {
   });
 
   it("renders the site shell and exposes correct metadata", () => {
-    const { container, rerender } = render(<MainSection><p>Content</p></MainSection>);
+    render(<MainSection><p>Content</p></MainSection>);
     expect(screen.getByText("Content")).toBeInTheDocument();
-    rerender(<RootLayout><p>Layout content</p></RootLayout>);
-    expect(container.ownerDocument.documentElement).toHaveAttribute("lang", "en");
+    const layout = RootLayout({ children: <p>Layout content</p> });
+    expect(layout.props.lang).toBe("en");
     expect(metadata).toMatchObject({ title: "Anna Ji", description: "Anna Ji's portfolio" });
   });
 

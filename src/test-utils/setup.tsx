@@ -1,6 +1,23 @@
 import "@testing-library/jest-dom";
 import React from "react";
 
+class MockIntersectionObserver implements IntersectionObserver {
+  readonly root = null;
+  readonly rootMargin = "0px";
+  readonly thresholds = [0];
+
+  disconnect = jest.fn();
+  observe = jest.fn();
+  takeRecords = jest.fn(() => []);
+  unobserve = jest.fn();
+}
+
+Object.defineProperty(globalThis, "IntersectionObserver", {
+  configurable: true,
+  writable: true,
+  value: MockIntersectionObserver,
+});
+
 jest.mock("next/image", () => ({
   __esModule: true,
   default: ({ fill, priority, objectFit, ...props }: React.ImgHTMLAttributes<HTMLImageElement> & { fill?: boolean; priority?: boolean; objectFit?: string }) => <img {...props} />,

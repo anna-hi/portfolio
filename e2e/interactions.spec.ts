@@ -14,7 +14,8 @@ test("carousel controls change the visible image", async ({ page }) => {
   await page.goto("/projects/penella");
   const next = page.getByRole("button", { name: "Next carousel image" });
   await next.scrollIntoViewIfNeeded();
-  const visibleImages = page.locator('img[src*="/penella-project/carousel/"]');
+  const carousel = next.locator("..");
+  const visibleImages = carousel.locator("img");
   await expect(visibleImages.first()).toHaveAttribute("src", /penella-sketch1/);
   await next.click();
   await expect(visibleImages.first()).toHaveAttribute("src", /penella-sketch2/);

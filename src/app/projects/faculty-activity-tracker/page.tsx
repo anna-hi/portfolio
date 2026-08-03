@@ -177,7 +177,6 @@ export default function FacultyActivityTrackerPage() {
             <ImageViewer
               src={`${FOLDER}/gifs/fat-hover.gif`}
               alt="alt"
-              useImg
             />
           </figure>
         </div>
@@ -313,7 +312,6 @@ export default function FacultyActivityTrackerPage() {
               <ImageViewer
                 src={`${FOLDER}/gifs/fat-faculty.gif`}
                 alt="alt"
-                useImg
               />
               <figcaption>Full faculty-facing user experience.</figcaption>
             </figure>
@@ -321,7 +319,6 @@ export default function FacultyActivityTrackerPage() {
               <ImageViewer
                 src={`${FOLDER}/gifs/fat-merit.gif`}
                 alt="alt"
-                useImg
               />
               <figcaption>
                 Full Merit Committee member-facing user experience.
